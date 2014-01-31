@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DBAD41F5-8455-4752-9B96-9AF7B93A098A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloPicsSDKSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1BF14649-2846-49B5-B132-0CEE50C58FFF</key>
+		<string>https://subversion.assembla.com/svn/app-printmee.ios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TestSDKApp/HelloPicsSDKSample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1BF14649-2846-49B5-B132-0CEE50C58FFF</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>1BF14649-2846-49B5-B132-0CEE50C58FFF</key>
+		<string>https://subversion.assembla.com/svn/app-printmee.ios</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://subversion.assembla.com/svn/app-printmee.ios/TestSDKApp/HelloPicsSDKSample.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1BF14649-2846-49B5-B132-0CEE50C58FFF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1BF14649-2846-49B5-B132-0CEE50C58FFF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>app-printmee</string>
+		</dict>
+	</array>
+</dict>
+</plist>

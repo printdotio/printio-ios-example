@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A0B02C61-DE4F-40D0-8C53-0EEB46EC908B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TestSDKApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>955F4B99-FC2D-4242-A781-4E0DBB1F0D68</key>
+		<string>https://subversion.assembla.com/svn/app-printmee.ios</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TestSDKApp/TestSDKApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>955F4B99-FC2D-4242-A781-4E0DBB1F0D68</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>955F4B99-FC2D-4242-A781-4E0DBB1F0D68</key>
+		<string>https://subversion.assembla.com/svn/app-printmee.ios</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://subversion.assembla.com/svn/app-printmee.ios/TestSDKApp/TestSDKApp.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>955F4B99-FC2D-4242-A781-4E0DBB1F0D68</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>955F4B99-FC2D-4242-A781-4E0DBB1F0D68</string>
+			<key>IDESourceControlWCCName</key>
+			<string>app-printmee</string>
+		</dict>
+	</array>
+</dict>
+</plist>
