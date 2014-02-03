@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <HelloPicsFramework/HelloPics.h>
 
 @implementation AppDelegate
 

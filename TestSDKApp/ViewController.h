@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <HelloPicsFramework/HelloPics.h>
+#import <PrintIO/PrintIO.h>
 
-@interface ViewController : UIViewController <HelloPicsDelegate, UITextFieldDelegate>
+@interface ViewController : UIViewController <PrintIODelegate, UITextFieldDelegate>
 {
 
 }

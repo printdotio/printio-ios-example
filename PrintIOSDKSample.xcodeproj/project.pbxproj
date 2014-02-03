@@ -87,22 +87,22 @@
 		B429BD97186B0F3F002340BB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		B429BD99186B0FA5002340BB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B429BD9B186B0FB5002340BB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		B43F19C0185B061000926E70 /* HelloPicsSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloPicsSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43F19C0185B061000926E70 /* PrintIOSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintIOSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43F19C3185B061000926E70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B43F19C5185B061000926E70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B43F19C7185B061000926E70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B43F19CD185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19CF185B061000926E70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B43F19D1185B061000926E70 /* HelloPicsSDKSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloPicsSDKSample-Prefix.pch"; sourceTree = "<group>"; };
+		B43F19D1185B061000926E70 /* PrintIOSDKSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PrintIOSDKSample-Prefix.pch"; sourceTree = "<group>"; };
 		B43F19D2185B061000926E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B43F19D3185B061000926E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B43F19D6185B061000926E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B43F19D8185B061000926E70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B43F19D9185B061000926E70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B43F19DB185B061000926E70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B43F19E1185B061000926E70 /* HelloPicsSDKSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloPicsSDKSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43F19E1185B061000926E70 /* PrintIOSDKSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintIOSDKSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43F19E2185B061000926E70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B43F19EA185B061000926E70 /* HelloPicsSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloPicsSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
+		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
 		B4A00DDF188947A50068A3F7 /* timess.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = timess.ttf; sourceTree = "<group>"; };
@@ -186,8 +186,8 @@
 		B43F19C1185B061000926E70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B43F19C0185B061000926E70 /* HelloPicsSDKSample.app */,
-				B43F19E1185B061000926E70 /* HelloPicsSDKSampleTests.xctest */,
+				B43F19C0185B061000926E70 /* PrintIOSDKSample.app */,
+				B43F19E1185B061000926E70 /* PrintIOSDKSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 				B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */,
 				B43F19CC185B061000926E70 /* InfoPlist.strings */,
 				B43F19CF185B061000926E70 /* main.m */,
-				B43F19D1185B061000926E70 /* HelloPicsSDKSample-Prefix.pch */,
+				B43F19D1185B061000926E70 /* PrintIOSDKSample-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -258,7 +258,7 @@
 		B43F19E9185B061000926E70 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B43F19EA185B061000926E70 /* HelloPicsSDKSampleTests-Info.plist */,
+				B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */,
 				B43F19EB185B061000926E70 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -323,9 +323,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B43F19BF185B061000926E70 /* HelloPicsSDKSample */ = {
+		B43F19BF185B061000926E70 /* PrintIOSDKSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B43F19F2185B061000926E70 /* Build configuration list for PBXNativeTarget "HelloPicsSDKSample" */;
+			buildConfigurationList = B43F19F2185B061000926E70 /* Build configuration list for PBXNativeTarget "PrintIOSDKSample" */;
 			buildPhases = (
 				B43F19BC185B061000926E70 /* Sources */,
 				B43F19BD185B061000926E70 /* Frameworks */,
@@ -335,14 +335,14 @@
 			);
 			dependencies = (
 			);
-			name = HelloPicsSDKSample;
+			name = PrintIOSDKSample;
 			productName = TestSDKApp;
-			productReference = B43F19C0185B061000926E70 /* HelloPicsSDKSample.app */;
+			productReference = B43F19C0185B061000926E70 /* PrintIOSDKSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B43F19E0185B061000926E70 /* HelloPicsSDKSampleTests */ = {
+		B43F19E0185B061000926E70 /* PrintIOSDKSampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B43F19F5185B061000926E70 /* Build configuration list for PBXNativeTarget "HelloPicsSDKSampleTests" */;
+			buildConfigurationList = B43F19F5185B061000926E70 /* Build configuration list for PBXNativeTarget "PrintIOSDKSampleTests" */;
 			buildPhases = (
 				B43F19DD185B061000926E70 /* Sources */,
 				B43F19DE185B061000926E70 /* Frameworks */,
@@ -353,9 +353,9 @@
 			dependencies = (
 				B43F19E7185B061000926E70 /* PBXTargetDependency */,
 			);
-			name = HelloPicsSDKSampleTests;
+			name = PrintIOSDKSampleTests;
 			productName = TestSDKAppTests;
-			productReference = B43F19E1185B061000926E70 /* HelloPicsSDKSampleTests.xctest */;
+			productReference = B43F19E1185B061000926E70 /* PrintIOSDKSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -372,7 +372,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B43F19BB185B061000926E70 /* Build configuration list for PBXProject "HelloPicsSDKSample" */;
+			buildConfigurationList = B43F19BB185B061000926E70 /* Build configuration list for PBXProject "PrintIOSDKSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -385,8 +385,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B43F19BF185B061000926E70 /* HelloPicsSDKSample */,
-				B43F19E0185B061000926E70 /* HelloPicsSDKSampleTests */,
+				B43F19BF185B061000926E70 /* PrintIOSDKSample */,
+				B43F19E0185B061000926E70 /* PrintIOSDKSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -450,7 +450,7 @@
 /* Begin PBXTargetDependency section */
 		B43F19E7185B061000926E70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B43F19BF185B061000926E70 /* HelloPicsSDKSample */;
+			target = B43F19BF185B061000926E70 /* PrintIOSDKSample */;
 			targetProxy = B43F19E6185B061000926E70 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -571,16 +571,17 @@
 					"/Users/aleksandargrubin/Desktop/SharedFolder/app-printmee.ios/TestSDKApp",
 					"/Users/aleksandargrubin/Desktop/app-printmee.ios/TestSDKApp",
 					"/Users/tengai/Desktop/app-printmee.ios/TestSDKApp/UninstalledProducts",
+					"/Users/tengai/Desktop/GIT_HELLO_PICS/printio-ios-example",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TestSDKApp/HelloPicsSDKSample-Prefix.pch";
+				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "TestSDKApp/TestSDKApp-Info.plist";
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
 					"-lstdc++",
 					"-lc++",
 				);
-				PRODUCT_NAME = HelloPicsSDKSample;
+				PRODUCT_NAME = PrintIOSDKSample;
 				PROVISIONING_PROFILE = "813D4341-9C26-4C2B-BBBB-D380FD7671D1";
 				WRAPPER_EXTENSION = app;
 			};
@@ -600,16 +601,17 @@
 					"/Users/aleksandargrubin/Desktop/SharedFolder/app-printmee.ios/TestSDKApp",
 					"/Users/aleksandargrubin/Desktop/app-printmee.ios/TestSDKApp",
 					"/Users/tengai/Desktop/app-printmee.ios/TestSDKApp/UninstalledProducts",
+					"/Users/tengai/Desktop/GIT_HELLO_PICS/printio-ios-example",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TestSDKApp/HelloPicsSDKSample-Prefix.pch";
+				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "TestSDKApp/TestSDKApp-Info.plist";
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
 					"-lstdc++",
 					"-lc++",
 				);
-				PRODUCT_NAME = HelloPicsSDKSample;
+				PRODUCT_NAME = PrintIOSDKSample;
 				PROVISIONING_PROFILE = "813D4341-9C26-4C2B-BBBB-D380FD7671D1";
 				WRAPPER_EXTENSION = app;
 			};
@@ -631,8 +633,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "TestSDKAppTests/HelloPicsSDKSampleTests-Info.plist";
-				PRODUCT_NAME = HelloPicsSDKSampleTests;
+				INFOPLIST_FILE = "TestSDKAppTests/PrintIOSDKSampleTests-Info.plist";
+				PRODUCT_NAME = PrintIOSDKSampleTests;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -649,8 +651,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/TestSDKApp-Prefix.pch";
-				INFOPLIST_FILE = "TestSDKAppTests/HelloPicsSDKSampleTests-Info.plist";
-				PRODUCT_NAME = HelloPicsSDKSampleTests;
+				INFOPLIST_FILE = "TestSDKAppTests/PrintIOSDKSampleTests-Info.plist";
+				PRODUCT_NAME = PrintIOSDKSampleTests;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -658,7 +660,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B43F19BB185B061000926E70 /* Build configuration list for PBXProject "HelloPicsSDKSample" */ = {
+		B43F19BB185B061000926E70 /* Build configuration list for PBXProject "PrintIOSDKSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B43F19F0185B061000926E70 /* Debug */,
@@ -667,7 +669,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B43F19F2185B061000926E70 /* Build configuration list for PBXNativeTarget "HelloPicsSDKSample" */ = {
+		B43F19F2185B061000926E70 /* Build configuration list for PBXNativeTarget "PrintIOSDKSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B43F19F3185B061000926E70 /* Debug */,
@@ -676,7 +678,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B43F19F5185B061000926E70 /* Build configuration list for PBXNativeTarget "HelloPicsSDKSampleTests" */ = {
+		B43F19F5185B061000926E70 /* Build configuration list for PBXNativeTarget "PrintIOSDKSampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B43F19F6185B061000926E70 /* Debug */,

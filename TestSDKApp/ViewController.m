@@ -10,7 +10,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) HelloPics *helloPics;
+@property (nonatomic, strong) PrintIO *printIO;
 
 @end
 
@@ -34,91 +34,91 @@
     
     // Set customization file
     if (self.switchCustomization.isOn)
-        [self.helloPics customizationXML:xmlData];
+        [self.printIO customizationXML:xmlData];
     
     // Change title bar color
     if (self.switchTitleBarColor.isOn)
-        [self.helloPics titleBarColor:[UIColor magentaColor]
+        [self.printIO titleBarColor:[UIColor magentaColor]
                             fontColor:[UIColor whiteColor]];
     
     // Set what
     if (self.switchPhotoSources.isOn)
-        [self.helloPics usePhotoSources:self.switchPhotoSources.isOn];
+        [self.printIO usePhotoSources:self.switchPhotoSources.isOn];
     
     // Set images, UIImage object and/or NSString image urls
-    [self.helloPics images:images];
+    [self.printIO images:images];
     
     // Set country code
     if (self.switchCountryCode.isOn){
-        [self.helloPics countryCode:@"US"];
-        [self.helloPics currencyCode:@"USD"];
-        [self.helloPics languageCode:@"en"];
+        [self.printIO countryCode:@"US"];
+        [self.printIO currencyCode:@"USD"];
+        [self.printIO languageCode:@"en"];
     }
     
     // Set custom icon
-    [self.helloPics iconWithFileName:@"icon1"];
+    [self.printIO iconWithFileName:@"icon1"];
     
     // Set custom fonts
     if (self.switchCustomFonts.isOn){
         NSArray *fonts = @[@"timess.ttf", @"timess.ttf",
                            @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
         
-        [self.helloPics customFonts:fonts];
+        [self.printIO customFonts:fonts];
     }
     
     // Set Payee name
     if (self.txtPayeeName.text){
-        [self.helloPics payeeName:self.txtPayeeName.text];
+        [self.printIO payeeName:self.txtPayeeName.text];
     }
     
     //    [self.helloPics availablePhotoSources:[NSArray arrayWithObjects:
-    //                                            [NSNumber numberWithInt:HELLOPICS_PS_FACEBOOK],
-    //                                            [NSNumber numberWithInt:HELLOPICS_PS_INSTAGRAM], nil]];
+    //                                            [NSNumber numberWithInt:PRINTIO_PS_FACEBOOK],
+    //                                            [NSNumber numberWithInt:PRINTIO_PS_INSTAGRAM], nil]];
     
     // Jumps directly to product
     if (self.switchJumpToProduct.isOn)
-        [self.helloPics goToProductId:PRODUCT_PHONE_CASES()];
+        [self.printIO goToProductId:PRODUCT_PHONE_CASES()];
     
     // Jump To SKU
     if (self.switchJumpToSKU.isOn){
-        [self.helloPics goToProductId:PRODUCT_PHONE_CASES()
+        [self.printIO goToProductId:PRODUCT_PHONE_CASES()
                               withSKU:@"PhoneCase-BlackberryZ10-Gloss"];
     }
     
     // Open widget
-    [self.helloPics open];
+    [self.printIO open];
 }
 
 #pragma mark - HelloPics Delegate
 
-- (void)HelloPicsWidgetOnOpen
+- (void)PrintIOWidgetOnOpen
 {
     NSLog(@"HelloPicsWidgetOnOpen");
 }
 
-- (void)HelloPicsWidgetOnClose
+- (void)PrintIOWidgetOnClose
 {
     NSLog(@"HelloPicsWidgetOnClose");
-    _helloPics = nil;
+    _printIO = nil;
 }
 
 #pragma mark - Init
 
-- (HelloPics *)helloPics
+- (PrintIO *)printIO
 {
-    if (!_helloPics){
+    if (!_printIO){
         
         // Init HelloPics widget
         BOOL isProduction = self.switchProduction.isOn;
         NSString *recipeId = isProduction ? @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"  : @"12345-12345-12345-12345-12345";
         
-        _helloPics = [[HelloPics alloc]initWithViewController:self
-                                                  environment:isProduction ? HELLOPICS_PRODUCTION : HELLOPICS_STAGING
+        _printIO = [[PrintIO alloc]initWithViewController:self
+                                                  environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
                                                      recipeId:recipeId];
         // Set Delegate
-        [_helloPics setDelegate:self];
+        [_printIO setDelegate:self];
     }
-    return _helloPics;
+    return _printIO;
 }
 
 - (void)viewDidLoad

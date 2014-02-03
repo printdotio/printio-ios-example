@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B43F19BF185B061000926E70"
-               BuildableName = "HelloPicsSDKSample.app"
-               BlueprintName = "HelloPicsSDKSample"
-               ReferencedContainer = "container:HelloPicsSDKSample.xcodeproj">
+               BuildableName = "PrintIOSDKSample.app"
+               BlueprintName = "PrintIOSDKSample"
+               ReferencedContainer = "container:PrintIOSDKSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B43F19E0185B061000926E70"
-               BuildableName = "HelloPicsSDKSampleTests.xctest"
-               BlueprintName = "HelloPicsSDKSampleTests"
-               ReferencedContainer = "container:HelloPicsSDKSample.xcodeproj">
+               BuildableName = "PrintIOSDKSampleTests.xctest"
+               BlueprintName = "PrintIOSDKSampleTests"
+               ReferencedContainer = "container:PrintIOSDKSample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
-            BuildableName = "HelloPicsSDKSample.app"
-            BlueprintName = "HelloPicsSDKSample"
-            ReferencedContainer = "container:HelloPicsSDKSample.xcodeproj">
+            BuildableName = "PrintIOSDKSample.app"
+            BlueprintName = "PrintIOSDKSample"
+            ReferencedContainer = "container:PrintIOSDKSample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
-            BuildableName = "HelloPicsSDKSample.app"
-            BlueprintName = "HelloPicsSDKSample"
-            ReferencedContainer = "container:HelloPicsSDKSample.xcodeproj">
+            BuildableName = "PrintIOSDKSample.app"
+            BlueprintName = "PrintIOSDKSample"
+            ReferencedContainer = "container:PrintIOSDKSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
-            BuildableName = "HelloPicsSDKSample.app"
-            BlueprintName = "HelloPicsSDKSample"
-            ReferencedContainer = "container:HelloPicsSDKSample.xcodeproj">
+            BuildableName = "PrintIOSDKSample.app"
+            BlueprintName = "PrintIOSDKSample"
+            ReferencedContainer = "container:PrintIOSDKSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

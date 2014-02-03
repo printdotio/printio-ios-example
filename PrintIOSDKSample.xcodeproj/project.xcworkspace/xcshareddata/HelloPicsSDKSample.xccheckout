@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>07BFC07C-7D5B-4FA6-B4B8-E9A00FD94985</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloPicsSDKSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>67B26252-00FC-4F14-8C4B-C51B8C34D61E</key>
+		<string>https://github.com/printdotio/printio-ios-example.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HelloPicsSDKSample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>67B26252-00FC-4F14-8C4B-C51B8C34D61E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/printdotio/printio-ios-example.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>67B26252-00FC-4F14-8C4B-C51B8C34D61E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67B26252-00FC-4F14-8C4B-C51B8C34D61E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>printio-ios-example</string>
+		</dict>
+	</array>
+</dict>
+</plist>
