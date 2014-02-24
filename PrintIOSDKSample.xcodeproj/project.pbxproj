@@ -41,8 +41,6 @@
 		B43F19E5185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
 		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
-		B474D2D318A92E7C00007FCE /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B474D2D218A92E7C00007FCE /* PrintIOBundle.bundle */; };
-		B474D2D518A92E8700007FCE /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B474D2D418A92E8700007FCE /* PrintIO.framework */; };
 		B4A00DE0188947A50068A3F7 /* timess.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DDF188947A50068A3F7 /* timess.ttf */; };
 		B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */; };
 		B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE6188947F90068A3F7 /* steelfish_outline.otf */; };
@@ -107,8 +105,6 @@
 		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
-		B474D2D218A92E7C00007FCE /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PrintIOBundle.bundle; sourceTree = "<group>"; };
-		B474D2D418A92E8700007FCE /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PrintIO.framework; sourceTree = "<group>"; };
 		B4A00DDF188947A50068A3F7 /* timess.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = timess.ttf; sourceTree = "<group>"; };
 		B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "steelfish rg it.otf"; sourceTree = "<group>"; };
 		B4A00DE6188947F90068A3F7 /* steelfish_outline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = steelfish_outline.otf; sourceTree = "<group>"; };
@@ -145,7 +141,6 @@
 				B429BD8D186B0E0D002340BB /* SystemConfiguration.framework in Frameworks */,
 				B429BD98186B0F3F002340BB /* Twitter.framework in Frameworks */,
 				B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */,
-				B474D2D518A92E8700007FCE /* PrintIO.framework in Frameworks */,
 				B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,8 +195,6 @@
 		B43F19C2185B061000926E70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B474D2D418A92E8700007FCE /* PrintIO.framework */,
-				B474D2D218A92E7C00007FCE /* PrintIOBundle.bundle */,
 				B429BD99186B0FA5002340BB /* Accounts.framework */,
 				B429BD75186B0D2F002340BB /* AudioToolbox.framework */,
 				B429BD73186B0D26002340BB /* AVFoundation.framework */,
@@ -416,7 +409,6 @@
 				B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */,
 				B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */,
 				B4A00DF0188948370068A3F7 /* CaviarDreams_Bold.ttf in Resources */,
-				B474D2D318A92E7C00007FCE /* PrintIOBundle.bundle in Resources */,
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
 				B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */,
