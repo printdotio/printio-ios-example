@@ -42,11 +42,13 @@
                             fontColor:[UIColor whiteColor]];
     
     // Set what
-    if (self.switchPhotoSources.isOn)
+    if (self.switchPhotoSources.isOn){
         [self.printIO usePhotoSources:self.switchPhotoSources.isOn];
-    
-    // Set images, UIImage object and/or NSString image urls
-    [self.printIO images:images];
+        
+    } else {
+        // Set images, UIImage object and/or NSString image urls
+        [self.printIO images:images];
+    }
     
     // Set country code
     if (self.switchCountryCode.isOn){
