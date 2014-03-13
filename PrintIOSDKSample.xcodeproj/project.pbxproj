@@ -50,8 +50,8 @@
 		B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */; };
 		B4A00DF3188948370068A3F7 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */; };
 		B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DF5188948570068A3F7 /* aubrey.ttf */; };
-		B4B76CEB18CF65970048A114 /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B76CEA18CF65970048A114 /* PrintIO.framework */; };
-		B4B76CED18CF65A30048A114 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4B76CEC18CF65A30048A114 /* PrintIOBundle.bundle */; };
+		B4F023A318D1E5F20010412D /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4F023A218D1E5F20010412D /* PrintIOBundle.bundle */; };
+		B4F023AB18D1FC660010412D /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F023AA18D1FC660010412D /* PrintIO.framework */; };
 		B4F5FE091861FAB2000229A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F5FE071861FAA1000229A0 /* QuartzCore.framework */; };
 		B4F5FE0A1861FAC5000229A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F5FE071861FAA1000229A0 /* QuartzCore.framework */; };
 		B4F5FE0B1861FAD2000229A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C5185B061000926E70 /* CoreGraphics.framework */; };
@@ -116,8 +116,8 @@
 		B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		B4A00DF5188948570068A3F7 /* aubrey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aubrey.ttf; sourceTree = "<group>"; };
-		B4B76CEA18CF65970048A114 /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
-		B4B76CEC18CF65A30048A114 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 3-11-14, 4.38 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
+		B4F023A218D1E5F20010412D /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 3-13-14, 2.10 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
+		B4F023AA18D1FC660010412D /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B4F5FE051861FA6B000229A0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B4F5FE071861FAA1000229A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -145,7 +145,7 @@
 				B429BD8D186B0E0D002340BB /* SystemConfiguration.framework in Frameworks */,
 				B429BD98186B0F3F002340BB /* Twitter.framework in Frameworks */,
 				B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */,
-				B4B76CEB18CF65970048A114 /* PrintIO.framework in Frameworks */,
+				B4F023AB18D1FC660010412D /* PrintIO.framework in Frameworks */,
 				B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,8 +200,7 @@
 		B43F19C2185B061000926E70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4B76CEC18CF65A30048A114 /* PrintIOBundle.bundle */,
-				B4B76CEA18CF65970048A114 /* PrintIO.framework */,
+				B4AAA60418D1A2DB002C2F70 /* PrintIO */,
 				B429BD99186B0FA5002340BB /* Accounts.framework */,
 				B429BD75186B0D2F002340BB /* AudioToolbox.framework */,
 				B429BD73186B0D26002340BB /* AVFoundation.framework */,
@@ -327,6 +326,15 @@
 			name = Aubrey;
 			sourceTree = "<group>";
 		};
+		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
+			isa = PBXGroup;
+			children = (
+				B4F023AA18D1FC660010412D /* PrintIO.framework */,
+				B4F023A218D1E5F20010412D /* PrintIOBundle.bundle */,
+			);
+			name = PrintIO;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,7 +424,7 @@
 				B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */,
 				B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */,
 				B4A00DF0188948370068A3F7 /* CaviarDreams_Bold.ttf in Resources */,
-				B4B76CED18CF65A30048A114 /* PrintIOBundle.bundle in Resources */,
+				B4F023A318D1E5F20010412D /* PrintIOBundle.bundle in Resources */,
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
 				B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */,
@@ -495,7 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -528,6 +536,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -535,7 +544,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -560,8 +569,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -583,10 +594,13 @@
 					/Users/tengai/Desktop,
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO_App/IntermediateBuildFilesPath/UninstalledProducts",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIOApp/IntermediateBuildFilesPath/UninstalledProducts",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "TestSDKApp/TestSDKApp-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
 					"-lstdc++",
@@ -594,6 +608,7 @@
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
 				PROVISIONING_PROFILE = "813D4341-9C26-4C2B-BBBB-D380FD7671D1";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -616,10 +631,13 @@
 					/Users/tengai/Desktop,
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO_App/IntermediateBuildFilesPath/UninstalledProducts",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIOApp/IntermediateBuildFilesPath/UninstalledProducts",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "TestSDKApp/TestSDKApp-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
 					"-lstdc++",
@@ -627,6 +645,7 @@
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
 				PROVISIONING_PROFILE = "813D4341-9C26-4C2B-BBBB-D380FD7671D1";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
