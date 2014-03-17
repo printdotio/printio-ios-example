@@ -28,6 +28,8 @@
 		B429BD98186B0F3F002340BB /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD97186B0F3F002340BB /* Twitter.framework */; };
 		B429BD9A186B0FA5002340BB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD99186B0FA5002340BB /* Accounts.framework */; };
 		B429BD9C186B0FB5002340BB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD9B186B0FB5002340BB /* CoreTelephony.framework */; };
+		B439644C18D6F57E00310E50 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B439644B18D6F57E00310E50 /* PrintIOBundle.bundle */; };
+		B439646E18D7945D00310E50 /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B439646D18D7945D00310E50 /* PrintIO.framework */; };
 		B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C3185B061000926E70 /* Foundation.framework */; };
 		B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19CC185B061000926E70 /* InfoPlist.strings */; };
@@ -50,8 +52,6 @@
 		B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */; };
 		B4A00DF3188948370068A3F7 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */; };
 		B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DF5188948570068A3F7 /* aubrey.ttf */; };
-		B4F023A318D1E5F20010412D /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4F023A218D1E5F20010412D /* PrintIOBundle.bundle */; };
-		B4F023AB18D1FC660010412D /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F023AA18D1FC660010412D /* PrintIO.framework */; };
 		B4F5FE091861FAB2000229A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F5FE071861FAA1000229A0 /* QuartzCore.framework */; };
 		B4F5FE0A1861FAC5000229A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F5FE071861FAA1000229A0 /* QuartzCore.framework */; };
 		B4F5FE0B1861FAD2000229A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C5185B061000926E70 /* CoreGraphics.framework */; };
@@ -89,6 +89,8 @@
 		B429BD97186B0F3F002340BB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		B429BD99186B0FA5002340BB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B429BD9B186B0FB5002340BB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B439644B18D6F57E00310E50 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 3-17-14, 9.27 AM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
+		B439646D18D7945D00310E50 /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B43F19C0185B061000926E70 /* PrintIOSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintIOSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43F19C3185B061000926E70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B43F19C5185B061000926E70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -116,8 +118,6 @@
 		B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		B4A00DF5188948570068A3F7 /* aubrey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aubrey.ttf; sourceTree = "<group>"; };
-		B4F023A218D1E5F20010412D /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 3-13-14, 2.10 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
-		B4F023AA18D1FC660010412D /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B4F5FE051861FA6B000229A0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B4F5FE071861FAA1000229A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -145,7 +145,7 @@
 				B429BD8D186B0E0D002340BB /* SystemConfiguration.framework in Frameworks */,
 				B429BD98186B0F3F002340BB /* Twitter.framework in Frameworks */,
 				B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */,
-				B4F023AB18D1FC660010412D /* PrintIO.framework in Frameworks */,
+				B439646E18D7945D00310E50 /* PrintIO.framework in Frameworks */,
 				B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,8 +329,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B4F023AA18D1FC660010412D /* PrintIO.framework */,
-				B4F023A218D1E5F20010412D /* PrintIOBundle.bundle */,
+				B439646D18D7945D00310E50 /* PrintIO.framework */,
+				B439644B18D6F57E00310E50 /* PrintIOBundle.bundle */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 				B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */,
 				B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */,
 				B4A00DF0188948370068A3F7 /* CaviarDreams_Bold.ttf in Resources */,
-				B4F023A318D1E5F20010412D /* PrintIOBundle.bundle in Resources */,
+				B439644C18D6F57E00310E50 /* PrintIOBundle.bundle in Resources */,
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
 				B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */,
