@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B40FF4301887DA3F005B09E7 /* TestSDKApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */; };
 		B410D01418802A0400C20755 /* customization.xml in Resources */ = {isa = PBXBuildFile; fileRef = B410D01318802A0400C20755 /* customization.xml */; };
+		B4187AF818E595480081978D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4187AF718E595480081978D /* ViewController.xib */; };
+		B4187B1218E5C92A0081978D /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4187B1118E5C92A0081978D /* PrintIOBundle.bundle */; };
+		B4187B1A18E5CC850081978D /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4187B1918E5CC850081978D /* PrintIO.framework */; };
 		B41CADBC1884186F00A91191 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B41CADBB1884186F00A91191 /* icon1.png */; };
 		B41CADCF18843AFB00A91191 /* dream.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B41CADCE18843AFB00A91191 /* dream.jpg */; };
 		B41D88AD186D8791005A292A /* thunder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B41D88AC186D8791005A292A /* thunder.jpg */; };
@@ -33,7 +35,6 @@
 		B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19CC185B061000926E70 /* InfoPlist.strings */; };
 		B43F19D0185B061000926E70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19CF185B061000926E70 /* main.m */; };
 		B43F19D4185B061000926E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19D3185B061000926E70 /* AppDelegate.m */; };
-		B43F19D7185B061000926E70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43F19D5185B061000926E70 /* Main.storyboard */; };
 		B43F19DA185B061000926E70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19D9185B061000926E70 /* ViewController.m */; };
 		B43F19DC185B061000926E70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43F19DB185B061000926E70 /* Images.xcassets */; };
 		B43F19E3185B061000926E70 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19E2185B061000926E70 /* XCTest.framework */; };
@@ -41,8 +42,6 @@
 		B43F19E5185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
 		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
-		B47DB8E318D88D43008108EE /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B47DB8E218D88D43008108EE /* PrintIOBundle.bundle */; };
-		B47DB90518D8BD34008108EE /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47DB90418D8BD34008108EE /* PrintIO.framework */; };
 		B4A00DE0188947A50068A3F7 /* timess.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DDF188947A50068A3F7 /* timess.ttf */; };
 		B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */; };
 		B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE6188947F90068A3F7 /* steelfish_outline.otf */; };
@@ -71,6 +70,9 @@
 /* Begin PBXFileReference section */
 		B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestSDKApp-Info.plist"; sourceTree = "<group>"; };
 		B410D01318802A0400C20755 /* customization.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization.xml; sourceTree = "<group>"; };
+		B4187AF718E595480081978D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		B4187B1118E5C92A0081978D /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 3-28-14, 4.12 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
+		B4187B1918E5CC850081978D /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B41CADBB1884186F00A91191 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		B41CADCE18843AFB00A91191 /* dream.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dream.jpg; sourceTree = "<group>"; };
 		B41D88AC186D8791005A292A /* thunder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thunder.jpg; sourceTree = "<group>"; };
@@ -98,7 +100,6 @@
 		B43F19D1185B061000926E70 /* PrintIOSDKSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PrintIOSDKSample-Prefix.pch"; sourceTree = "<group>"; };
 		B43F19D2185B061000926E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B43F19D3185B061000926E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B43F19D6185B061000926E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B43F19D8185B061000926E70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B43F19D9185B061000926E70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B43F19DB185B061000926E70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -107,8 +108,6 @@
 		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
-		B47DB8E218D88D43008108EE /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 3-18-14, 3.16 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
-		B47DB90418D8BD34008108EE /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B4A00DDF188947A50068A3F7 /* timess.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = timess.ttf; sourceTree = "<group>"; };
 		B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "steelfish rg it.otf"; sourceTree = "<group>"; };
 		B4A00DE6188947F90068A3F7 /* steelfish_outline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = steelfish_outline.otf; sourceTree = "<group>"; };
@@ -145,7 +144,7 @@
 				B429BD8D186B0E0D002340BB /* SystemConfiguration.framework in Frameworks */,
 				B429BD98186B0F3F002340BB /* Twitter.framework in Frameworks */,
 				B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */,
-				B47DB90518D8BD34008108EE /* PrintIO.framework in Frameworks */,
+				B4187B1A18E5CC850081978D /* PrintIO.framework in Frameworks */,
 				B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,7 +230,7 @@
 			children = (
 				B43F19D2185B061000926E70 /* AppDelegate.h */,
 				B43F19D3185B061000926E70 /* AppDelegate.m */,
-				B43F19D5185B061000926E70 /* Main.storyboard */,
+				B4187AF718E595480081978D /* ViewController.xib */,
 				B43F19D8185B061000926E70 /* ViewController.h */,
 				B43F19D9185B061000926E70 /* ViewController.m */,
 				B43F19DB185B061000926E70 /* Images.xcassets */,
@@ -329,8 +328,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B47DB90418D8BD34008108EE /* PrintIO.framework */,
-				B47DB8E218D88D43008108EE /* PrintIOBundle.bundle */,
+				B4187B1918E5CC850081978D /* PrintIO.framework */,
+				B4187B1118E5C92A0081978D /* PrintIOBundle.bundle */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";
@@ -417,18 +416,17 @@
 				B4A00DE0188947A50068A3F7 /* timess.ttf in Resources */,
 				B4A00DEA188947F90068A3F7 /* steelfish_rg.otf in Resources */,
 				B410D01418802A0400C20755 /* customization.xml in Resources */,
-				B40FF4301887DA3F005B09E7 /* TestSDKApp-Info.plist in Resources */,
 				B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */,
 				B41D88AD186D8791005A292A /* thunder.jpg in Resources */,
 				B4A00DF1188948370068A3F7 /* CaviarDreams_BoldItalic.ttf in Resources */,
 				B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */,
+				B4187AF818E595480081978D /* ViewController.xib in Resources */,
 				B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */,
 				B4A00DF0188948370068A3F7 /* CaviarDreams_Bold.ttf in Resources */,
-				B47DB8E318D88D43008108EE /* PrintIOBundle.bundle in Resources */,
+				B4187B1218E5C92A0081978D /* PrintIOBundle.bundle in Resources */,
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
 				B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */,
-				B43F19D7185B061000926E70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,14 +476,6 @@
 				B43F19CD185B061000926E70 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B43F19D5185B061000926E70 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B43F19D6185B061000926E70 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		B43F19EB185B061000926E70 /* InfoPlist.strings */ = {

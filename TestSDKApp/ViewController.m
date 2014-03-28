@@ -39,7 +39,7 @@
     // Change title bar color
     if (self.switchTitleBarColor.isOn)
         [self.printIO titleBarColor:[UIColor magentaColor]
-                            fontColor:[UIColor whiteColor]];
+                          fontColor:[UIColor whiteColor]];
     
     // Set what
     if (self.switchPhotoSources.isOn){
@@ -53,7 +53,15 @@
     // Set country code
     if (self.switchCountryCode.isOn){
         [self.printIO countryCode:@"US"];
+    }
+    
+    // Set currency code
+    if (self.switchCurrencyCode.isOn){
         [self.printIO currencyCode:@"USD"];
+    }
+    
+    // Set language code
+    if (self.switchLanguageCode.isOn){
         [self.printIO languageCode:@"en"];
     }
     
@@ -73,9 +81,39 @@
         [self.printIO payeeName:self.txtPayeeName.text];
     }
     
-    //    [self.helloPics availablePhotoSources:[NSArray arrayWithObjects:
-    //                                            [NSNumber numberWithInt:PRINTIO_PS_FACEBOOK],
-    //                                            [NSNumber numberWithInt:PRINTIO_PS_INSTAGRAM], nil]];
+    // Set available photo sources
+    NSMutableArray *photoSources = [[NSMutableArray alloc]init];
+    
+    if (self.switchPSPhone.isOn){
+        [photoSources addObject:[NSNumber numberWithInt:PIO_SM_PHONE]];
+    }
+    
+    if (self.switchPSFacebook.isOn){
+        [photoSources addObject:[NSNumber numberWithInt:PIO_SM_FACEBOOK]];
+    }
+    
+    if (self.switchPSInstagram.isOn){
+        [photoSources addObject:[NSNumber numberWithInt:PIO_SM_INSTAGRAM]];
+    }
+    
+    if (self.switchPSPicasa.isOn){
+        [photoSources addObject:[NSNumber numberWithInt:PIO_SM_PICASA]];
+    }
+    
+    if (self.switchPSFlickr.isOn){
+        [photoSources addObject:[NSNumber numberWithInt:PIO_SM_FLICKR]];
+    }
+    
+    if (self.switchPSDropbox.isOn){
+        [photoSources addObject:[NSNumber numberWithInt:PIO_SM_DROPBOX]];
+    }
+    
+    if (self.switchPSPhotobucket.isOn){
+        [photoSources addObject:[NSNumber numberWithInt:PIO_SM_PHOTOBUCKET]];
+    }
+    
+    [self.printIO availablePhotoSources:photoSources];
+    
     
     // Jumps directly to product
     if (self.switchJumpToProduct.isOn)
@@ -84,7 +122,29 @@
     // Jump To SKU
     if (self.switchJumpToSKU.isOn){
         [self.printIO goToProductId:PRODUCT_PHONE_CASES()
-                              withSKU:@"PhoneCase-BlackberryZ10-Gloss"];
+                            withSKU:@"PhoneCase-BlackberryZ10-Gloss"];
+    }
+    
+    // Enable or disable Side Menu
+    if (self.switchEnableSideMenu.isOn){
+        [self.printIO enableSideMenu:YES];
+        
+        // Set options for Side Menu
+        NSArray *buttons = [NSArray arrayWithObjects:[NSNumber numberWithInt:PIO_SM_SEARCH_BAR],[NSNumber numberWithInt:PIO_SM_EXIT_BUTTON], [NSNumber numberWithInt:PIO_SM_PRODUCTS], [NSNumber numberWithInt:PIO_SM_FEATURED_PRODUCTS], [NSNumber numberWithInt:PIO_SM_VIEW_CART], nil];
+        
+        NSArray *options = [NSArray arrayWithObjects:[NSNumber numberWithInt:PIO_SM_CHANGE_CURRENCY], [NSNumber numberWithInt:PIO_SM_CHANGE_COUNTRY], [NSNumber numberWithInt:PIO_SM_CHANGE_LANGUAGE], nil];
+        
+        NSArray *infos = [NSArray arrayWithObjects:[NSNumber numberWithInt:PIO_SM_PRICING_CHART],[NSNumber numberWithInt:PIO_SM_SHARE_APP], [NSNumber numberWithInt:PIO_SM_LIKE_US_FB], [NSNumber numberWithInt:PIO_SM_RATE_APP], [NSNumber numberWithInt:PIO_SM_ABOUT], [NSNumber numberWithInt:PIO_SM_HOW_IT_WORKS], [NSNumber numberWithInt:PIO_SM_PAST_ORDERS], nil];
+        
+        [self.printIO sideMenuAddButtons:buttons
+                                 options:options
+                            optionsTitle:@"Options"
+                            optionsColor:[UIColor colorWithRed:34.0/255.0 green:160.0/255.0 blue:221.0/255.0 alpha:255.0/255.0]
+                           accountsTitle:@"Accounts"
+                           accountsColor:[UIColor colorWithRed:26.0/255.0 green:188.0/255.0 blue:156.0/255.0 alpha:255.0/255.0]
+                                    info:infos
+                               infoTitle:@"Info"
+                               infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]];
     }
     
     // Open widget
@@ -115,8 +175,8 @@
         NSString *recipeId = isProduction ? @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"  : @"12345-12345-12345-12345-12345";
         
         _printIO = [[PrintIO alloc]initWithViewController:self
-                                                  environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
-                                                     recipeId:recipeId];
+                                              environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
+                                                 recipeId:recipeId];
         // Set Delegate
         [_printIO setDelegate:self];
     }
@@ -127,7 +187,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    
+    [self.scrollView addSubview:self.panelView];
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.panelView.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning
