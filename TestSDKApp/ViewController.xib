@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
@@ -9,9 +9,12 @@
             <connections>
                 <outlet property="panelView" destination="tnN-HY-Os2" id="9sn-5u-ylg"/>
                 <outlet property="scrollView" destination="8vs-RM-dSZ" id="fvG-xz-4Kw"/>
+                <outlet property="switchBtnInNavBar" destination="EkA-nb-6Eq" id="Esk-vJ-GL7"/>
                 <outlet property="switchCountryCode" destination="7c1-q0-8cc" id="Bl6-hF-ni0"/>
                 <outlet property="switchCurrencyCode" destination="YwH-id-ztT" id="gxe-uM-wdC"/>
+                <outlet property="switchCustomDoubleTapScreen" destination="0mh-mK-CDc" id="l3n-4f-xYs"/>
                 <outlet property="switchCustomFonts" destination="zjA-5F-JQ8" id="x1C-Kr-Etq"/>
+                <outlet property="switchCustomShareText" destination="8X1-cL-3Qg" id="U3f-cf-tbi"/>
                 <outlet property="switchCustomization" destination="AOp-VF-lEw" id="NPg-5G-tXx"/>
                 <outlet property="switchEnableSideMenu" destination="E2J-Ac-eC2" id="Bn2-Cq-jqU"/>
                 <outlet property="switchJumpToProduct" destination="C5R-AD-B7F" id="dyK-tW-xe5"/>
@@ -45,7 +48,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <view contentMode="scaleToFill" id="tnN-HY-Os2">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="946"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="1060"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using PrintIO SDK example" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zVv-n1-qCu">
@@ -269,12 +272,42 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use custom share text:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oe6-Oi-8hk">
+                    <rect key="frame" x="21" y="880" width="188" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add custom double tap screen:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="2f6-46-ln2">
+                    <rect key="frame" x="22" y="906" width="196" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show menu button in navigation bar:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IRl-gP-N9X">
+                    <rect key="frame" x="23" y="946" width="195" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="E2J-Ac-eC2">
                     <rect key="frame" x="226" y="837" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8X1-cL-3Qg">
+                    <rect key="frame" x="226" y="875" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="0mh-mK-CDc">
+                    <rect key="frame" x="226" y="913" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="EkA-nb-6Eq">
+                    <rect key="frame" x="226" y="951" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5rA-bH-t2H">
-                    <rect key="frame" x="93" y="886" width="139" height="35"/>
+                    <rect key="frame" x="92" y="1014" width="139" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.32941177490000001" green="0.45098042490000001" blue="0.56862747670000002" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="Print something">

@@ -40,4 +40,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchPSDropbox;
 @property (weak, nonatomic) IBOutlet UISwitch *switchPSPhotobucket;
 
+@property (weak, nonatomic) IBOutlet UISwitch *switchCustomShareText;
+@property (weak, nonatomic) IBOutlet UISwitch *switchBtnInNavBar;
+@property (weak, nonatomic) IBOutlet UISwitch *switchCustomDoubleTapScreen;
+
 @end

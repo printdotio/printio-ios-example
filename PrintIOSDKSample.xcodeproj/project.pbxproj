@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		B410D01418802A0400C20755 /* customization.xml in Resources */ = {isa = PBXBuildFile; fileRef = B410D01318802A0400C20755 /* customization.xml */; };
 		B4187AF818E595480081978D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4187AF718E595480081978D /* ViewController.xib */; };
-		B4187B1218E5C92A0081978D /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4187B1118E5C92A0081978D /* PrintIOBundle.bundle */; };
-		B4187B1A18E5CC850081978D /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4187B1918E5CC850081978D /* PrintIO.framework */; };
 		B41CADBC1884186F00A91191 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B41CADBB1884186F00A91191 /* icon1.png */; };
 		B41CADCF18843AFB00A91191 /* dream.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B41CADCE18843AFB00A91191 /* dream.jpg */; };
 		B41D88AD186D8791005A292A /* thunder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B41D88AC186D8791005A292A /* thunder.jpg */; };
@@ -42,6 +40,10 @@
 		B43F19E5185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
 		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
+		B4685B6418EADFCA00978871 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4685B6318EADFCA00978871 /* PrintIOBundle.bundle */; };
+		B4685B6A18EAE70500978871 /* touch.png in Resources */ = {isa = PBXBuildFile; fileRef = B4685B6918EAE70500978871 /* touch.png */; };
+		B4685B7818EB0DCA00978871 /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4685B7718EB0DCA00978871 /* PrintIO.framework */; };
+		B48ADEC318E95A5200492F00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ADEC218E95A5200492F00 /* CoreLocation.framework */; };
 		B4A00DE0188947A50068A3F7 /* timess.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DDF188947A50068A3F7 /* timess.ttf */; };
 		B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */; };
 		B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE6188947F90068A3F7 /* steelfish_outline.otf */; };
@@ -71,8 +73,6 @@
 		B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestSDKApp-Info.plist"; sourceTree = "<group>"; };
 		B410D01318802A0400C20755 /* customization.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization.xml; sourceTree = "<group>"; };
 		B4187AF718E595480081978D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		B4187B1118E5C92A0081978D /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 3-28-14, 4.12 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
-		B4187B1918E5CC850081978D /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B41CADBB1884186F00A91191 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		B41CADCE18843AFB00A91191 /* dream.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dream.jpg; sourceTree = "<group>"; };
 		B41D88AC186D8791005A292A /* thunder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thunder.jpg; sourceTree = "<group>"; };
@@ -108,6 +108,10 @@
 		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
+		B4685B6318EADFCA00978871 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 4-1-14, 1.44 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
+		B4685B6918EAE70500978871 /* touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touch.png; sourceTree = "<group>"; };
+		B4685B7718EB0DCA00978871 /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
+		B48ADEC218E95A5200492F00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B4A00DDF188947A50068A3F7 /* timess.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = timess.ttf; sourceTree = "<group>"; };
 		B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "steelfish rg it.otf"; sourceTree = "<group>"; };
 		B4A00DE6188947F90068A3F7 /* steelfish_outline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = steelfish_outline.otf; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48ADEC318E95A5200492F00 /* CoreLocation.framework in Frameworks */,
 				B429BD9A186B0FA5002340BB /* Accounts.framework in Frameworks */,
 				B429BD8A186B0DF8002340BB /* AVFoundation.framework in Frameworks */,
 				B429BD8E186B0E2B002340BB /* AudioToolbox.framework in Frameworks */,
@@ -135,6 +140,7 @@
 				B429BD8B186B0DFF002340BB /* CFNetwork.framework in Frameworks */,
 				B429BD89186B0DF2002340BB /* libxml2.dylib in Frameworks */,
 				B429BD94186B0EF5002340BB /* libsqlite3.dylib in Frameworks */,
+				B4685B7818EB0DCA00978871 /* PrintIO.framework in Frameworks */,
 				B429BD8C186B0E05002340BB /* MessageUI.framework in Frameworks */,
 				B429BD91186B0E45002340BB /* MobileCoreServices.framework in Frameworks */,
 				B429BD92186B0E4B002340BB /* OpenGLES.framework in Frameworks */,
@@ -144,7 +150,6 @@
 				B429BD8D186B0E0D002340BB /* SystemConfiguration.framework in Frameworks */,
 				B429BD98186B0F3F002340BB /* Twitter.framework in Frameworks */,
 				B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */,
-				B4187B1A18E5CC850081978D /* PrintIO.framework in Frameworks */,
 				B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +176,7 @@
 				B4A00DDD188946700068A3F7 /* Customization XML */,
 				B4A00DDC188946620068A3F7 /* Custom Fonts */,
 				B41CADBB1884186F00A91191 /* icon1.png */,
+				B4685B6918EAE70500978871 /* touch.png */,
 				B41CADCE18843AFB00A91191 /* dream.jpg */,
 				B41D88AC186D8791005A292A /* thunder.jpg */,
 			);
@@ -208,6 +214,7 @@
 				B429BD77186B0D3E002340BB /* CoreMedia.framework */,
 				B429BD79186B0D45002340BB /* CoreVideo.framework */,
 				B429BD9B186B0FB5002340BB /* CoreTelephony.framework */,
+				B48ADEC218E95A5200492F00 /* CoreLocation.framework */,
 				B43F19C3185B061000926E70 /* Foundation.framework */,
 				B429BD7D186B0D5B002340BB /* MessageUI.framework */,
 				B429BD7F186B0D6F002340BB /* MobileCoreServices.framework */,
@@ -328,8 +335,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B4187B1918E5CC850081978D /* PrintIO.framework */,
-				B4187B1118E5C92A0081978D /* PrintIOBundle.bundle */,
+				B4685B7718EB0DCA00978871 /* PrintIO.framework */,
+				B4685B6318EADFCA00978871 /* PrintIOBundle.bundle */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";
@@ -423,10 +430,11 @@
 				B4187AF818E595480081978D /* ViewController.xib in Resources */,
 				B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */,
 				B4A00DF0188948370068A3F7 /* CaviarDreams_Bold.ttf in Resources */,
-				B4187B1218E5C92A0081978D /* PrintIOBundle.bundle in Resources */,
+				B4685B6418EADFCA00978871 /* PrintIOBundle.bundle in Resources */,
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
 				B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */,
+				B4685B6A18EAE70500978871 /* touch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +501,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -523,10 +534,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -534,7 +545,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -558,18 +572,21 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
 		B43F19F3185B061000926E70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
@@ -586,11 +603,12 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIOApp/IntermediateBuildFilesPath/UninstalledProducts",
 					"$(PROJECT_DIR)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-ecbrmppodoufoeaxvwzjoqibfidt/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
 				INFOPLIST_FILE = "TestSDKApp/TestSDKApp-Info.plist";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				"OTHER_LDFLAGS[arch=*]" = (
 					"-ObjC",
 					"-lstdc++",
@@ -598,7 +616,7 @@
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
 				PROVISIONING_PROFILE = "813D4341-9C26-4C2B-BBBB-D380FD7671D1";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -606,7 +624,10 @@
 		B43F19F4185B061000926E70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = (
+					armv7s,
+					armv7,
+				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
@@ -623,6 +644,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIOApp/IntermediateBuildFilesPath/UninstalledProducts",
 					"$(PROJECT_DIR)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-ecbrmppodoufoeaxvwzjoqibfidt/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
@@ -635,7 +657,7 @@
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
 				PROVISIONING_PROFILE = "813D4341-9C26-4C2B-BBBB-D380FD7671D1";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

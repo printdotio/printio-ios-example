@@ -147,8 +147,24 @@
                                infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]];
     }
     
+    // Custom share text. Will be used form side menu button.
+    if (self.switchCustomShareText.isOn){
+        [self.printIO setApplicationShareText:@"Example share app text with link http://www.google.com"];
+    }
+    
+    // Show custom double tap screen when customizing product
+    if (self.switchCustomDoubleTapScreen.isOn){
+        [self.printIO showCustomDoubleTapImage:[[NSBundle mainBundle] pathForResource:@"touch" ofType:@"png"]];
+    }
+    
+    // Show button in navigation bar
+    if (self.switchBtnInNavBar.isOn){
+        [self.printIO showMenuButtonInNavigationBar:[[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"]];
+    }
     // Open widget
     [self.printIO open];
+    
+    NSLog(@"widget starting");
 }
 
 #pragma mark - HelloPics Delegate
