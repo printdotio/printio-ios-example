@@ -43,5 +43,14 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchCustomShareText;
 @property (weak, nonatomic) IBOutlet UISwitch *switchBtnInNavBar;
 @property (weak, nonatomic) IBOutlet UISwitch *switchCustomDoubleTapScreen;
+@property (weak, nonatomic) IBOutlet UISwitch *switchShowTabBarInCustomizationScreen;
+@property (weak, nonatomic) IBOutlet UISwitch *switchHideImagesListInCustomization;
+@property (weak, nonatomic) IBOutlet UISwitch *switchPassPhotosInSDK;
+@property (weak, nonatomic) IBOutlet UISwitch *switchDisablePSWhenPhotosArePassed;
+@property (weak, nonatomic) IBOutlet UISwitch *switchUsePassedImageAsThumbForOnePhotoTemplate;
+@property (weak, nonatomic) IBOutlet UISwitch *switchDisablePSWhenPhotoIsPassedForOnePhototemplate;
+
+// Partners
+@property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;
 
 @end
