@@ -225,9 +225,13 @@
     PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"VIEW CART"
                                                                         type:PIO_SM_VIEW_CART
                                                                     iconPath:nil];
+    
+    PIOSideMenuButton *btnPastOrders = [[PIOSideMenuButton alloc]initWithTitle:@"PAST ORDERS"
+                                                                        type:PIO_SM_PAST_ORDERS
+                                                                    iconPath:nil];
     btnViewCart.fontSize = 15.0;
     
-    NSArray *buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, nil];
+    NSArray *buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, btnPastOrders, nil];
     
     // Options
     PIOSideMenuButton *btnChangeCurrency = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE CURRENCY"
@@ -273,6 +277,17 @@
     
     // Set visible buttons in Image Editor
     [self.printIO imageEditorShowButtons:[NSArray arrayWithObjects:[[PIOButton alloc]initWithType:PIO_BUTTON_IMAGE_EDITOR_INFO], nil]];
+    
+    // Show menu button in navigation bar
+    [self.printIO showMenuButtonInNavigationBar:[[NSBundle mainBundle] pathForResource:@"mg" ofType:@"png"]];
+    
+    // Change title bar color
+    [self.printIO titleBarColor:[UIColor darkGrayColor] fontColor:[UIColor whiteColor]];
+    
+    // Change shoping cart icon
+    [self.printIO setShopingCartIcon:[[NSBundle mainBundle]pathForResource:@"icon_cart" ofType:@"png"]];
+    
+    [self.printIO setPartnerId:PARTNER_MIRRORGRAM];
     
     // START WIDGET
     [self.printIO open];
