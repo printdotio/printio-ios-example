@@ -52,5 +52,6 @@
 
 // Partners
 @property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;
+@property (weak, nonatomic) IBOutlet UISwitch *SwitchMGPath2;
 
 @end

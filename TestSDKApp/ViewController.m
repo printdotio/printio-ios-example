@@ -19,7 +19,13 @@
 
 - (IBAction)onClickTestSDK:(id)sender
 {
-    // Check do we need to change setting for testing mirrorgram
+    // MG Path 2
+    if (self.SwitchMGPath2.isOn){
+        [self testMGPath2];
+        return;
+    }
+    
+    // MG Path 1
     if (self.switchMirrorgram.isOn){
         [self testMirrorgram];
         return;
@@ -200,6 +206,18 @@
 }
 
 #pragma mark - Settings for partners
+
+- (void)testMGPath2
+{
+    // Pass in one image
+    UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
+    NSArray *images = [NSArray arrayWithObjects:image1, nil];
+    [self.printIO images:images];
+    
+    [self.printIO payeeName:@"Mirrorgram"];
+    
+    [self testMirrorgram];
+}
 
 - (void)testMirrorgram
 {

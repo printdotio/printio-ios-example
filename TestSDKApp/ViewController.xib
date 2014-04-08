@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="SwitchMGPath2" destination="VVd-eN-Jxe" id="nXH-F5-WXO"/>
                 <outlet property="panelView" destination="tnN-HY-Os2" id="9sn-5u-ylg"/>
                 <outlet property="scrollView" destination="8vs-RM-dSZ" id="fvG-xz-4Kw"/>
                 <outlet property="switchBtnInNavBar" destination="EkA-nb-6Eq" id="Esk-vJ-GL7"/>
@@ -55,7 +56,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <view contentMode="scaleToFill" id="tnN-HY-Os2">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="1428"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="1489"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using PrintIO SDK example" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zVv-n1-qCu">
@@ -389,12 +390,22 @@
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mirrorgram PATH 2:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bhk-iK-Ngm">
+                    <rect key="frame" x="20" y="1350" width="188" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="U7g-yl-onP">
                     <rect key="frame" x="226" y="1306" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="VVd-eN-Jxe">
+                    <rect key="frame" x="226" y="1345" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5rA-bH-t2H">
-                    <rect key="frame" x="91" y="1365" width="139" height="35"/>
+                    <rect key="frame" x="91" y="1434" width="139" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.32941177490000001" green="0.45098042490000001" blue="0.56862747670000002" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="Print something">
