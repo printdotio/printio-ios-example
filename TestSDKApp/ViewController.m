@@ -214,7 +214,7 @@
     NSArray *images = [NSArray arrayWithObjects:image1, nil];
     [self.printIO images:images];
     
-    [self.printIO payeeName:@"Mirrorgram"];
+    
     
     [self testMirrorgram];
 }
@@ -232,24 +232,35 @@
     // Set main buttons for Side Menu
     PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@"CAMERA"
                                                                       type:PIO_SM_EXIT_BUTTON
-                                                                  iconPath:nil];
+                                                                  iconPath:[[NSBundle mainBundle] pathForResource:@"btn_camera" ofType:@"png"]];
     btnCamera.fontSize = 15.0;
     
     PIOSideMenuButton *btnProducts = [[PIOSideMenuButton alloc]initWithTitle:@"PRODUCTS"
                                                                         type:PIO_SM_PRODUCTS
-                                                                    iconPath:nil];
+                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"btn_products" ofType:@"png"]];
     btnProducts.fontSize = 15.0;
     
     PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"VIEW CART"
                                                                         type:PIO_SM_VIEW_CART
-                                                                    iconPath:nil];
+                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"btn_cart" ofType:@"png"]];
     
     PIOSideMenuButton *btnPastOrders = [[PIOSideMenuButton alloc]initWithTitle:@"PAST ORDERS"
-                                                                        type:PIO_SM_PAST_ORDERS
-                                                                    iconPath:nil];
+                                                                          type:PIO_SM_PAST_ORDERS
+                                                                      iconPath:nil];
+    
+    NSArray *buttons;
+    
+    if (self.SwitchMGPath2.isOn){
+        PIOSideMenuButton *btnShareWithImage = [[PIOSideMenuButton alloc]initWithTitle:@"   SHARE"
+                                                                                  type:PIO_SM_SHARE_WITH_IMAGE
+                                                                              iconPath:nil];
+        buttons = [NSArray arrayWithObjects:btnCamera, btnShareWithImage, btnProducts, btnViewCart, btnPastOrders, nil];
+    } else {
+        buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, btnPastOrders, nil];
+    }
+    
     btnViewCart.fontSize = 15.0;
     
-    NSArray *buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, btnPastOrders, nil];
     
     // Options
     PIOSideMenuButton *btnChangeCurrency = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE CURRENCY"
@@ -272,7 +283,7 @@
     // Infos
     PIOSideMenuButton *btnHowItWorks = [[PIOSideMenuButton alloc]initWithTitle:@"HOW IT WORKS"
                                                                           type:PIO_SM_HOW_IT_WORKS
-                                                                      iconPath:nil];
+                                                                      iconPath:[[NSBundle mainBundle] pathForResource:@"btn_info" ofType:@"png"]];
     btnHowItWorks.fontSize = 15.0;
     
     NSArray *infos = [NSArray arrayWithObjects:btnHowItWorks, nil];
@@ -280,12 +291,12 @@
     [self.printIO sideMenuAddButtons:buttons
                              options:options
                         optionsTitle:@"OPTIONS"
-                        optionsColor:[UIColor colorWithRed:34.0/255.0 green:160.0/255.0 blue:221.0/255.0 alpha:255.0/255.0]
+                        optionsColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]
                        accountsTitle:@"SOCIAL ACCOUNTS"
-                       accountsColor:[UIColor colorWithRed:26.0/255.0 green:188.0/255.0 blue:156.0/255.0 alpha:255.0/255.0]
+                       accountsColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]
                                 info:infos
                            infoTitle:@"INFO"
-                           infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]];
+                           infoColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]];
     
     // Show custom double tap screen when customizing product
     [self.printIO showCustomDoubleTapImage:[[NSBundle mainBundle] pathForResource:@"touch" ofType:@"png"]];
@@ -306,6 +317,10 @@
     [self.printIO setShopingCartIcon:[[NSBundle mainBundle]pathForResource:@"icon_cart" ofType:@"png"]];
     
     [self.printIO setPartnerId:PARTNER_MIRRORGRAM];
+    
+    [self.printIO setBackgoundImageForSideMenuItems:[[NSBundle mainBundle]pathForResource:@"bcg" ofType:@"png"]];
+    
+    [self.printIO payeeName:@"Mirrorgram"];
     
     // START WIDGET
     [self.printIO open];
