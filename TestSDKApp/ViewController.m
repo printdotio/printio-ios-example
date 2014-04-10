@@ -19,6 +19,12 @@
 
 - (IBAction)onClickTestSDK:(id)sender
 {
+    // MG Path 3
+    if (self.SwitchMGPath3.isOn){
+        [self testMGPath3];
+        return;
+    }
+    
     // MG Path 2
     if (self.SwitchMGPath2.isOn){
         [self testMGPath2];
@@ -207,6 +213,13 @@
 
 #pragma mark - Settings for partners
 
+- (void)testMGPath3
+{
+    [self.printIO setMGPathNumber:3];
+    
+    [self testMGPath2];
+}
+
 - (void)testMGPath2
 {
     // Pass in one image
@@ -308,10 +321,11 @@
     [self.printIO imageEditorShowButtons:[NSArray arrayWithObjects:[[PIOButton alloc]initWithType:PIO_BUTTON_IMAGE_EDITOR_INFO], nil]];
     
     // Show menu button in navigation bar
-    [self.printIO showMenuButtonInNavigationBar:[[NSBundle mainBundle] pathForResource:@"mg" ofType:@"png"]];
+    [self.printIO showMenuButtonInNavigationBar:[[NSBundle mainBundle] pathForResource:@"mg_menu" ofType:@"png"]];
     
     // Change title bar color
-    [self.printIO titleBarColor:[UIColor darkGrayColor] fontColor:[UIColor whiteColor]];
+    [self.printIO titleBarColor:[UIColor colorWithRed:72.0/255.0 green:72.0/255.0 blue:72.0/255.0 alpha:1.0]
+                      fontColor:[UIColor whiteColor]];
     
     // Change shoping cart icon
     [self.printIO setShopingCartIcon:[[NSBundle mainBundle]pathForResource:@"icon_cart" ofType:@"png"]];
@@ -321,6 +335,11 @@
     [self.printIO setBackgoundImageForSideMenuItems:[[NSBundle mainBundle]pathForResource:@"bcg" ofType:@"png"]];
     
     [self.printIO payeeName:@"Mirrorgram"];
+    
+    [self.printIO setPassedImageAsThumbForOnePhotoTemplate:YES];
+    
+    // Set custom icon
+    [self.printIO iconWithFileName:@"mg_menu"];
     
     // START WIDGET
     [self.printIO open];
