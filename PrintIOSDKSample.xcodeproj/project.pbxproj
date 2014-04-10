@@ -61,7 +61,7 @@
 		B4A00DF3188948370068A3F7 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */; };
 		B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DF5188948570068A3F7 /* aubrey.ttf */; };
 		B4C887A018F6E5A30097D97A /* mg_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C8879F18F6E5A30097D97A /* mg_menu.png */; };
-		B4C887A218F6FB240097D97A /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4C887A118F6FB240097D97A /* PrintIOBundle.bundle */; };
+		B4C887A418F6FC2A0097D97A /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4C887A318F6FC2A0097D97A /* PrintIOBundle.bundle */; };
 		B4F5FE091861FAB2000229A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F5FE071861FAA1000229A0 /* QuartzCore.framework */; };
 		B4F5FE0A1861FAC5000229A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F5FE071861FAA1000229A0 /* QuartzCore.framework */; };
 		B4F5FE0B1861FAD2000229A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C5185B061000926E70 /* CoreGraphics.framework */; };
@@ -138,7 +138,7 @@
 		B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		B4A00DF5188948570068A3F7 /* aubrey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aubrey.ttf; sourceTree = "<group>"; };
 		B4C8879F18F6E5A30097D97A /* mg_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_menu.png; sourceTree = "<group>"; };
-		B4C887A118F6FB240097D97A /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PrintIOBundle.bundle; sourceTree = "<group>"; };
+		B4C887A318F6FC2A0097D97A /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 4-10-14, 6.07 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B4F5FE051861FA6B000229A0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B4F5FE071861FAA1000229A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -370,7 +370,7 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B4C887A118F6FB240097D97A /* PrintIOBundle.bundle */,
+				B4C887A318F6FC2A0097D97A /* PrintIOBundle.bundle */,
 				B4755A5D18F1F95C00E80B99 /* PrintIO.framework */,
 			);
 			name = PrintIO;
@@ -465,7 +465,7 @@
 				B410D01418802A0400C20755 /* customization.xml in Resources */,
 				B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */,
 				B41D88AD186D8791005A292A /* thunder.jpg in Resources */,
-				B4C887A218F6FB240097D97A /* PrintIOBundle.bundle in Resources */,
+				B4C887A418F6FC2A0097D97A /* PrintIOBundle.bundle in Resources */,
 				B4A00DF1188948370068A3F7 /* CaviarDreams_BoldItalic.ttf in Resources */,
 				B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */,
 				B4187AF818E595480081978D /* ViewController.xib in Resources */,
