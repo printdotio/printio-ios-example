@@ -154,11 +154,14 @@
         [self.printIO sideMenuAddButtons:buttons
                                  options:options
                             optionsTitle:@"Options"
+                       optionsTitleColor:[UIColor whiteColor]
                             optionsColor:[UIColor colorWithRed:34.0/255.0 green:160.0/255.0 blue:221.0/255.0 alpha:255.0/255.0]
                            accountsTitle:@"Accounts"
+                      accountsTitleColor:[UIColor whiteColor]
                            accountsColor:[UIColor colorWithRed:26.0/255.0 green:188.0/255.0 blue:156.0/255.0 alpha:255.0/255.0]
                                     info:infos
                                infoTitle:@"Info"
+                          infoTitleColor:[UIColor whiteColor]
                                infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]];
     }
     
@@ -203,6 +206,16 @@
     // Use passed image as thumbnail for one phtoo template
     if (self.switchUsePassedImageAsThumbForOnePhotoTemplate.isOn){
         [self.printIO setPassedImageAsThumbForOnePhotoTemplate:YES];
+    }
+    
+    // Hide Category/Search view in Featured Products screen
+    if (self.hideCategoriesView.isOn){
+        [self.printIO hideCategoryViewInFeaturedProducts:YES];
+    }
+    
+    // Hide status bar
+    if (self.switchHideStatusBar.isOn){
+        [self.printIO hideStatusBar:YES];
     }
     
     // Open widget
@@ -257,9 +270,10 @@
                                                                         type:PIO_SM_VIEW_CART
                                                                     iconPath:[[NSBundle mainBundle] pathForResource:@"btn_cart" ofType:@"png"]];
     
-    PIOSideMenuButton *btnPastOrders = [[PIOSideMenuButton alloc]initWithTitle:@"PAST ORDERS"
-                                                                          type:PIO_SM_PAST_ORDERS
-                                                                      iconPath:nil];
+    PIOSideMenuButton *btnEmailSupport = [[PIOSideMenuButton alloc]initWithTitle:@"EMAIL SUPPORT"
+                                                                            type:PIO_SM_EMAIL_SUPPORT
+                                                                        iconPath:[[NSBundle mainBundle] pathForResource:@"btn_email_support" ofType:@"png"]];
+    btnEmailSupport.dataHolder = @"support@mirrorgram.com";
     
     NSArray *buttons;
     
@@ -267,13 +281,12 @@
         PIOSideMenuButton *btnShareWithImage = [[PIOSideMenuButton alloc]initWithTitle:@"   SHARE"
                                                                                   type:PIO_SM_SHARE_WITH_IMAGE
                                                                               iconPath:nil];
-        buttons = [NSArray arrayWithObjects:btnCamera, btnShareWithImage, btnProducts, btnViewCart, btnPastOrders, nil];
+        buttons = [NSArray arrayWithObjects:btnCamera, btnShareWithImage, btnProducts, btnViewCart, btnEmailSupport, nil];
     } else {
-        buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, btnPastOrders, nil];
+        buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, btnEmailSupport, nil];
     }
     
     btnViewCart.fontSize = 15.0;
-    
     
     // Options
     PIOSideMenuButton *btnChangeCurrency = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE CURRENCY"
@@ -304,11 +317,15 @@
     [self.printIO sideMenuAddButtons:buttons
                              options:options
                         optionsTitle:@"OPTIONS"
+                   optionsTitleColor:[UIColor blackColor]
                         optionsColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]
+     
                        accountsTitle:@"SOCIAL ACCOUNTS"
+                  accountsTitleColor:[UIColor blackColor]
                        accountsColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]
                                 info:infos
                            infoTitle:@"INFO"
+                      infoTitleColor:[UIColor blackColor]
                            infoColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]];
     
     // Show custom double tap screen when customizing product
@@ -328,7 +345,7 @@
                       fontColor:[UIColor whiteColor]];
     
     // Change shoping cart icon
-    [self.printIO setShopingCartIcon:[[NSBundle mainBundle]pathForResource:@"icon_cart" ofType:@"png"]];
+    [self.printIO setShopingCartIcon:[[NSBundle mainBundle]pathForResource:@"mg_cart" ofType:@"png"]];
     
     [self.printIO setPartnerId:PARTNER_MIRRORGRAM];
     
@@ -340,6 +357,9 @@
     
     // Set custom icon
     [self.printIO iconWithFileName:@"mg_menu"];
+    
+    [self.printIO hideCategoryViewInFeaturedProducts:YES];
+    [self.printIO hideStatusBar:YES];
     
     // START WIDGET
     [self.printIO open];

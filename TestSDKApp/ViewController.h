@@ -49,6 +49,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchDisablePSWhenPhotosArePassed;
 @property (weak, nonatomic) IBOutlet UISwitch *switchUsePassedImageAsThumbForOnePhotoTemplate;
 @property (weak, nonatomic) IBOutlet UISwitch *switchDisablePSWhenPhotoIsPassedForOnePhototemplate;
+@property (weak, nonatomic) IBOutlet UISwitch *hideCategoriesView;
+@property (weak, nonatomic) IBOutlet UISwitch *switchHideStatusBar;
 
 // Partners
 @property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;
