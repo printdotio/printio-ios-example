@@ -363,7 +363,6 @@
     
     // START WIDGET
     [self.printIO open];
-    
 }
 
 #pragma mark - HelloPics Delegate

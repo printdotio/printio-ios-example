@@ -28,6 +28,7 @@
 		B429BD98186B0F3F002340BB /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD97186B0F3F002340BB /* Twitter.framework */; };
 		B429BD9A186B0FA5002340BB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD99186B0FA5002340BB /* Accounts.framework */; };
 		B429BD9C186B0FB5002340BB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD9B186B0FB5002340BB /* CoreTelephony.framework */; };
+		B42F57CD18FAA8A400A9479A /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F57CC18FAA8A400A9479A /* PrintIO.framework */; };
 		B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C3185B061000926E70 /* Foundation.framework */; };
 		B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19CC185B061000926E70 /* InfoPlist.strings */; };
@@ -40,7 +41,7 @@
 		B43F19E5185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
 		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
-		B4755A5E18F1F95C00E80B99 /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4755A5D18F1F95C00E80B99 /* PrintIO.framework */; };
+		B47537A118FC8F0900B48D19 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B47537A018FC8F0900B48D19 /* PrintIOBundle.bundle */; };
 		B489518E18F59A9200C38041 /* mg_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B489518D18F59A9200C38041 /* mg_camera.png */; };
 		B489519418F59E7C00C38041 /* btn_products.png in Resources */ = {isa = PBXBuildFile; fileRef = B489518F18F59E7C00C38041 /* btn_products.png */; };
 		B489519518F59E7C00C38041 /* btn_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = B489519018F59E7C00C38041 /* btn_cart.png */; };
@@ -51,7 +52,6 @@
 		B48ADEC318E95A5200492F00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ADEC218E95A5200492F00 /* CoreLocation.framework */; };
 		B492168018F2BBA0002D0EB2 /* touch.png in Resources */ = {isa = PBXBuildFile; fileRef = B492167F18F2BBA0002D0EB2 /* touch.png */; };
 		B497202518F7ED330017301F /* mg_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = B497202418F7ED330017301F /* mg_cart.png */; };
-		B497203F18F852260017301F /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B497203E18F852260017301F /* PrintIOBundle.bundle */; };
 		B4A00DE0188947A50068A3F7 /* timess.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DDF188947A50068A3F7 /* timess.ttf */; };
 		B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */; };
 		B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE6188947F90068A3F7 /* steelfish_outline.otf */; };
@@ -100,6 +100,7 @@
 		B429BD97186B0F3F002340BB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		B429BD99186B0FA5002340BB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B429BD9B186B0FB5002340BB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B42F57CC18FAA8A400A9479A /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B43F19C0185B061000926E70 /* PrintIOSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintIOSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43F19C3185B061000926E70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B43F19C5185B061000926E70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,7 +118,7 @@
 		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
-		B4755A5D18F1F95C00E80B99 /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-darhkiabtmimuifpjhkowuevktyn/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
+		B47537A018FC8F0900B48D19 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 4-14-14, 11.47 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B489518D18F59A9200C38041 /* mg_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_camera.png; sourceTree = "<group>"; };
 		B489518F18F59E7C00C38041 /* btn_products.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_products.png; sourceTree = "<group>"; };
 		B489519018F59E7C00C38041 /* btn_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_cart.png; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		B48ADEC218E95A5200492F00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B492167F18F2BBA0002D0EB2 /* touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touch.png; sourceTree = "<group>"; };
 		B497202418F7ED330017301F /* mg_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_cart.png; sourceTree = "<group>"; };
-		B497203E18F852260017301F /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 4-11-14, 6.37 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B4A00DDF188947A50068A3F7 /* timess.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = timess.ttf; sourceTree = "<group>"; };
 		B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "steelfish rg it.otf"; sourceTree = "<group>"; };
 		B4A00DE6188947F90068A3F7 /* steelfish_outline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = steelfish_outline.otf; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				B429BD8B186B0DFF002340BB /* CFNetwork.framework in Frameworks */,
 				B429BD89186B0DF2002340BB /* libxml2.dylib in Frameworks */,
 				B429BD94186B0EF5002340BB /* libsqlite3.dylib in Frameworks */,
-				B4755A5E18F1F95C00E80B99 /* PrintIO.framework in Frameworks */,
+				B42F57CD18FAA8A400A9479A /* PrintIO.framework in Frameworks */,
 				B429BD8C186B0E05002340BB /* MessageUI.framework in Frameworks */,
 				B429BD91186B0E45002340BB /* MobileCoreServices.framework in Frameworks */,
 				B429BD92186B0E4B002340BB /* OpenGLES.framework in Frameworks */,
@@ -370,8 +370,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B497203E18F852260017301F /* PrintIOBundle.bundle */,
-				B4755A5D18F1F95C00E80B99 /* PrintIO.framework */,
+				B47537A018FC8F0900B48D19 /* PrintIOBundle.bundle */,
+				B42F57CC18FAA8A400A9479A /* PrintIO.framework */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";
@@ -465,7 +465,7 @@
 				B410D01418802A0400C20755 /* customization.xml in Resources */,
 				B497202518F7ED330017301F /* mg_cart.png in Resources */,
 				B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */,
-				B497203F18F852260017301F /* PrintIOBundle.bundle in Resources */,
+				B47537A118FC8F0900B48D19 /* PrintIOBundle.bundle in Resources */,
 				B41D88AD186D8791005A292A /* thunder.jpg in Resources */,
 				B4A00DF1188948370068A3F7 /* CaviarDreams_BoldItalic.ttf in Resources */,
 				B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */,
