@@ -38,6 +38,7 @@
                 <outlet property="switchPassPhotosInSDK" destination="brV-cq-gEu" id="Qef-Bt-6Tu"/>
                 <outlet property="switchPhotoSources" destination="1q7-2I-Usg" id="Axn-e0-avk"/>
                 <outlet property="switchProduction" destination="2RD-1e-L6O" id="vq9-bo-pRX"/>
+                <outlet property="switchSetCountryInFProducts" destination="tR1-pW-FpO" id="c1R-7R-TVz"/>
                 <outlet property="switchShowTabBarInCustomizationScreen" destination="nhl-1r-Lpj" id="MSX-Xd-Vyo"/>
                 <outlet property="switchTitleBarColor" destination="A4d-Xu-sKd" id="E0D-iC-7IZ"/>
                 <outlet property="switchUsePassedImageAsThumbForOnePhotoTemplate" destination="Doj-gI-PZq" id="JR1-93-vte"/>
@@ -59,7 +60,7 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <view contentMode="scaleToFill" id="tnN-HY-Os2">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="1582"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="1639"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using PrintIO SDK example" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zVv-n1-qCu">
@@ -394,6 +395,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set country on Featured Products screen:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aWf-UA-Z3v">
+                    <rect key="frame" x="22" y="1366" width="195" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="5LM-jO-g4f">
                     <rect key="frame" x="227" y="1287" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -402,43 +409,47 @@
                     <rect key="frame" x="226" y="1329" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="tR1-pW-FpO">
+                    <rect key="frame" x="227" y="1371" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </switch>
                 <view contentMode="scaleToFill" id="lVt-9y-7qM">
-                    <rect key="frame" x="32" y="1385" width="270" height="1"/>
+                    <rect key="frame" x="32" y="1431" width="270" height="1"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mirrorgram PATH 1:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dl8-Kb-heU">
-                    <rect key="frame" x="23" y="1401" width="188" height="21"/>
+                    <rect key="frame" x="20" y="1458" width="188" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="U7g-yl-onP">
-                    <rect key="frame" x="228" y="1396" width="51" height="31"/>
+                    <rect key="frame" x="225" y="1453" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mirrorgram PATH 2:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bhk-iK-Ngm">
-                    <rect key="frame" x="22" y="1440" width="188" height="21"/>
+                    <rect key="frame" x="19" y="1497" width="188" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="VVd-eN-Jxe">
-                    <rect key="frame" x="228" y="1435" width="51" height="31"/>
+                    <rect key="frame" x="225" y="1492" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mirrorgram PATH 3:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AJY-qU-DA7">
-                    <rect key="frame" x="22" y="1479" width="188" height="21"/>
+                    <rect key="frame" x="19" y="1536" width="188" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="4QM-QT-t2K">
-                    <rect key="frame" x="228" y="1474" width="51" height="31"/>
+                    <rect key="frame" x="225" y="1531" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5rA-bH-t2H">
-                    <rect key="frame" x="93" y="1527" width="139" height="35"/>
+                    <rect key="frame" x="90" y="1584" width="139" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.32941177490000001" green="0.45098042490000001" blue="0.56862747670000002" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="Print something">

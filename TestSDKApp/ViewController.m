@@ -218,6 +218,11 @@
         [self.printIO hideStatusBar:YES];
     }
     
+    // Set country in featured products
+    if (self.switchSetCountryInFProducts.isOn){
+        [self.printIO setCountryInFeaturedProducts:YES];
+    }
+    
     // Open widget
     [self.printIO open];
     
@@ -346,6 +351,7 @@
     
     // Change shoping cart icon
     [self.printIO setShopingCartIcon:[[NSBundle mainBundle]pathForResource:@"mg_cart" ofType:@"png"]];
+    [self.printIO setShopingCartIconWithCircle:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"]];
     
     [self.printIO setPartnerId:PARTNER_MIRRORGRAM];
     
@@ -360,6 +366,21 @@
     
     [self.printIO hideCategoryViewInFeaturedProducts:YES];
     [self.printIO hideStatusBar:YES];
+    
+    [self.printIO setBackgoundImageForToolbarInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_toolbar_bcg" ofType:@"png"]];
+    [self.printIO setIconForHelpButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_icon_question_mark" ofType:@"png"]];
+    [self.printIO setImageForAddPhotosButton:[[NSBundle mainBundle]pathForResource:@"mg_add_photos" ofType:@"png"]];
+    
+    [self.printIO setCountryInFeaturedProducts:YES];
+    
+    [self.printIO setIconForBackButton:[[NSBundle mainBundle]pathForResource:@"mg_back_new" ofType:@"png"]];
+    
+    // Path to XML customization file
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization_mg" ofType:@"xml"];
+    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+    [self.printIO customizationXML:xmlData];
+    
+    [self.printIO hideIconForUplaodInstructions:YES];
     
     // START WIDGET
     [self.printIO open];
@@ -406,10 +427,18 @@
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.panelView.frame.size.height);
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 #pragma mark - UITextField Delegate
@@ -419,5 +448,6 @@
     [textField resignFirstResponder];
     return NO;
 }
+\
 
 @end

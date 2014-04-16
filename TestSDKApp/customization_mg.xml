@@ -1,0 +1,25 @@
+<customization>
+    
+    <screen name="product_details">
+        <button name="button_create" bcg_color="#2277D4" font_color="#ffffff"/>
+    </screen>
+    
+    <screen name="dialog_two_buttons">
+        <button name="button_right" bcg_color="#2277D4" font_color="#ffffff"/>
+        <button name="button_left" bcg_color="#D1D1D1" font_color="#2277D4"/>
+    </screen>
+    
+    <screen name="dialog_arrange_photos">
+        <button name="button_right" bcg_color="#2277D4"/>
+        <button name="button_left" bcg_color="#D1D1D1"/>
+        <label name="label_right" font_color="#ffffff"/>
+        <label name="label_left" font_color="#2277D4"/>
+    </screen>
+    
+    <screen name="photo_sources">
+        <label name="label_title" font_color="#484848"/>
+        <label name="label_down" bcg_color="#484848"/>
+        <button name="button_next" bcg_color="#50A3FF" font_color="#ffffff"/>
+    </screen>
+    
+</customization>
