@@ -2,6 +2,11 @@
     
     <screen name="product_details">
         <button name="button_create" bcg_color="#2277D4" font_color="#ffffff"/>
+        <label name="label_1" font_color="#000000"/>
+        <label name="label_2" font_color="#000000"/>
+        <label name="label_3" font_color="#000000"/>
+        <label name="label_4" font_color="#000000"/>
+        <label name="label_5" font_color="#000000"/>
     </screen>
     
     <screen name="dialog_two_buttons">
@@ -20,6 +25,28 @@
         <label name="label_title" font_color="#484848"/>
         <label name="label_down" bcg_color="#484848"/>
         <button name="button_next" bcg_color="#50A3FF" font_color="#ffffff"/>
+    </screen>
+    
+    <screen name="shopping_cart">
+        <button name="button_edit" bcg_color="#484848" font_color="#ffffff" />
+        <button name="button_check_out" bcg_color="#50A3FF" font_color="#ffffff" />
+    </screen>
+    
+    <screen name="select_address">
+        <button name="button_edit" bcg_color="#484848" font_color="#ffffff" />
+        <button name="button_add" bcg_color="#50A3FF" font_color="#ffffff" />
+    </screen>
+    
+    <screen name="product_preview">
+        <label name="label_1" bcg_color="#484848" font_color="#ffffff" />
+        <label name="label_2" bcg_color="#484848" font_color="#ffffff" />
+        <label name="label_3" bcg_color="#484848" font_color="#ffffff" />
+        <label name="label_4" bcg_color="#484848" font_color="#ffffff" />
+    </screen>
+    
+    <screen name="image_editor">
+        <button name="button_back" bcg_color="#484848" font_color="#ffffff" title="Cancel"/>
+        <button name="button_save" bcg_color="#50A3FF" font_color="#ffffff" />
     </screen>
     
 </customization>

@@ -334,7 +334,7 @@
                            infoColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]];
     
     // Show custom double tap screen when customizing product
-    [self.printIO showCustomDoubleTapImage:[[NSBundle mainBundle] pathForResource:@"touch" ofType:@"png"]];
+    [self.printIO showCustomDoubleTapImage:@""];
     
     // Hide tab bar in Customize Product screen
     [self.printIO showTabBarInCustomizeProduct:NO];
@@ -381,6 +381,17 @@
     [self.printIO customizationXML:xmlData];
     
     [self.printIO hideIconForUplaodInstructions:YES];
+    
+    [self.printIO setDoubleTapBaloonImage:[[NSBundle mainBundle]pathForResource:@"mg_double_tap_balloon" ofType:@"png"]
+                                     text:@"Double tap photo to edit"
+                                textColor:[UIColor whiteColor]];
+    
+    [self.printIO removePlusFromAddMoreProductsButton:YES];
+    
+    [self.printIO setBackgroundColorForNavBarButtonLeft:[UIColor clearColor]
+                                                  right:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:1.0]];
+    
+    [self.printIO removeLogoFromPaymentScreen:YES];
     
     // START WIDGET
     [self.printIO open];
@@ -429,6 +440,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    
 }
 
 - (void)didReceiveMemoryWarning
