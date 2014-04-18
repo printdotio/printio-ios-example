@@ -19,6 +19,12 @@
 
 - (IBAction)onClickTestSDK:(id)sender
 {
+    // Photobucket
+    if (self.switchPhotobucket.isOn){
+        [self testPhotobucket];
+        return;
+    }
+    
     // MG Path 3
     if (self.SwitchMGPath3.isOn){
         [self testMGPath3];
@@ -397,6 +403,119 @@
     [self.printIO open];
 }
 
+- (void)testPhotobucket
+{
+    [self.printIO enableSideMenu:YES];
+    [self.printIO usePhotoSources:YES];
+    [self.printIO showTabBarInCustomizeProduct:YES];
+    [self.printIO titleBarColor:[UIColor whiteColor] fontColor:[UIColor blackColor]];
+    [self.printIO payeeName:@"Photobucket"];
+    [self.printIO setCountryInFeaturedProducts:YES];
+    [self.printIO setStatusBarDark:YES];
+    [self.printIO setShopingCartIconWithCircle:[[NSBundle mainBundle]pathForResource:@"pb_cart" ofType:@"png"]];
+    [self.printIO setIconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
+    [self.printIO setIconForSideMenu:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"]];
+    [self.printIO setBackgoundImageForSideMenuItems:[[NSBundle mainBundle]pathForResource:@"pb_bcg" ofType:@"png"]];
+    [self.printIO setBackgroundColorForSideMenu:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];
+    
+    // Available Photo sources
+    PIOSideMenuButton *btnPhone = [[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE];
+    
+    PIOSideMenuButton *btnInstagram = [[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM];
+    btnInstagram.iconPath = [[NSBundle mainBundle] pathForResource:@"pb_btn_side_menu_instagram_transparent" ofType:@"png"];
+    btnInstagram.iconPathSelected = [[NSBundle mainBundle] pathForResource:@"pb_btn_side_menu_instagram_transparent" ofType:@"png"];
+    btnInstagram.textColor = [UIColor blackColor];
+    
+    PIOSideMenuButton *btnFb = [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK];
+    btnFb.iconPath = [[NSBundle mainBundle] pathForResource:@"pb_btn_side_menu_fb_transparent" ofType:@"png"];
+    btnFb.iconPathSelected = [[NSBundle mainBundle] pathForResource:@"pb_btn_side_menu_fb_transparent" ofType:@"png"];
+    btnFb.textColor = [UIColor blackColor];
+    
+    [self.printIO availablePhotoSources:[NSArray arrayWithObjects:btnPhone,btnInstagram,btnFb, nil]];
+    
+    // Set main buttons for Side Menu
+    PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@"EXIT"
+                                                                      type:PIO_SM_EXIT_BUTTON
+                                                                  iconPath:[[NSBundle mainBundle] pathForResource:@"pb_btn_camera" ofType:@"png"]];
+    btnCamera.fontSize = 15.0;
+    btnCamera.textColor = [UIColor blackColor];
+    
+    PIOSideMenuButton *btnProducts = [[PIOSideMenuButton alloc]initWithTitle:@"PRODUCTS"
+                                                                        type:PIO_SM_PRODUCTS
+                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"pb_btn_products" ofType:@"png"]];
+    btnProducts.fontSize = 15.0;
+    btnProducts.textColor = [UIColor blackColor];
+    
+    PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"VIEW CART"
+                                                                        type:PIO_SM_VIEW_CART
+                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"pb_btn_cart" ofType:@"png"]];
+    btnViewCart.textColor = [UIColor blackColor];
+    
+    PIOSideMenuButton *btnEmailSupport = [[PIOSideMenuButton alloc]initWithTitle:@"EMAIL SUPPORT"
+                                                                            type:PIO_SM_EMAIL_SUPPORT
+                                                                        iconPath:[[NSBundle mainBundle] pathForResource:@"pb_btn_email_support" ofType:@"png"]];
+    btnEmailSupport.dataHolder = @"support@photobucket.com";
+    btnEmailSupport.textColor = [UIColor blackColor];
+    NSArray *buttons;
+    
+    if (self.SwitchMGPath2.isOn){
+        PIOSideMenuButton *btnShareWithImage = [[PIOSideMenuButton alloc]initWithTitle:@"   SHARE"
+                                                                                  type:PIO_SM_SHARE_WITH_IMAGE
+                                                                              iconPath:nil];
+        buttons = [NSArray arrayWithObjects:btnCamera, btnShareWithImage, btnProducts, btnViewCart, btnEmailSupport, nil];
+    } else {
+        buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, btnEmailSupport, nil];
+    }
+    
+    btnViewCart.fontSize = 15.0;
+    
+    // Options
+    PIOSideMenuButton *btnChangeCurrency = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE CURRENCY"
+                                                                              type:PIO_SM_CHANGE_CURRENCY
+                                                                          iconPath:nil];
+    btnChangeCurrency.fontSize = 14.0;
+    btnChangeCurrency.textColor = [UIColor blackColor];
+    
+    PIOSideMenuButton *btnChangeCountry = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE COUNTRY"
+                                                                             type:PIO_SM_CHANGE_COUNTRY
+                                                                         iconPath:nil];
+    btnChangeCountry.fontSize = 14.0;
+    btnChangeCountry.textColor = [UIColor blackColor];
+    
+    PIOSideMenuButton *btnChangeLanguage = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE LANGUAGE"
+                                                                              type:PIO_SM_CHANGE_LANGUAGE
+                                                                          iconPath:nil];
+    btnChangeLanguage.fontSize = 14.0;
+    btnChangeLanguage.textColor = [UIColor blackColor];
+    
+    NSArray *options = [NSArray arrayWithObjects:btnChangeCurrency, btnChangeCountry, btnChangeLanguage, nil];
+    
+    // Infos
+    PIOSideMenuButton *btnHowItWorks = [[PIOSideMenuButton alloc]initWithTitle:@"HOW IT WORKS"
+                                                                          type:PIO_SM_HOW_IT_WORKS
+                                                                      iconPath:[[NSBundle mainBundle] pathForResource:@"pb_btn_info" ofType:@"png"]];
+    btnHowItWorks.fontSize = 15.0;
+    btnHowItWorks.textColor = [UIColor blackColor];
+    
+    NSArray *infos = [NSArray arrayWithObjects:btnHowItWorks, nil];
+    
+    [self.printIO sideMenuAddButtons:buttons
+                             options:options
+                        optionsTitle:@"OPTIONS"
+                   optionsTitleColor:[UIColor whiteColor]
+                        optionsColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:255.0/255.0]
+     
+                       accountsTitle:@"SOCIAL ACCOUNTS"
+                  accountsTitleColor:[UIColor whiteColor]
+                       accountsColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:255.0/255.0]
+                                info:infos
+                           infoTitle:@"INFO"
+                      infoTitleColor:[UIColor whiteColor]
+                           infoColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:255.0/255.0]];
+    
+    [self.printIO open];
+}
+
 #pragma mark - HelloPics Delegate
 
 - (void)PrintIOWidgetOnOpen
@@ -440,7 +559,19 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"SHIPPING TO: %@ ", @"UNITED"]];
+    [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, 12)];
+    [str addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:14] range:NSMakeRange(13, str.length - 13)];
     
+    NSTextAttachment *imageAtt = [[NSTextAttachment alloc]init];
+    imageAtt.image = [UIImage imageNamed:@"arrow_down"];
+    
+    NSAttributedString *att = [NSAttributedString attributedStringWithAttachment:imageAtt];
+    
+    [str replaceCharactersInRange:NSMakeRange([str string].length - 1, 1) withAttributedString:att];
+    
+   // [(UILabel *)[self.view viewWithTag:8] setAttributedText:str];
+    //[(UILabel *)[self.view viewWithTag:8] setBackgroundColor:[UIColor redColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -460,6 +591,5 @@
     [textField resignFirstResponder];
     return NO;
 }
-\
 
 @end
