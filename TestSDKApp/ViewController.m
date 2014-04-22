@@ -229,6 +229,11 @@
         [self.printIO setCountryInFeaturedProducts:YES];
     }
     
+    // Change loading GIF animation
+    if (self.switchCustomGIF.isOn){
+        [self.printIO setLoadingGIF:@"load"];
+    }
+    
     // Open widget
     [self.printIO open];
     
@@ -417,6 +422,10 @@
     [self.printIO setIconForSideMenu:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"]];
     [self.printIO setBackgoundImageForSideMenuItems:[[NSBundle mainBundle]pathForResource:@"pb_bcg" ofType:@"png"]];
     [self.printIO setBackgroundColorForSideMenu:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];
+    [self.printIO hideStatusBar:YES];
+    [self.printIO setPartnerId:PARTNER_PHOTOBUCKET];
+    [self.printIO iconWithFileName:@""];
+    [self.printIO removeLogoFromPaymentScreen:YES];
     
     // Available Photo sources
     PIOSideMenuButton *btnPhone = [[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE];
@@ -559,19 +568,9 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    NSMutableAttributedString *str = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"SHIPPING TO: %@ ", @"UNITED"]];
-    [str addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, 12)];
-    [str addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:14] range:NSMakeRange(13, str.length - 13)];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO
+                                            withAnimation:UIStatusBarAnimationSlide];
     
-    NSTextAttachment *imageAtt = [[NSTextAttachment alloc]init];
-    imageAtt.image = [UIImage imageNamed:@"arrow_down"];
-    
-    NSAttributedString *att = [NSAttributedString attributedStringWithAttachment:imageAtt];
-    
-    [str replaceCharactersInRange:NSMakeRange([str string].length - 1, 1) withAttributedString:att];
-    
-   // [(UILabel *)[self.view viewWithTag:8] setAttributedText:str];
-    //[(UILabel *)[self.view viewWithTag:8] setBackgroundColor:[UIColor redColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -591,5 +590,9 @@
     [textField resignFirstResponder];
     return NO;
 }
+
+#pragma mark - FOR TEST
+
+
 
 @end

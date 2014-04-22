@@ -41,10 +41,13 @@
 		B43F19E5185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
 		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
+		B464E69A190660A00033FB98 /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = B464E699190660A00033FB98 /* load.gif */; };
+		B464E69C190662A80033FB98 /* mg_image_editor_info.png in Resources */ = {isa = PBXBuildFile; fileRef = B464E69B190662A80033FB98 /* mg_image_editor_info.png */; };
 		B471EF3C18FE66FA00BE63FB /* mg_cart_new.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF3B18FE66FA00BE63FB /* mg_cart_new.png */; };
 		B471EF3E18FE6D2200BE63FB /* mg_back_new.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF3D18FE6D2200BE63FB /* mg_back_new.png */; };
 		B471EF4218FE794600BE63FB /* mg_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF4118FE794600BE63FB /* mg_menu.png */; };
 		B471EF4618FE7A0900BE63FB /* customization_mg.xml in Resources */ = {isa = PBXBuildFile; fileRef = B471EF4518FE7A0900BE63FB /* customization_mg.xml */; };
+		B478E8AA1905DC2D00F55D0B /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B478E8A91905DC2D00F55D0B /* PrintIOBundle.bundle */; };
 		B4877C0A18FFB8EB00F56D33 /* mg_double_tap_balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = B4877C0918FFB8EB00F56D33 /* mg_double_tap_balloon.png */; };
 		B489518E18F59A9200C38041 /* mg_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B489518D18F59A9200C38041 /* mg_camera.png */; };
 		B489519418F59E7C00C38041 /* btn_products.png in Resources */ = {isa = PBXBuildFile; fileRef = B489518F18F59E7C00C38041 /* btn_products.png */; };
@@ -84,7 +87,6 @@
 		B4C41F9B19013B0B00D6013F /* btn_drag_drop.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F9719013B0B00D6013F /* btn_drag_drop.png */; };
 		B4C41F9C19013B0B00D6013F /* btn_home.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F9819013B0B00D6013F /* btn_home.png */; };
 		B4C41FA21901456400D6013F /* mg_camera_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41FA11901456400D6013F /* mg_camera_small@2x.png */; };
-		B4C41FB8190174F000D6013F /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4C41FB7190174F000D6013F /* PrintIOBundle.bundle */; };
 		B4F5FE091861FAB2000229A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F5FE071861FAA1000229A0 /* QuartzCore.framework */; };
 		B4F5FE0A1861FAC5000229A0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F5FE071861FAA1000229A0 /* QuartzCore.framework */; };
 		B4F5FE0B1861FAD2000229A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C5185B061000926E70 /* CoreGraphics.framework */; };
@@ -141,10 +143,13 @@
 		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
+		B464E699190660A00033FB98 /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = load.gif; sourceTree = "<group>"; };
+		B464E69B190662A80033FB98 /* mg_image_editor_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_image_editor_info.png; sourceTree = "<group>"; };
 		B471EF3B18FE66FA00BE63FB /* mg_cart_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_cart_new.png; sourceTree = "<group>"; };
 		B471EF3D18FE6D2200BE63FB /* mg_back_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_back_new.png; sourceTree = "<group>"; };
 		B471EF4118FE794600BE63FB /* mg_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_menu.png; sourceTree = "<group>"; };
 		B471EF4518FE7A0900BE63FB /* customization_mg.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization_mg.xml; sourceTree = "<group>"; };
+		B478E8A91905DC2D00F55D0B /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 4-22-14, 1.06 AM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B4877C0918FFB8EB00F56D33 /* mg_double_tap_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_double_tap_balloon.png; sourceTree = "<group>"; };
 		B489518D18F59A9200C38041 /* mg_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_camera.png; sourceTree = "<group>"; };
 		B489518F18F59E7C00C38041 /* btn_products.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_products.png; sourceTree = "<group>"; };
@@ -184,7 +189,6 @@
 		B4C41F9719013B0B00D6013F /* btn_drag_drop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_drag_drop.png; sourceTree = "<group>"; };
 		B4C41F9819013B0B00D6013F /* btn_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_home.png; sourceTree = "<group>"; };
 		B4C41FA11901456400D6013F /* mg_camera_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mg_camera_small@2x.png"; sourceTree = "<group>"; };
-		B4C41FB7190174F000D6013F /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 4-18-14, 4.57 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B4F5FE051861FA6B000229A0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B4F5FE071861FAA1000229A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -345,6 +349,7 @@
 		B471EF4318FE79D600BE63FB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B464E69B190662A80033FB98 /* mg_image_editor_info.png */,
 				B4C41FA11901456400D6013F /* mg_camera_small@2x.png */,
 				B4C41F9519013B0B00D6013F /* btn_arrange.png */,
 				B4C41F9619013B0B00D6013F /* btn_business.png */,
@@ -372,6 +377,7 @@
 		B489518C18F59A5400C38041 /* MG.assets */ = {
 			isa = PBXGroup;
 			children = (
+				B464E699190660A00033FB98 /* load.gif */,
 				B471EF4518FE7A0900BE63FB /* customization_mg.xml */,
 				B471EF4318FE79D600BE63FB /* Images */,
 			);
@@ -437,7 +443,7 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B4C41FB7190174F000D6013F /* PrintIOBundle.bundle */,
+				B478E8A91905DC2D00F55D0B /* PrintIOBundle.bundle */,
 				B42F57CC18FAA8A400A9479A /* PrintIO.framework */,
 			);
 			name = PrintIO;
@@ -562,7 +568,8 @@
 				B410D01418802A0400C20755 /* customization.xml in Resources */,
 				B497202518F7ED330017301F /* mg_cart.png in Resources */,
 				B471EF3E18FE6D2200BE63FB /* mg_back_new.png in Resources */,
-				B4C41FB8190174F000D6013F /* PrintIOBundle.bundle in Resources */,
+				B478E8AA1905DC2D00F55D0B /* PrintIOBundle.bundle in Resources */,
+				B464E69C190662A80033FB98 /* mg_image_editor_info.png in Resources */,
 				B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */,
 				B4C41F8C19010CD500D6013F /* pb_btn_camera.png in Resources */,
 				B41D88AD186D8791005A292A /* thunder.jpg in Resources */,
@@ -574,6 +581,7 @@
 				B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */,
 				B489519418F59E7C00C38041 /* btn_products.png in Resources */,
 				B4C41F7A1901061F00D6013F /* pb_cart.png in Resources */,
+				B464E69A190660A00033FB98 /* load.gif in Resources */,
 				B4C41F80190109D500D6013F /* pb_menu.png in Resources */,
 				B4A00DF0188948370068A3F7 /* CaviarDreams_Bold.ttf in Resources */,
 				B4877C0A18FFB8EB00F56D33 /* mg_double_tap_balloon.png in Resources */,

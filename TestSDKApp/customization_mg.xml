@@ -56,14 +56,19 @@
     </screen>
     
     <screen name="image_editor">
-        <button name="button_back" bcg_color="#484848" font_color="#ffffff" title="Cancel"/>
+        <button name="button_back" bcg_color="#d1d1d1" font_color="#000000" title="Cancel"/>
         <button name="button_save" bcg_color="#50A3FF" font_color="#ffffff" />
+        <button name="button_1" font_color="#ccd0d5" image_name="mg_image_editor_info" image_format="png"/>
     </screen>
     
     <screen name="address_validation">
         <button name="button_accept" bcg_color="#50A3FF" font_color="#ffffff" />
         <button name="button_edit" bcg_color="#484848" font_color="#ffffff" />
         <button name="button_edit_down" bcg_color="#484848" font_color="#ffffff" />
+    </screen>
+    
+    <screen name="shipment_review">
+        <button name="button_enter" bcg_color="#50A3FF" font_color="#ffffff" />
     </screen>
     
     <screen name="order_confirmation">
@@ -73,6 +78,11 @@
     <screen name="customize_books">
         <button name="button_back" bcg_color="#484848" font_color="#ffffff" />
         <button name="button_buy" bcg_color="#50A3FF" font_color="#ffffff" />
+    </screen>
+    
+    <screen name="credit_card">
+        <button name="button_1" bcg_color="#50A3FF" font_color="#ffffff" />
+        <button name="button_2" bcg_color="#484848" font_color="#ffffff" />
     </screen>
     
 </customization>

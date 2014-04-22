@@ -52,6 +52,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *hideCategoriesView;
 @property (weak, nonatomic) IBOutlet UISwitch *switchHideStatusBar;
 @property (weak, nonatomic) IBOutlet UISwitch *switchSetCountryInFProducts;
+@property (weak, nonatomic) IBOutlet UISwitch *switchCustomGIF;
 
 // Partners
 @property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;
