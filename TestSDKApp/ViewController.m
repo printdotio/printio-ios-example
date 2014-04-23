@@ -19,6 +19,12 @@
 
 - (IBAction)onClickTestSDK:(id)sender
 {
+    // Yellowlab-500px
+    if (self.switchYellowLab500px.isOn){
+        [self testYellowlab500px];
+        return;
+    }
+    
     // Photobucket
     if (self.switchPhotobucket.isOn){
         [self testPhotobucket];
@@ -234,6 +240,11 @@
         [self.printIO setLoadingGIF:@"load"];
     }
     
+    // Photo Arrangement option
+    if (self.switchPhotoArrangement.isOn){
+        [self.printIO setPhotoArrangement:PIO_PHOTO_ARRANGEMENT_AUTO];
+    }
+    
     // Open widget
     [self.printIO open];
     
@@ -241,6 +252,36 @@
 }
 
 #pragma mark - Settings for partners
+
+- (void)testYellowlab500px
+{
+    [self.printIO removeLogoFromPaymentScreen:YES];
+    [self.printIO enableSideMenu:YES];
+    [self.printIO usePhotoSources:YES];
+    [self.printIO availablePhotoSources:[NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE],[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK], nil]];
+    
+    // Set main buttons for Side Menu
+    PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@"EXIT"
+                                                                      type:PIO_SM_EXIT_BUTTON
+                                                                  iconPath:[[NSBundle mainBundle] pathForResource:@"btn_camera" ofType:@"png"]];
+    btnCamera.fontSize = 15.0;
+    
+    PIOSideMenuButton *btnProducts = [[PIOSideMenuButton alloc]initWithTitle:@"PRODUCTS"
+                                                                        type:PIO_SM_PRODUCTS
+                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"btn_products" ofType:@"png"]];
+    btnProducts.fontSize = 15.0;
+    
+    PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"VIEW CART"
+                                                                        type:PIO_SM_VIEW_CART
+                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"btn_cart" ofType:@"png"]];
+    
+    PIOSideMenuButton *btnEmailSupport = [[PIOSideMenuButton alloc]initWithTitle:@"EMAIL SUPPORT"
+                                                                            type:PIO_SM_EMAIL_SUPPORT
+                                                                        iconPath:[[NSBundle mainBundle] pathForResource:@"btn_email_support" ofType:@"png"]];
+    btnEmailSupport.dataHolder = @"support@support.com";
+    
+    [self.printIO open];
+}
 
 - (void)testMGPath3
 {
@@ -525,7 +566,7 @@
     [self.printIO open];
 }
 
-#pragma mark - HelloPics Delegate
+#pragma mark - PrintIO Delegate
 
 - (void)PrintIOWidgetOnOpen
 {
@@ -535,6 +576,12 @@
 - (void)PrintIOWidgetOnClose
 {
     NSLog(@"HelloPicsWidgetOnClose");
+    _printIO = nil;
+}
+
+- (void)PrintIOWidgetOnCloseWithOrderData:(NSMutableDictionary *)orderData
+{
+    NSLog(@"orderData: %@", orderData);
     _printIO = nil;
 }
 

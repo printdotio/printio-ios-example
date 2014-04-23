@@ -53,11 +53,13 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchHideStatusBar;
 @property (weak, nonatomic) IBOutlet UISwitch *switchSetCountryInFProducts;
 @property (weak, nonatomic) IBOutlet UISwitch *switchCustomGIF;
+@property (weak, nonatomic) IBOutlet UISwitch *switchPhotoArrangement;
 
 // Partners
 @property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;
 @property (weak, nonatomic) IBOutlet UISwitch *SwitchMGPath2;
 @property (weak, nonatomic) IBOutlet UISwitch *SwitchMGPath3;
 @property (weak, nonatomic) IBOutlet UISwitch *switchPhotobucket;
+@property (weak, nonatomic) IBOutlet UISwitch *switchYellowLab500px;
 
 @end
