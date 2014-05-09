@@ -8,10 +8,14 @@
 
 #import "ViewController.h"
 #import <PrintIO/PIOSideMenuButton.h>
+#import <PrintIO/PIOVariantOption.h>
+#import "VCVariantsOptions.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) PrintIO *printIO;
+
+@property (nonatomic, strong) NSDictionary *userData;
 
 @end
 
@@ -49,66 +53,16 @@
         return;
     }
     
-    UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
-    //UIImage *image2 = [UIImage imageNamed:@"thunder.jpg"];
+    // Navigation bar
+    [self.printIO navigationBarColor:self.switchTitleBarColor.isOn ? [UIColor blueColor] : [UIColor whiteColor]
+                          titleColor:self.switchTitleBarColor.isOn ? [UIColor whiteColor] : [UIColor blackColor]
+           leftButtonBackgroundColor:nil
+          rightButtonBackgroundColor:nil
+                     titleButtonIcon:self.switchBtnInNavBar.isOn ? [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"] : nil];
+    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
+                 withNumberOfProducts:YES];
     
-    NSArray *images = [NSArray arrayWithObjects:image1, nil];
-    
-    //@"http://res.cloudinary.com/demo/image/upload/sample.jpg",
-    //@"http://photographylife.com/wp-content/uploads/2012/10/Nikon-D600-Sample-11.jpg",
-    //@"http://www.digitaltrends.com/wp-content/uploads/2013/03/vertu-constellation-review-sample-image-flowers.jpg",
-    
-    // Path to XML customization file
-    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization"
-                                                        ofType:@"xml"];
-    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
-    
-    // Set customization file
-    if (self.switchCustomization.isOn)
-        [self.printIO customizationXML:xmlData];
-    
-    // Change title bar color
-    if (self.switchTitleBarColor.isOn)
-        [self.printIO titleBarColor:[UIColor magentaColor]
-                          fontColor:[UIColor whiteColor]];
-    
-    // Set what
-    if (self.switchPhotoSources.isOn){
-        [self.printIO usePhotoSources:self.switchPhotoSources.isOn];
-    }
-    
-    // Set country code
-    if (self.switchCountryCode.isOn){
-        [self.printIO countryCode:@"US"];
-    }
-    
-    // Set currency code
-    if (self.switchCurrencyCode.isOn){
-        [self.printIO currencyCode:@"USD"];
-    }
-    
-    // Set language code
-    if (self.switchLanguageCode.isOn){
-        [self.printIO languageCode:@"en"];
-    }
-    
-    // Set custom icon
-    [self.printIO iconWithFileName:@"icon1"];
-    
-    // Set custom fonts
-    if (self.switchCustomFonts.isOn){
-        NSArray *fonts = @[@"timess.ttf", @"timess.ttf",
-                           @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
-        
-        [self.printIO customFonts:fonts];
-    }
-    
-    // Set Payee name
-    if (self.txtPayeeName.text){
-        [self.printIO payeeName:self.txtPayeeName.text];
-    }
-    
-    // Set available photo sources
+    // Photo Sources
     NSMutableArray *photoSources = [[NSMutableArray alloc]init];
     
     if (self.switchPSPhone.isOn){
@@ -141,6 +95,53 @@
     
     [self.printIO availablePhotoSources:photoSources];
     
+    UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
+    //UIImage *image2 = [UIImage imageNamed:@"thunder.jpg"];
+    
+    NSArray *images = [NSArray arrayWithObjects:image1, nil];
+    
+    //@"http://res.cloudinary.com/demo/image/upload/sample.jpg",
+    //@"http://photographylife.com/wp-content/uploads/2012/10/Nikon-D600-Sample-11.jpg",
+    //@"http://www.digitaltrends.com/wp-content/uploads/2013/03/vertu-constellation-review-sample-image-flowers.jpg",
+    
+    // Path to XML customization file
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization"
+                                                        ofType:@"xml"];
+    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+    
+    // Set customization file
+    if (self.switchCustomization.isOn){
+        [self.printIO customizationXML:xmlData];
+        [self.printIO changeLogo:@"icon1"];
+    }
+    
+    // Set country code
+    if (self.switchCountryCode.isOn){
+        [self.printIO countryCode:@"US"];
+    }
+    
+    // Set currency code
+    if (self.switchCurrencyCode.isOn){
+        [self.printIO currencyCode:@"USD"];
+    }
+    
+    // Set language code
+    if (self.switchLanguageCode.isOn){
+        [self.printIO languageCode:@"en"];
+    }
+    
+    // Set custom fonts
+    if (self.switchCustomFonts.isOn){
+        NSArray *fonts = @[@"timess.ttf", @"timess.ttf",
+                           @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
+        
+        [self.printIO customFonts:fonts];
+    }
+    
+    // Set Payee name
+    if (self.txtPayeeName.text){
+        [self.printIO payeeName:self.txtPayeeName.text];
+    }
     
     // Jumps directly to product
     if (self.switchJumpToProduct.isOn)
@@ -154,7 +155,7 @@
     
     // Enable or disable Side Menu
     if (self.switchEnableSideMenu.isOn){
-        [self.printIO enableSideMenu:YES];
+        [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"] background:nil];
         
         // Set options for Side Menu
         NSArray *buttons = [NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_SEARCH_BAR],[[PIOSideMenuButton alloc]initWithType:PIO_SM_EXIT_BUTTON], [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRODUCTS], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FEATURED_PRODUCTS], [[PIOSideMenuButton alloc]initWithType:PIO_SM_VIEW_CART], nil];
@@ -174,30 +175,26 @@
                                     info:infos
                                infoTitle:@"Info"
                           infoTitleColor:[UIColor whiteColor]
-                               infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]];
+                               infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]
+               backgroundImageForButtons:nil];
     }
     
     // Custom share text. Will be used form side menu button.
     if (self.switchCustomShareText.isOn){
-        [self.printIO setApplicationShareText:@"Example share app text with link http://www.google.com"];
+        [self.printIO setShareText:@"Example share app text with link http://www.google.com"];
     }
     
     // Show custom double tap screen when customizing product
     if (self.switchCustomDoubleTapScreen.isOn){
-        [self.printIO showCustomDoubleTapImage:[[NSBundle mainBundle] pathForResource:@"touch" ofType:@"png"]];
-    }
-    
-    // Show button in navigation bar
-    if (self.switchBtnInNavBar.isOn){
-        [self.printIO showMenuButtonInNavigationBar:[[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"]];
+        [self.printIO showHelpDialogWithImage:[[NSBundle mainBundle] pathForResource:@"touch" ofType:@"png"]];
     }
     
     // Show/hide tab bar in Customization Screen
-    [self.printIO showTabBarInCustomizeProduct:self.switchShowTabBarInCustomizationScreen.isOn];
+    [self.printIO showToolbarInCustomizeProduct:self.switchShowTabBarInCustomizationScreen.isOn backgroundImage:nil];
     
     // Hide image list in Customize Product screen
     if (self.switchHideImagesListInCustomization.isOn){
-        [self.printIO hideImagesListInCustomizationScreen:YES];
+        [self.printIO hideImagesListInCustomizeProduct:YES];
     }
     
     // Pass photos in SDK
@@ -207,12 +204,12 @@
     
     // Disable photo sources when photos are passed
     if (self.switchDisablePSWhenPhotosArePassed.isOn){
-        [self.printIO disablePhotoSourcesWhenImagesArePassed:YES];
+        [self.printIO disablePhotoSourcesWhenImagesArePassedIn:YES];
     }
     
     // Disable photo sources when photo is passed in SDK for one photo template
     if (self.switchDisablePSWhenPhotoIsPassedForOnePhototemplate.isOn){
-        [self.printIO disablePhotoSourcesWhenImageIsPassedForOnePhotoTemplate:YES];
+        [self.printIO disablePhotoSourcesForOnePhotoTemplate:YES];
     }
     
     // Use passed image as thumbnail for one phtoo template
@@ -222,17 +219,17 @@
     
     // Hide Category/Search view in Featured Products screen
     if (self.hideCategoriesView.isOn){
-        [self.printIO hideCategoryViewInFeaturedProducts:YES];
+        [self.printIO hideCategoriesInFeaturedProducts:YES];
     }
     
     // Hide status bar
     if (self.switchHideStatusBar.isOn){
-        [self.printIO hideStatusBar:YES];
+        [self.printIO statusBarDark:NO hidden:YES];
     }
     
     // Set country in featured products
     if (self.switchSetCountryInFProducts.isOn){
-        [self.printIO setCountryInFeaturedProducts:YES];
+        [self.printIO selectCountryInFeaturedProducts:YES];
     }
     
     // Change loading GIF animation
@@ -245,10 +242,30 @@
         [self.printIO setPhotoArrangement:PIO_PHOTO_ARRANGEMENT_AUTO];
     }
     
+    [self.printIO removePlusFromAddMoreProductsButton:YES];
+    
+    // Variants options test
+    if (self.switchTestVariantsOptions.isOn){
+        NSLog(@"all_values: %@", [self.userData allValues]);
+        [self.printIO setVariantsOptions:[NSArray arrayWithArray:[self.userData allValues]]];
+    }
+    
     // Open widget
     [self.printIO open];
     
     NSLog(@"widget starting");
+}
+
+- (IBAction)onClickTestVariantsOptions:(id)sender
+{
+    VCVariantsOptions *vc = [[VCVariantsOptions alloc]init];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)onVariantsOptionsSelected:(NSNotification *)notification
+{
+    self.userData = [notification userInfo];
+    NSLog(@"self.userData: %@", self.userData);
 }
 
 #pragma mark - Settings for partners
@@ -256,37 +273,39 @@
 - (void)testYellowlab500px
 {
     [self.printIO removeLogoFromPaymentScreen:YES];
-    [self.printIO enableSideMenu:YES];
-    [self.printIO usePhotoSources:YES];
+    [self.printIO removePlusFromAddMoreProductsButton:YES];
+    
     [self.printIO availablePhotoSources:[NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE],[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK], nil]];
     
-    // Set main buttons for Side Menu
-    PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@"EXIT"
-                                                                      type:PIO_SM_EXIT_BUTTON
-                                                                  iconPath:[[NSBundle mainBundle] pathForResource:@"btn_camera" ofType:@"png"]];
-    btnCamera.fontSize = 15.0;
     
-    PIOSideMenuButton *btnProducts = [[PIOSideMenuButton alloc]initWithTitle:@"PRODUCTS"
-                                                                        type:PIO_SM_PRODUCTS
-                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"btn_products" ofType:@"png"]];
-    btnProducts.fontSize = 15.0;
+    // Set options for Side Menu
+    NSArray *buttons = [NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_SEARCH_BAR],[[PIOSideMenuButton alloc]initWithType:PIO_SM_EXIT_BUTTON], [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRODUCTS], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FEATURED_PRODUCTS], [[PIOSideMenuButton alloc]initWithType:PIO_SM_VIEW_CART], nil];
     
-    PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"VIEW CART"
-                                                                        type:PIO_SM_VIEW_CART
-                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"btn_cart" ofType:@"png"]];
+    NSArray *options = [NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_CURRENCY], [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_COUNTRY], [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_LANGUAGE], nil];
     
-    PIOSideMenuButton *btnEmailSupport = [[PIOSideMenuButton alloc]initWithTitle:@"EMAIL SUPPORT"
-                                                                            type:PIO_SM_EMAIL_SUPPORT
-                                                                        iconPath:[[NSBundle mainBundle] pathForResource:@"btn_email_support" ofType:@"png"]];
-    btnEmailSupport.dataHolder = @"support@support.com";
+    NSArray *infos = [NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PRICING_CHART],[[PIOSideMenuButton alloc]initWithType:PIO_SM_SHARE_APP], [[PIOSideMenuButton alloc]initWithType:PIO_SM_LIKE_US_FB], [[PIOSideMenuButton alloc]initWithType:PIO_SM_RATE_APP], [[PIOSideMenuButton alloc]initWithType:PIO_SM_ABOUT], [[PIOSideMenuButton alloc]initWithType:PIO_SM_HOW_IT_WORKS], [[PIOSideMenuButton alloc]initWithType:PIO_SM_PAST_ORDERS], nil];
+    
+    [self.printIO sideMenuAddButtons:buttons
+                             options:options
+                        optionsTitle:@"Options"
+                   optionsTitleColor:[UIColor whiteColor]
+                        optionsColor:[UIColor colorWithRed:34.0/255.0 green:160.0/255.0 blue:221.0/255.0 alpha:255.0/255.0]
+                       accountsTitle:@"Accounts"
+                  accountsTitleColor:[UIColor whiteColor]
+                       accountsColor:[UIColor colorWithRed:26.0/255.0 green:188.0/255.0 blue:156.0/255.0 alpha:255.0/255.0]
+                                info:infos
+                           infoTitle:@"Info"
+                      infoTitleColor:[UIColor whiteColor]
+                           infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]backgroundImageForButtons:nil];
     
     [self.printIO open];
 }
 
 - (void)testMGPath3
 {
-    [self.printIO setMGPathNumber:3];
-    
+    [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                             [NSNumber numberWithInt:1], ED_PARTNERS_ID,
+                             [NSNumber numberWithInt:3], ED_MG_PATH_NUMBER, nil]];
     [self testMGPath2];
 }
 
@@ -297,8 +316,6 @@
     NSArray *images = [NSArray arrayWithObjects:image1, nil];
     [self.printIO images:images];
     
-    
-    
     [self testMirrorgram];
 }
 
@@ -306,8 +323,7 @@
 {
     // TO-DO Production mode switch also
     
-    [self.printIO enableSideMenu:YES];
-    [self.printIO usePhotoSources:YES];
+    [self.printIO useSideMenuWithMenuIcon:nil background:nil];
     
     // Available Photo sources
     [self.printIO availablePhotoSources:[NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE],[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK], nil]];
@@ -383,49 +399,47 @@
                                 info:infos
                            infoTitle:@"INFO"
                       infoTitleColor:[UIColor blackColor]
-                           infoColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]];
-    
-    // Show custom double tap screen when customizing product
-    [self.printIO showCustomDoubleTapImage:@""];
+                           infoColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]backgroundImageForButtons:[[NSBundle mainBundle]pathForResource:@"bcg" ofType:@"png"]];
     
     // Hide tab bar in Customize Product screen
-    [self.printIO showTabBarInCustomizeProduct:NO];
+    [self.printIO showToolbarInCustomizeProduct:NO
+                                backgroundImage:[[NSBundle mainBundle]pathForResource:@"mg_toolbar_bcg" ofType:@"png"]];
     
     // Set visible buttons in Image Editor
-    [self.printIO imageEditorShowButtons:[NSArray arrayWithObjects:[[PIOButton alloc]initWithType:PIO_BUTTON_IMAGE_EDITOR_INFO], nil]];
+    [self.printIO imageEditorShowButtons:[NSArray arrayWithObjects:
+                                          [[PIOButton alloc]initWithType:PIO_BUTTON_IMAGE_EDITOR_INFO], nil]];
     
-    // Show menu button in navigation bar
-    [self.printIO showMenuButtonInNavigationBar:[[NSBundle mainBundle] pathForResource:@"mg_menu" ofType:@"png"]];
-    
-    // Change title bar color
-    [self.printIO titleBarColor:[UIColor colorWithRed:72.0/255.0 green:72.0/255.0 blue:72.0/255.0 alpha:1.0]
-                      fontColor:[UIColor whiteColor]];
+    // Customize Navigation bar
+    [self.printIO navigationBarColor:[UIColor colorWithRed:72.0/255.0 green:72.0/255.0 blue:72.0/255.0 alpha:1.0]
+                          titleColor:[UIColor whiteColor]
+           leftButtonBackgroundColor:[UIColor clearColor]
+          rightButtonBackgroundColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:1.0]
+                     titleButtonIcon:[[NSBundle mainBundle] pathForResource:@"mg_menu" ofType:@"png"]];
     
     // Change shoping cart icon
-    [self.printIO setShopingCartIcon:[[NSBundle mainBundle]pathForResource:@"mg_cart" ofType:@"png"]];
-    [self.printIO setShopingCartIconWithCircle:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"]];
+    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart" ofType:@"png"] withNumberOfProducts:NO];
+    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"] withNumberOfProducts:YES];
     
-    [self.printIO setPartnerId:PARTNER_MIRRORGRAM];
-    
-    [self.printIO setBackgoundImageForSideMenuItems:[[NSBundle mainBundle]pathForResource:@"bcg" ofType:@"png"]];
+    [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                             [NSNumber numberWithInt:1], ED_PARTNERS_ID, nil]];
     
     [self.printIO payeeName:@"Mirrorgram"];
     
     [self.printIO setPassedImageAsThumbForOnePhotoTemplate:YES];
     
     // Set custom icon
-    [self.printIO iconWithFileName:@"mg_menu"];
+    [self.printIO changeLogo:@"mg_menu"];
     
-    [self.printIO hideCategoryViewInFeaturedProducts:YES];
-    [self.printIO hideStatusBar:YES];
+    [self.printIO hideCategoriesInFeaturedProducts:YES];
     
-    [self.printIO setBackgoundImageForToolbarInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_toolbar_bcg" ofType:@"png"]];
-    [self.printIO setIconForHelpButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_icon_question_mark" ofType:@"png"]];
-    [self.printIO setImageForAddPhotosButton:[[NSBundle mainBundle]pathForResource:@"mg_add_photos" ofType:@"png"]];
+    [self.printIO statusBarDark:NO hidden:YES];
     
-    [self.printIO setCountryInFeaturedProducts:YES];
+    [self.printIO iconForHelpButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_icon_question_mark" ofType:@"png"]];
+    [self.printIO iconForAddPhotosButton:[[NSBundle mainBundle]pathForResource:@"mg_add_photos" ofType:@"png"]];
     
-    [self.printIO setIconForBackButton:[[NSBundle mainBundle]pathForResource:@"mg_back_new" ofType:@"png"]];
+    [self.printIO selectCountryInFeaturedProducts:YES];
+    
+    [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"mg_back_new" ofType:@"png"]];
     
     // Path to XML customization file
     NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization_mg" ofType:@"xml"];
@@ -434,15 +448,11 @@
     
     [self.printIO hideIconForUplaodInstructions:YES];
     
-    [self.printIO setDoubleTapBaloonImage:[[NSBundle mainBundle]pathForResource:@"mg_double_tap_balloon" ofType:@"png"]
-                                     text:@"Double tap photo to edit"
-                                textColor:[UIColor whiteColor]];
+    [self.printIO setPopUpWithImage:[[NSBundle mainBundle]pathForResource:@"mg_double_tap_balloon" ofType:@"png"]
+                               text:@"Double tap photo to edit"
+                          textColor:[UIColor whiteColor]];
     
     [self.printIO removePlusFromAddMoreProductsButton:YES];
-    
-    [self.printIO setBackgroundColorForNavBarButtonLeft:[UIColor clearColor]
-                                                  right:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:1.0]];
-    
     [self.printIO removeLogoFromPaymentScreen:YES];
     
     // START WIDGET
@@ -451,22 +461,26 @@
 
 - (void)testPhotobucket
 {
-    [self.printIO enableSideMenu:YES];
-    [self.printIO usePhotoSources:YES];
-    [self.printIO showTabBarInCustomizeProduct:YES];
-    [self.printIO titleBarColor:[UIColor whiteColor] fontColor:[UIColor blackColor]];
+    [self.printIO showToolbarInCustomizeProduct:YES backgroundImage:nil];
+    [self.printIO navigationBarColor:[UIColor whiteColor]
+                          titleColor:[UIColor blackColor]
+           leftButtonBackgroundColor:nil
+          rightButtonBackgroundColor:nil
+                     titleButtonIcon:nil];
     [self.printIO payeeName:@"Photobucket"];
-    [self.printIO setCountryInFeaturedProducts:YES];
-    [self.printIO setStatusBarDark:YES];
-    [self.printIO setShopingCartIconWithCircle:[[NSBundle mainBundle]pathForResource:@"pb_cart" ofType:@"png"]];
-    [self.printIO setIconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
-    [self.printIO setIconForSideMenu:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"]];
-    [self.printIO setBackgoundImageForSideMenuItems:[[NSBundle mainBundle]pathForResource:@"pb_bcg" ofType:@"png"]];
-    [self.printIO setBackgroundColorForSideMenu:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];
-    [self.printIO hideStatusBar:YES];
-    [self.printIO setPartnerId:PARTNER_PHOTOBUCKET];
-    [self.printIO iconWithFileName:@""];
+    [self.printIO selectCountryInFeaturedProducts:YES];
+    [self.printIO statusBarDark:YES hidden:NO];
+    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
+                 withNumberOfProducts:YES];
+    [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
+    [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"]
+                               background:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];
+    [self.printIO statusBarDark:YES hidden:YES];
+    [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+                             [NSNumber numberWithInt:2], ED_PARTNERS_ID, nil]];
+    [self.printIO changeLogo:@""];
     [self.printIO removeLogoFromPaymentScreen:YES];
+     [self.printIO removePlusFromAddMoreProductsButton:YES];
     
     // Available Photo sources
     PIOSideMenuButton *btnPhone = [[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE];
@@ -561,7 +575,7 @@
                                 info:infos
                            infoTitle:@"INFO"
                       infoTitleColor:[UIColor whiteColor]
-                           infoColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:255.0/255.0]];
+                           infoColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:255.0/255.0] backgroundImageForButtons:[[NSBundle mainBundle]pathForResource:@"pb_bcg" ofType:@"png"]];
     
     [self.printIO open];
 }
@@ -611,13 +625,14 @@
     
     [self.scrollView addSubview:self.panelView];
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.panelView.frame.size.height);
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(onVariantsOptionsSelected:)
+                                                name:NOTIF_VARIANTS_SELECTED object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO
-                                            withAnimation:UIStatusBarAnimationSlide];
-    
 }
 
 - (void)didReceiveMemoryWarning

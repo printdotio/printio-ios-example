@@ -15,6 +15,7 @@
 }
 
 - (IBAction)onClickTestSDK:(id)sender;
+- (IBAction)onClickTestVariantsOptions:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIView *panelView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -61,5 +62,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *SwitchMGPath3;
 @property (weak, nonatomic) IBOutlet UISwitch *switchPhotobucket;
 @property (weak, nonatomic) IBOutlet UISwitch *switchYellowLab500px;
+@property (weak, nonatomic) IBOutlet UISwitch *switchTestVariantsOptions;
 
 @end
