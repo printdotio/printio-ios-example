@@ -248,6 +248,21 @@
     if (self.switchTestVariantsOptions.isOn){
         NSLog(@"all_values: %@", [self.userData allValues]);
         [self.printIO setVariantsOptions:[NSArray arrayWithArray:[self.userData allValues]]];
+        
+        // TEST CANVAS !!!!!!!!!!!!!
+        [self.printIO goToProductId:PRODUCT_ACRYLIC_BLOCKS()];
+        
+        // block size 4x6 inch
+        PIOVariantOption *p1 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_ACRYLIC_BLOCKS()
+                                                                  optionId:@"226c9e02a1ce4e37bcc17ab6e229ba90"
+                                                                   valueId:@"0ed825d81b6542f286552459d2299eef"];
+        // thickness 3/4 inch
+        PIOVariantOption *p2 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_ACRYLIC_BLOCKS()
+                                                                 optionId:@"96b7de2821a64b47b6e7c172d3cc4e77"
+                                                                  valueId:@"8f58cf00b67246fc9bf0ec2fb6797807"];
+        
+        //[self.printIO setVariantsOptions:[NSArray arrayWithObjects:p1, p2, nil]];
+        
     }
     
     // Open widget
