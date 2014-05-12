@@ -249,17 +249,19 @@
         NSLog(@"all_values: %@", [self.userData allValues]);
         [self.printIO setVariantsOptions:[NSArray arrayWithArray:[self.userData allValues]]];
         
-        // TEST CANVAS !!!!!!!!!!!!!
-        [self.printIO goToProductId:PRODUCT_ACRYLIC_BLOCKS()];
+        // TEST  !!!!!!!!!!!!!
+        //[self.printIO goToProductId:PRODUCT_MAGNETGRAM()];
         
-        // block size 4x6 inch
-        PIOVariantOption *p1 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_ACRYLIC_BLOCKS()
-                                                                  optionId:@"226c9e02a1ce4e37bcc17ab6e229ba90"
-                                                                   valueId:@"0ed825d81b6542f286552459d2299eef"];
-        // thickness 3/4 inch
-        PIOVariantOption *p2 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_ACRYLIC_BLOCKS()
-                                                                 optionId:@"96b7de2821a64b47b6e7c172d3cc4e77"
-                                                                  valueId:@"8f58cf00b67246fc9bf0ec2fb6797807"];
+        // Count = 9
+        PIOVariantOption *p1 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_MAGNETGRAM()
+                                                                  optionId:@"02026371d0574b85bf183c94265b6408"
+                                                                   valueId:@"bfc08971732e416e8ed42fe6f40e029b"];
+        //p1.color = [UIColor redColor];
+        
+        // 2 inch square
+        PIOVariantOption *p2 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_MAGNETGRAM()
+                                                                 optionId:@"dba2d33fcbcb4dd7a8d09bb6f879e86f"
+                                                                  valueId:@"af423b8306dd433985d9c0afd24963b4"];
         
         //[self.printIO setVariantsOptions:[NSArray arrayWithObjects:p1, p2, nil]];
         
