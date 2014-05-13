@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B403EB87192292D10064775D /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B403EB86192292D10064775D /* PrintIOBundle.bundle */; };
 		B410D01418802A0400C20755 /* customization.xml in Resources */ = {isa = PBXBuildFile; fileRef = B410D01318802A0400C20755 /* customization.xml */; };
 		B4187AF818E595480081978D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4187AF718E595480081978D /* ViewController.xib */; };
 		B41CADBC1884186F00A91191 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B41CADBB1884186F00A91191 /* icon1.png */; };
@@ -41,7 +42,6 @@
 		B43F19E5185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
 		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
-		B460D3B9191B8FEC0067DAAE /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B460D3B8191B8FEC0067DAAE /* PrintIOBundle.bundle */; };
 		B460D3BB191B90AF0067DAAE /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B460D3BA191B90AF0067DAAE /* PrintIO.framework */; };
 		B460D3BF191BA7DA0067DAAE /* VCVariantsOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = B460D3BD191BA7DA0067DAAE /* VCVariantsOptions.m */; };
 		B460D3C0191BA7DA0067DAAE /* VCVariantsOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = B460D3BE191BA7DA0067DAAE /* VCVariantsOptions.xib */; };
@@ -108,6 +108,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B403EB86192292D10064775D /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 5-13-14, 7.49 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestSDKApp-Info.plist"; sourceTree = "<group>"; };
 		B410D01318802A0400C20755 /* customization.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization.xml; sourceTree = "<group>"; };
 		B4187AF718E595480081978D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
-		B460D3B8191B8FEC0067DAAE /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 5-8-14, 12.10 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B460D3BA191B90AF0067DAAE /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B460D3BC191BA7DA0067DAAE /* VCVariantsOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCVariantsOptions.h; sourceTree = "<group>"; };
 		B460D3BD191BA7DA0067DAAE /* VCVariantsOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCVariantsOptions.m; sourceTree = "<group>"; };
@@ -458,8 +458,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
+				B403EB86192292D10064775D /* PrintIOBundle.bundle */,
 				B460D3BA191B90AF0067DAAE /* PrintIO.framework */,
-				B460D3B8191B8FEC0067DAAE /* PrintIOBundle.bundle */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";
@@ -572,6 +572,7 @@
 				B4C41F9B19013B0B00D6013F /* btn_drag_drop.png in Resources */,
 				B489518E18F59A9200C38041 /* mg_camera.png in Resources */,
 				B471EF4218FE794600BE63FB /* mg_menu.png in Resources */,
+				B403EB87192292D10064775D /* PrintIOBundle.bundle in Resources */,
 				B4C41F8E19010CD500D6013F /* pb_btn_cart.png in Resources */,
 				B489519C18F5A09000C38041 /* bcg.png in Resources */,
 				B489519718F59E7C00C38041 /* btn_info.png in Resources */,
@@ -582,7 +583,6 @@
 				B4A00DEA188947F90068A3F7 /* steelfish_rg.otf in Resources */,
 				B4364CB1190A60B200748812 /* pb_icon_cart_black.png in Resources */,
 				B4AB667118FD83C700308389 /* mg_toolbar_bcg.png in Resources */,
-				B460D3B9191B8FEC0067DAAE /* PrintIOBundle.bundle in Resources */,
 				B410D01418802A0400C20755 /* customization.xml in Resources */,
 				B497202518F7ED330017301F /* mg_cart.png in Resources */,
 				B471EF3E18FE6D2200BE63FB /* mg_back_new.png in Resources */,
@@ -797,7 +797,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "813D4341-9C26-4C2B-BBBB-D380FD7671D1";
+				PROVISIONING_PROFILE = "A7591B98-9B19-4FA8-9B21-EF66FDDA2D7D";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -840,7 +840,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "813D4341-9C26-4C2B-BBBB-D380FD7671D1";
+				PROVISIONING_PROFILE = "A7591B98-9B19-4FA8-9B21-EF66FDDA2D7D";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};

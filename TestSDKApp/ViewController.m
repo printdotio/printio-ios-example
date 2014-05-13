@@ -23,6 +23,8 @@
 
 - (IBAction)onClickTestSDK:(id)sender
 {
+    [self.printIO setDropboxKey:@"fj1mh6ts8udlotz" redirectUrl:@"db-fj1mh6ts8udlotz://authorize"];
+    
     // Yellowlab-500px
     if (self.switchYellowLab500px.isOn){
         [self testYellowlab500px];
@@ -225,6 +227,8 @@
     // Hide status bar
     if (self.switchHideStatusBar.isOn){
         [self.printIO statusBarDark:NO hidden:YES];
+    } else {
+        [self.printIO statusBarDark:YES hidden:NO];
     }
     
     // Set country in featured products
@@ -250,18 +254,18 @@
         [self.printIO setVariantsOptions:[NSArray arrayWithArray:[self.userData allValues]]];
         
         // TEST  !!!!!!!!!!!!!
-        //[self.printIO goToProductId:PRODUCT_MAGNETGRAM()];
+        //[self.printIO goToProductId:PRODUCT_THROW_PILLOWS()];
         
-        // Count = 9
-        PIOVariantOption *p1 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_MAGNETGRAM()
-                                                                  optionId:@"02026371d0574b85bf183c94265b6408"
-                                                                   valueId:@"bfc08971732e416e8ed42fe6f40e029b"];
+        // Count = 36
+        PIOVariantOption *p1 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_THROW_PILLOWS()
+                                                                  optionId:@"bf375e734bfc4b28b9a79b3511ec331a"
+                                                                   valueId:@"5a12312691fd42788a7bdfe295447122"];
         //p1.color = [UIColor redColor];
         
-        // 2 inch square
-        PIOVariantOption *p2 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_MAGNETGRAM()
-                                                                 optionId:@"dba2d33fcbcb4dd7a8d09bb6f879e86f"
-                                                                  valueId:@"af423b8306dd433985d9c0afd24963b4"];
+        // 3x3 inch
+        PIOVariantOption *p2 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_THROW_PILLOWS()
+                                                                 optionId:@"677d9d4c10a74e4d8f30b4d104b61681"
+                                                                  valueId:@"46d2cdbfed6547e385ba9ff56b405c72"];
         
         //[self.printIO setVariantsOptions:[NSArray arrayWithObjects:p1, p2, nil]];
         
@@ -486,7 +490,6 @@
                      titleButtonIcon:nil];
     [self.printIO payeeName:@"Photobucket"];
     [self.printIO selectCountryInFeaturedProducts:YES];
-    [self.printIO statusBarDark:YES hidden:NO];
     [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
                  withNumberOfProducts:YES];
     [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
