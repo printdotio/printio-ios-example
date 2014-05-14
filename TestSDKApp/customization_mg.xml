@@ -40,7 +40,6 @@
     </screen>
     
     <screen name="shopping_cart">
-        <button name="button_edit" bcg_color="#484848" font_color="#ffffff" />
         <button name="button_check_out" bcg_color="#50A3FF" font_color="#ffffff" />
     </screen>
     

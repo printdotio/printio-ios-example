@@ -42,7 +42,6 @@
 		B43F19E5185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
 		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
-		B460D3BB191B90AF0067DAAE /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B460D3BA191B90AF0067DAAE /* PrintIO.framework */; };
 		B460D3BF191BA7DA0067DAAE /* VCVariantsOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = B460D3BD191BA7DA0067DAAE /* VCVariantsOptions.m */; };
 		B460D3C0191BA7DA0067DAAE /* VCVariantsOptions.xib in Resources */ = {isa = PBXBuildFile; fileRef = B460D3BE191BA7DA0067DAAE /* VCVariantsOptions.xib */; };
 		B460D3C3191BB0F90067DAAE /* VOHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = B460D3C2191BB0F90067DAAE /* VOHolder.m */; };
@@ -72,6 +71,7 @@
 		B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */; };
 		B4A00DF3188948370068A3F7 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */; };
 		B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DF5188948570068A3F7 /* aubrey.ttf */; };
+		B4A6C0C819237E9B0029537B /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A6C0C719237E9B0029537B /* PrintIO.framework */; };
 		B4AB666F18FD83C200308389 /* mg_icon_question_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AB666E18FD83C200308389 /* mg_icon_question_mark.png */; };
 		B4AB667118FD83C700308389 /* mg_toolbar_bcg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AB667018FD83C700308389 /* mg_toolbar_bcg.png */; };
 		B4AB667318FD84E600308389 /* mg_add_photos.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AB667218FD84E600308389 /* mg_add_photos.png */; };
@@ -148,7 +148,6 @@
 		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
-		B460D3BA191B90AF0067DAAE /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B460D3BC191BA7DA0067DAAE /* VCVariantsOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCVariantsOptions.h; sourceTree = "<group>"; };
 		B460D3BD191BA7DA0067DAAE /* VCVariantsOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCVariantsOptions.m; sourceTree = "<group>"; };
 		B460D3BE191BA7DA0067DAAE /* VCVariantsOptions.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VCVariantsOptions.xib; sourceTree = "<group>"; };
@@ -180,6 +179,7 @@
 		B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		B4A00DF5188948570068A3F7 /* aubrey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aubrey.ttf; sourceTree = "<group>"; };
+		B4A6C0C719237E9B0029537B /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B4AB666E18FD83C200308389 /* mg_icon_question_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_icon_question_mark.png; sourceTree = "<group>"; };
 		B4AB667018FD83C700308389 /* mg_toolbar_bcg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_toolbar_bcg.png; sourceTree = "<group>"; };
 		B4AB667218FD84E600308389 /* mg_add_photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_add_photos.png; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 				B429BD8B186B0DFF002340BB /* CFNetwork.framework in Frameworks */,
 				B429BD89186B0DF2002340BB /* libxml2.dylib in Frameworks */,
 				B429BD94186B0EF5002340BB /* libsqlite3.dylib in Frameworks */,
-				B460D3BB191B90AF0067DAAE /* PrintIO.framework in Frameworks */,
+				B4A6C0C819237E9B0029537B /* PrintIO.framework in Frameworks */,
 				B429BD8C186B0E05002340BB /* MessageUI.framework in Frameworks */,
 				B429BD91186B0E45002340BB /* MobileCoreServices.framework in Frameworks */,
 				B429BD92186B0E4B002340BB /* OpenGLES.framework in Frameworks */,
@@ -458,8 +458,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
+				B4A6C0C719237E9B0029537B /* PrintIO.framework */,
 				B403EB86192292D10064775D /* PrintIOBundle.bundle */,
-				B460D3BA191B90AF0067DAAE /* PrintIO.framework */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";

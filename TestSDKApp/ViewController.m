@@ -2,7 +2,7 @@
 //  ViewController.m
 //  TestSDKApp
 //
-//  Created by Tengai on 12/13/13.
+//  Created by PrintIO on 12/13/13.
 //  Copyright (c) 2013 TestSDKApp. All rights reserved.
 //
 
@@ -23,8 +23,6 @@
 
 - (IBAction)onClickTestSDK:(id)sender
 {
-    [self.printIO setDropboxKey:@"fj1mh6ts8udlotz" redirectUrl:@"db-fj1mh6ts8udlotz://authorize"];
-    
     // Yellowlab-500px
     if (self.switchYellowLab500px.isOn){
         [self testYellowlab500px];
@@ -620,6 +618,11 @@
 }
 
 #pragma mark - Init
+
+- (void)dummyStart
+{
+    [self.printIO open];
+}
 
 - (PrintIO *)printIO
 {
