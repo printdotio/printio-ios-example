@@ -54,7 +54,7 @@
     }
     
     // Navigation bar
-    [self.printIO navigationBarColor:self.switchTitleBarColor.isOn ? [UIColor blueColor] : [UIColor whiteColor]
+    [self.printIO navigationBarColor:self.switchTitleBarColor.isOn ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
                           titleColor:self.switchTitleBarColor.isOn ? [UIColor whiteColor] : [UIColor blackColor]
            leftButtonBackgroundColor:nil
           rightButtonBackgroundColor:nil
@@ -158,11 +158,26 @@
         [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"] background:nil];
         
         // Set options for Side Menu
-        NSArray *buttons = [NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_SEARCH_BAR],[[PIOSideMenuButton alloc]initWithType:PIO_SM_EXIT_BUTTON], [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRODUCTS], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FEATURED_PRODUCTS], [[PIOSideMenuButton alloc]initWithType:PIO_SM_VIEW_CART], nil];
+        NSArray *buttons = [NSArray arrayWithObjects:
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_SEARCH_BAR],
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_EXIT_BUTTON],
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRODUCTS],
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_FEATURED_PRODUCTS],
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_VIEW_CART], nil];
         
-        NSArray *options = [NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_CURRENCY], [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_COUNTRY], [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_LANGUAGE], nil];
+        NSArray *options = [NSArray arrayWithObjects:
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_CURRENCY],
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_COUNTRY],
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_LANGUAGE], nil];
         
-        NSArray *infos = [NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PRICING_CHART],[[PIOSideMenuButton alloc]initWithType:PIO_SM_SHARE_APP], [[PIOSideMenuButton alloc]initWithType:PIO_SM_LIKE_US_FB], [[PIOSideMenuButton alloc]initWithType:PIO_SM_RATE_APP], [[PIOSideMenuButton alloc]initWithType:PIO_SM_ABOUT], [[PIOSideMenuButton alloc]initWithType:PIO_SM_HOW_IT_WORKS], [[PIOSideMenuButton alloc]initWithType:PIO_SM_PAST_ORDERS], nil];
+        NSArray *infos = [NSArray arrayWithObjects:
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRICING_CHART],
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_SHARE_APP],
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_LIKE_US_FB],
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_RATE_APP],
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_ABOUT],
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_HOW_IT_WORKS],
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_PAST_ORDERS], nil];
         
         [self.printIO sideMenuAddButtons:buttons
                                  options:options
