@@ -28,7 +28,6 @@
 		B429BD98186B0F3F002340BB /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD97186B0F3F002340BB /* Twitter.framework */; };
 		B429BD9A186B0FA5002340BB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD99186B0FA5002340BB /* Accounts.framework */; };
 		B429BD9C186B0FB5002340BB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD9B186B0FB5002340BB /* CoreTelephony.framework */; };
-		B42D6D411926C8610049A8D4 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B42D6D401926C8610049A8D4 /* PrintIOBundle.bundle */; };
 		B4364CB1190A60B200748812 /* pb_icon_cart_black.png in Resources */ = {isa = PBXBuildFile; fileRef = B4364CB0190A60B200748812 /* pb_icon_cart_black.png */; };
 		B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C3185B061000926E70 /* Foundation.framework */; };
 		B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
@@ -47,6 +46,7 @@
 		B460D3C3191BB0F90067DAAE /* VOHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = B460D3C2191BB0F90067DAAE /* VOHolder.m */; };
 		B464E69A190660A00033FB98 /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = B464E699190660A00033FB98 /* load.gif */; };
 		B464E69C190662A80033FB98 /* mg_image_editor_info.png in Resources */ = {isa = PBXBuildFile; fileRef = B464E69B190662A80033FB98 /* mg_image_editor_info.png */; };
+		B469E7911929211A00DF3F23 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B469E7901929211A00DF3F23 /* PrintIOBundle.bundle */; };
 		B471EF3C18FE66FA00BE63FB /* mg_cart_new.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF3B18FE66FA00BE63FB /* mg_cart_new.png */; };
 		B471EF3E18FE6D2200BE63FB /* mg_back_new.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF3D18FE6D2200BE63FB /* mg_back_new.png */; };
 		B471EF4218FE794600BE63FB /* mg_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF4118FE794600BE63FB /* mg_menu.png */; };
@@ -129,7 +129,6 @@
 		B429BD97186B0F3F002340BB /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		B429BD99186B0FA5002340BB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B429BD9B186B0FB5002340BB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		B42D6D401926C8610049A8D4 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 5-17-14, 12.26 AM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B4364CB0190A60B200748812 /* pb_icon_cart_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_icon_cart_black.png; sourceTree = "<group>"; };
 		B43F19C0185B061000926E70 /* PrintIOSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintIOSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43F19C3185B061000926E70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -155,6 +154,7 @@
 		B460D3C2191BB0F90067DAAE /* VOHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOHolder.m; sourceTree = "<group>"; };
 		B464E699190660A00033FB98 /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = load.gif; sourceTree = "<group>"; };
 		B464E69B190662A80033FB98 /* mg_image_editor_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_image_editor_info.png; sourceTree = "<group>"; };
+		B469E7901929211A00DF3F23 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 5-18-14, 7.03 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B471EF3B18FE66FA00BE63FB /* mg_cart_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_cart_new.png; sourceTree = "<group>"; };
 		B471EF3D18FE6D2200BE63FB /* mg_back_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_back_new.png; sourceTree = "<group>"; };
 		B471EF4118FE794600BE63FB /* mg_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_menu.png; sourceTree = "<group>"; };
@@ -458,7 +458,7 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B42D6D401926C8610049A8D4 /* PrintIOBundle.bundle */,
+				B469E7901929211A00DF3F23 /* PrintIOBundle.bundle */,
 				B4A6C0C719237E9B0029537B /* PrintIO.framework */,
 			);
 			name = PrintIO;
@@ -572,7 +572,7 @@
 				B4C41F9B19013B0B00D6013F /* btn_drag_drop.png in Resources */,
 				B489518E18F59A9200C38041 /* mg_camera.png in Resources */,
 				B471EF4218FE794600BE63FB /* mg_menu.png in Resources */,
-				B42D6D411926C8610049A8D4 /* PrintIOBundle.bundle in Resources */,
+				B469E7911929211A00DF3F23 /* PrintIOBundle.bundle in Resources */,
 				B4C41F8E19010CD500D6013F /* pb_btn_cart.png in Resources */,
 				B489519C18F5A09000C38041 /* bcg.png in Resources */,
 				B489519718F59E7C00C38041 /* btn_info.png in Resources */,
