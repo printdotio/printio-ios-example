@@ -656,6 +656,8 @@
     return _printIO;
 }
 
+#pragma mark - View Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -673,13 +675,8 @@
 {
 }
 
-- (void)didReceiveMemoryWarning
+- (BOOL)prefersStatusBarHidden
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)prefersStatusBarHidden{
     return YES;
 }
 
@@ -690,8 +687,6 @@
     [textField resignFirstResponder];
     return NO;
 }
-
-#pragma mark - FOR TEST
 
 
 

@@ -71,6 +71,7 @@
 		B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */; };
 		B4A00DF3188948370068A3F7 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */; };
 		B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DF5188948570068A3F7 /* aubrey.ttf */; };
+		B4A38A891929EBC60071EBFD /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A38A881929EBC60071EBFD /* libz.1.1.3.dylib */; };
 		B4A6C0C819237E9B0029537B /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A6C0C719237E9B0029537B /* PrintIO.framework */; };
 		B4AB666F18FD83C200308389 /* mg_icon_question_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AB666E18FD83C200308389 /* mg_icon_question_mark.png */; };
 		B4AB667118FD83C700308389 /* mg_toolbar_bcg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AB667018FD83C700308389 /* mg_toolbar_bcg.png */; };
@@ -179,6 +180,7 @@
 		B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		B4A00DF5188948570068A3F7 /* aubrey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aubrey.ttf; sourceTree = "<group>"; };
+		B4A38A881929EBC60071EBFD /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		B4A6C0C719237E9B0029537B /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B4AB666E18FD83C200308389 /* mg_icon_question_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_icon_question_mark.png; sourceTree = "<group>"; };
 		B4AB667018FD83C700308389 /* mg_toolbar_bcg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_toolbar_bcg.png; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48ADEC318E95A5200492F00 /* CoreLocation.framework in Frameworks */,
+				B4A38A891929EBC60071EBFD /* libz.1.1.3.dylib in Frameworks */,
 				B429BD9A186B0FA5002340BB /* Accounts.framework in Frameworks */,
 				B429BD8A186B0DF8002340BB /* AVFoundation.framework in Frameworks */,
 				B429BD8E186B0E2B002340BB /* AudioToolbox.framework in Frameworks */,
@@ -298,6 +301,7 @@
 				B429BD7F186B0D6F002340BB /* MobileCoreServices.framework */,
 				B4F5FE051861FA6B000229A0 /* libsqlite3.dylib */,
 				B429BD7B186B0D55002340BB /* libxml2.dylib */,
+				B4A38A881929EBC60071EBFD /* libz.1.1.3.dylib */,
 				B429BD81186B0D75002340BB /* OpenGLES.framework */,
 				B4F5FE071861FAA1000229A0 /* QuartzCore.framework */,
 				B429BD95186B0F2C002340BB /* Social.framework */,
@@ -681,10 +685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -717,7 +718,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
 		};
@@ -725,10 +726,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7s,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -756,17 +754,14 @@
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
 		};
 		B43F19F3185B061000926E70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7s,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
@@ -797,8 +792,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "A7591B98-9B19-4FA8-9B21-EF66FDDA2D7D";
-				VALID_ARCHS = "armv7 armv7s arm64";
+				PROVISIONING_PROFILE = "82433357-AD95-4860-92C4-8013FE85C763";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -806,10 +801,7 @@
 		B43F19F4185B061000926E70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv7s,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
@@ -840,8 +832,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "A7591B98-9B19-4FA8-9B21-EF66FDDA2D7D";
-				VALID_ARCHS = "armv7 armv7s arm64";
+				PROVISIONING_PROFILE = "82433357-AD95-4860-92C4-8013FE85C763";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
