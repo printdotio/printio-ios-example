@@ -617,12 +617,12 @@
 
 - (void)PrintIOWidgetOnOpen
 {
-    NSLog(@"HelloPicsWidgetOnOpen");
+    NSLog(@"PrintIOWidgetOnOpen");
 }
 
 - (void)PrintIOWidgetOnClose
 {
-    NSLog(@"HelloPicsWidgetOnClose");
+    NSLog(@"PrintIOWidgetOnClose");
     _printIO = nil;
 }
 
