@@ -271,8 +271,8 @@
         
         // Count = 36
         PIOVariantOption *p1 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_THROW_PILLOWS()
-                                                                  optionId:@"bf375e734bfc4b28b9a79b3511ec331a"
-                                                                   valueId:@"5a12312691fd42788a7bdfe295447122"];
+                                                                 optionId:@"bf375e734bfc4b28b9a79b3511ec331a"
+                                                                  valueId:@"5a12312691fd42788a7bdfe295447122"];
         //p1.color = [UIColor redColor];
         
         // 3x3 inch
@@ -513,7 +513,7 @@
                              [NSNumber numberWithInt:2], ED_PARTNERS_ID, nil]];
     [self.printIO changeLogo:@""];
     [self.printIO removeLogoFromPaymentScreen:YES];
-     [self.printIO removePlusFromAddMoreProductsButton:YES];
+    [self.printIO removePlusFromAddMoreProductsButton:YES];
     
     // Available Photo sources
     PIOSideMenuButton *btnPhone = [[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE];
@@ -645,11 +645,11 @@
         
         // Init HelloPics widget
         BOOL isProduction = self.switchProduction.isOn;
-        NSString *recipeId = isProduction ? @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"  : @"12345-12345-12345-12345-12345";
         
         _printIO = [[PrintIO alloc]initWithViewController:self
                                               environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
-                                                 recipeId:recipeId];
+                                       productionRecipeId:@"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
+                                          stagingRecipeId:@"00000000-0000-0000-0000-000000000000"];
         // Set Delegate
         [_printIO setDelegate:self];
     }
