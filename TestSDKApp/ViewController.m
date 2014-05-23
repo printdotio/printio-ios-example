@@ -69,22 +69,22 @@
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE]];
     }
     
-    if (self.switchPSFacebook.isOn){
-        [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK]];
-    }
-    
     if (self.switchPSInstagram.isOn){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
     }
     
-    if (self.switchPSPicasa.isOn){
-        [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PICASA]];
+    if (self.switchPSFacebook.isOn){
+        [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK]];
     }
     
     if (self.switchPSFlickr.isOn){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FLICKR]];
     }
     
+    if (self.switchPSPicasa.isOn){
+        [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PICASA]];
+    }
+
     if (self.switchPSDropbox.isOn){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_DROPBOX]];
     }
