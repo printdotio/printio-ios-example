@@ -1,0 +1,3 @@
+[submodule "PrintIOSDK"]
+	path = PrintIOSDK
+	url = https://github.com/printdotio/printio-ios-sdk.git
