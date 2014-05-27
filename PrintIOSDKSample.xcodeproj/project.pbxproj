@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B404B5B5192F551A00545157 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B404B5B4192F551A00545157 /* PrintIOBundle.bundle */; };
+		925874DC1935254F0071178C /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925874DA1935254F0071178C /* PrintIO.framework */; };
+		925874DD1935254F0071178C /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 925874DB1935254F0071178C /* PrintIOBundle.bundle */; };
 		B410D01418802A0400C20755 /* customization.xml in Resources */ = {isa = PBXBuildFile; fileRef = B410D01318802A0400C20755 /* customization.xml */; };
 		B4187AF818E595480081978D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4187AF718E595480081978D /* ViewController.xib */; };
 		B41CADBC1884186F00A91191 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B41CADBB1884186F00A91191 /* icon1.png */; };
@@ -72,7 +73,6 @@
 		B4A00DF3188948370068A3F7 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */; };
 		B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DF5188948570068A3F7 /* aubrey.ttf */; };
 		B4A38A891929EBC60071EBFD /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A38A881929EBC60071EBFD /* libz.1.1.3.dylib */; };
-		B4A6C0C819237E9B0029537B /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A6C0C719237E9B0029537B /* PrintIO.framework */; };
 		B4AB666F18FD83C200308389 /* mg_icon_question_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AB666E18FD83C200308389 /* mg_icon_question_mark.png */; };
 		B4AB667118FD83C700308389 /* mg_toolbar_bcg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AB667018FD83C700308389 /* mg_toolbar_bcg.png */; };
 		B4AB667318FD84E600308389 /* mg_add_photos.png in Resources */ = {isa = PBXBuildFile; fileRef = B4AB667218FD84E600308389 /* mg_add_photos.png */; };
@@ -109,7 +109,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B404B5B4192F551A00545157 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 5-23-14, 12.04 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
+		925874DA1935254F0071178C /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = PrintIOSDK/PrintIO.framework; sourceTree = "<group>"; };
+		925874DB1935254F0071178C /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = PrintIOSDK/PrintIOBundle.bundle; sourceTree = "<group>"; };
 		B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestSDKApp-Info.plist"; sourceTree = "<group>"; };
 		B410D01318802A0400C20755 /* customization.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization.xml; sourceTree = "<group>"; };
 		B4187AF718E595480081978D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -181,7 +182,6 @@
 		B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		B4A00DF5188948570068A3F7 /* aubrey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aubrey.ttf; sourceTree = "<group>"; };
 		B4A38A881929EBC60071EBFD /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
-		B4A6C0C719237E9B0029537B /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B4AB666E18FD83C200308389 /* mg_icon_question_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_icon_question_mark.png; sourceTree = "<group>"; };
 		B4AB667018FD83C700308389 /* mg_toolbar_bcg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_toolbar_bcg.png; sourceTree = "<group>"; };
 		B4AB667218FD84E600308389 /* mg_add_photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_add_photos.png; sourceTree = "<group>"; };
@@ -221,8 +221,8 @@
 				B429BD8B186B0DFF002340BB /* CFNetwork.framework in Frameworks */,
 				B429BD89186B0DF2002340BB /* libxml2.dylib in Frameworks */,
 				B429BD94186B0EF5002340BB /* libsqlite3.dylib in Frameworks */,
-				B4A6C0C819237E9B0029537B /* PrintIO.framework in Frameworks */,
 				B429BD8C186B0E05002340BB /* MessageUI.framework in Frameworks */,
+				925874DC1935254F0071178C /* PrintIO.framework in Frameworks */,
 				B429BD91186B0E45002340BB /* MobileCoreServices.framework in Frameworks */,
 				B429BD92186B0E4B002340BB /* OpenGLES.framework in Frameworks */,
 				B4F5FE091861FAB2000229A0 /* QuartzCore.framework in Frameworks */,
@@ -462,8 +462,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B404B5B4192F551A00545157 /* PrintIOBundle.bundle */,
-				B4A6C0C719237E9B0029537B /* PrintIO.framework */,
+				925874DA1935254F0071178C /* PrintIO.framework */,
+				925874DB1935254F0071178C /* PrintIOBundle.bundle */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";
@@ -576,7 +576,6 @@
 				B4C41F9B19013B0B00D6013F /* btn_drag_drop.png in Resources */,
 				B489518E18F59A9200C38041 /* mg_camera.png in Resources */,
 				B471EF4218FE794600BE63FB /* mg_menu.png in Resources */,
-				B404B5B5192F551A00545157 /* PrintIOBundle.bundle in Resources */,
 				B4C41F8E19010CD500D6013F /* pb_btn_cart.png in Resources */,
 				B489519C18F5A09000C38041 /* bcg.png in Resources */,
 				B489519718F59E7C00C38041 /* btn_info.png in Resources */,
@@ -608,6 +607,7 @@
 				B4A00DF0188948370068A3F7 /* CaviarDreams_Bold.ttf in Resources */,
 				B4877C0A18FFB8EB00F56D33 /* mg_double_tap_balloon.png in Resources */,
 				B4C41F7E1901070700D6013F /* pb_back.png in Resources */,
+				925874DD1935254F0071178C /* PrintIOBundle.bundle in Resources */,
 				B489519618F59E7C00C38041 /* btn_email_support.png in Resources */,
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
@@ -780,6 +780,7 @@
 					"$(PROJECT_DIR)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-ecbrmppodoufoeaxvwzjoqibfidt/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
+					"$(PROJECT_DIR)/PrintIOSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
@@ -820,6 +821,7 @@
 					"$(PROJECT_DIR)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-ecbrmppodoufoeaxvwzjoqibfidt/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
+					"$(PROJECT_DIR)/PrintIOSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
