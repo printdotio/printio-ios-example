@@ -43,13 +43,13 @@
     
     // MG Path 2
     if (self.SwitchMGPath2.isOn){
-        [self testMGPath2];
+        [self testMGPath2:2];
         return;
     }
     
     // MG Path 1
     if (self.switchMirrorgram.isOn){
-        [self testMirrorgram];
+        [self testMirrorgram:1];
         return;
     }
     
@@ -337,23 +337,20 @@
 
 - (void)testMGPath3
 {
-    [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
-                             [NSNumber numberWithInt:1], ED_PARTNERS_ID,
-                             [NSNumber numberWithInt:3], ED_MG_PATH_NUMBER, nil]];
-    [self testMGPath2];
+    [self testMGPath2:3];
 }
 
-- (void)testMGPath2
+- (void)testMGPath2:(int)path
 {
     // Pass in one image
     UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
     NSArray *images = [NSArray arrayWithObjects:image1, nil];
     [self.printIO images:images];
     
-    [self testMirrorgram];
+    [self testMirrorgram:path];
 }
 
-- (void)testMirrorgram
+- (void)testMirrorgram:(int)path
 {
     // TO-DO Production mode switch also
     
@@ -455,7 +452,8 @@
     [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"] withNumberOfProducts:YES];
     
     [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
-                             [NSNumber numberWithInt:1], ED_PARTNERS_ID, nil]];
+                             [NSNumber numberWithInt:1], ED_PARTNERS_ID,
+                             [NSNumber numberWithInt:path], ED_MG_PATH_NUMBER, nil]];
     
     [self.printIO payeeName:@"Mirrorgram"];
     
@@ -620,7 +618,7 @@
     NSLog(@"PrintIOWidgetOnOpen");
 }
 
-- (void)PrintIOWidgetOnClose
+- (void)PrintIOWidgetOnCloseWithFlag:(NSInteger)flag
 {
     NSLog(@"PrintIOWidgetOnClose");
     _printIO = nil;
@@ -687,7 +685,5 @@
     [textField resignFirstResponder];
     return NO;
 }
-
-
 
 @end

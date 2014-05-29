@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B404B5B5192F551A00545157 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B404B5B4192F551A00545157 /* PrintIOBundle.bundle */; };
 		B410D01418802A0400C20755 /* customization.xml in Resources */ = {isa = PBXBuildFile; fileRef = B410D01318802A0400C20755 /* customization.xml */; };
 		B4187AF818E595480081978D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4187AF718E595480081978D /* ViewController.xib */; };
 		B41CADBC1884186F00A91191 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B41CADBB1884186F00A91191 /* icon1.png */; };
@@ -51,6 +50,7 @@
 		B471EF3E18FE6D2200BE63FB /* mg_back_new.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF3D18FE6D2200BE63FB /* mg_back_new.png */; };
 		B471EF4218FE794600BE63FB /* mg_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF4118FE794600BE63FB /* mg_menu.png */; };
 		B471EF4618FE7A0900BE63FB /* customization_mg.xml in Resources */ = {isa = PBXBuildFile; fileRef = B471EF4518FE7A0900BE63FB /* customization_mg.xml */; };
+		B4859331193240370016E7D6 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4859330193240370016E7D6 /* PrintIOBundle.bundle */; };
 		B4877C0A18FFB8EB00F56D33 /* mg_double_tap_balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = B4877C0918FFB8EB00F56D33 /* mg_double_tap_balloon.png */; };
 		B489518E18F59A9200C38041 /* mg_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B489518D18F59A9200C38041 /* mg_camera.png */; };
 		B489519418F59E7C00C38041 /* btn_products.png in Resources */ = {isa = PBXBuildFile; fileRef = B489518F18F59E7C00C38041 /* btn_products.png */; };
@@ -109,7 +109,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B404B5B4192F551A00545157 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 5-23-14, 12.04 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestSDKApp-Info.plist"; sourceTree = "<group>"; };
 		B410D01318802A0400C20755 /* customization.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization.xml; sourceTree = "<group>"; };
 		B4187AF718E595480081978D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -160,6 +159,7 @@
 		B471EF3D18FE6D2200BE63FB /* mg_back_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_back_new.png; sourceTree = "<group>"; };
 		B471EF4118FE794600BE63FB /* mg_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_menu.png; sourceTree = "<group>"; };
 		B471EF4518FE7A0900BE63FB /* customization_mg.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization_mg.xml; sourceTree = "<group>"; };
+		B4859330193240370016E7D6 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 5-25-14, 5.12 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B4877C0918FFB8EB00F56D33 /* mg_double_tap_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_double_tap_balloon.png; sourceTree = "<group>"; };
 		B489518D18F59A9200C38041 /* mg_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_camera.png; sourceTree = "<group>"; };
 		B489518F18F59E7C00C38041 /* btn_products.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_products.png; sourceTree = "<group>"; };
@@ -462,7 +462,7 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B404B5B4192F551A00545157 /* PrintIOBundle.bundle */,
+				B4859330193240370016E7D6 /* PrintIOBundle.bundle */,
 				B4A6C0C719237E9B0029537B /* PrintIO.framework */,
 			);
 			name = PrintIO;
@@ -576,7 +576,7 @@
 				B4C41F9B19013B0B00D6013F /* btn_drag_drop.png in Resources */,
 				B489518E18F59A9200C38041 /* mg_camera.png in Resources */,
 				B471EF4218FE794600BE63FB /* mg_menu.png in Resources */,
-				B404B5B5192F551A00545157 /* PrintIOBundle.bundle in Resources */,
+				B4859331193240370016E7D6 /* PrintIOBundle.bundle in Resources */,
 				B4C41F8E19010CD500D6013F /* pb_btn_cart.png in Resources */,
 				B489519C18F5A09000C38041 /* bcg.png in Resources */,
 				B489519718F59E7C00C38041 /* btn_info.png in Resources */,
@@ -717,6 +717,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "8E62404E-089D-46CB-B7BC-75DA59BDEF45";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
@@ -752,6 +753,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "8E62404E-089D-46CB-B7BC-75DA59BDEF45";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 arm64 armv7s";
@@ -764,8 +766,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tengai/Desktop/app-printmee.ios/TestSDKApp",
@@ -792,7 +794,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "82433357-AD95-4860-92C4-8013FE85C763";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -804,8 +806,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/tengai/Desktop/app-printmee.ios/TestSDKApp",
@@ -832,7 +834,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "82433357-AD95-4860-92C4-8013FE85C763";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
