@@ -55,6 +55,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchSetCountryInFProducts;
 @property (weak, nonatomic) IBOutlet UISwitch *switchCustomGIF;
 @property (weak, nonatomic) IBOutlet UISwitch *switchPhotoArrangement;
+@property (weak, nonatomic) IBOutlet UISwitch *switchPresentViewFromRight;
 
 // Partners
 @property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;

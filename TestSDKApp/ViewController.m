@@ -53,6 +53,8 @@
         return;
     }
     
+    [self.printIO setPhotobucketUsername:@"boroue@gmail.com" password:@"cisirep"];
+    
     // Navigation bar
     [self.printIO navigationBarColor:self.switchTitleBarColor.isOn ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
                           titleColor:self.switchTitleBarColor.isOn ? [UIColor whiteColor] : [UIColor blackColor]
@@ -285,7 +287,7 @@
     }
     
     // Open widget
-    [self.printIO open];
+    [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
     
     NSLog(@"widget starting");
 }
@@ -618,15 +620,9 @@
     NSLog(@"PrintIOWidgetOnOpen");
 }
 
-- (void)PrintIOWidgetOnCloseWithFlag:(NSInteger)flag
+- (void)PrintIOWidgetOnCloseWithData:(NSDictionary *)data
 {
-    NSLog(@"PrintIOWidgetOnClose");
-    _printIO = nil;
-}
-
-- (void)PrintIOWidgetOnCloseWithOrderData:(NSMutableDictionary *)orderData
-{
-    NSLog(@"orderData: %@", orderData);
+    NSLog(@"data: %@", data);
     _printIO = nil;
 }
 
