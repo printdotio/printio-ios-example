@@ -52,9 +52,7 @@
         [self testMirrorgram:1];
         return;
     }
-    
-    [self.printIO setPhotobucketUsername:@"boroue@gmail.com" password:@"cisirep"];
-    
+        
     // Navigation bar
     [self.printIO navigationBarColor:self.switchTitleBarColor.isOn ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
                           titleColor:self.switchTitleBarColor.isOn ? [UIColor whiteColor] : [UIColor blackColor]
@@ -196,6 +194,11 @@
                backgroundImageForButtons:nil];
     }
     
+    // Slide Side Menu from right
+    if (self.swSlideSideMenuFromRight.isOn){
+        [self.printIO slideSideMenuFromRight:YES];
+    }
+    
     // Custom share text. Will be used form side menu button.
     if (self.switchCustomShareText.isOn){
         [self.printIO setShareText:@"Example share app text with link http://www.google.com"];
@@ -284,6 +287,16 @@
         
         //[self.printIO setVariantsOptions:[NSArray arrayWithObjects:p1, p2, nil]];
         
+    }
+    
+    // Jump to shoping cart
+    if (self.swJumpToShopingCart.isOn){
+        [self.printIO goToScreen:PRINTIO_SCREEN_SHOPING_CART];
+    }
+    
+    // Show terms of service
+    if (self.swShowTermsOfService.isOn){
+        [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     }
     
     // Open widget
