@@ -347,6 +347,8 @@
                       infoTitleColor:[UIColor whiteColor]
                            infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]backgroundImageForButtons:nil];
     
+    [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
+    
     [self.printIO open];
 }
 
@@ -502,6 +504,8 @@
     [self.printIO removePlusFromAddMoreProductsButton:YES];
     [self.printIO removeLogoFromPaymentScreen:YES];
     
+    [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
+    
     // START WIDGET
     [self.printIO open];
 }
@@ -622,6 +626,8 @@
                            infoTitle:@"INFO"
                       infoTitleColor:[UIColor whiteColor]
                            infoColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:255.0/255.0] backgroundImageForButtons:[[NSBundle mainBundle]pathForResource:@"pb_bcg" ofType:@"png"]];
+    
+    [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     
     [self.printIO open];
 }

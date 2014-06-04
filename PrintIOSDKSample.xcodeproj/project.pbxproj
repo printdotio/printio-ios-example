@@ -50,7 +50,7 @@
 		B471EF3E18FE6D2200BE63FB /* mg_back_new.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF3D18FE6D2200BE63FB /* mg_back_new.png */; };
 		B471EF4218FE794600BE63FB /* mg_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B471EF4118FE794600BE63FB /* mg_menu.png */; };
 		B471EF4618FE7A0900BE63FB /* customization_mg.xml in Resources */ = {isa = PBXBuildFile; fileRef = B471EF4518FE7A0900BE63FB /* customization_mg.xml */; };
-		B4859331193240370016E7D6 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4859330193240370016E7D6 /* PrintIOBundle.bundle */; };
+		B47E695E193F7F0700A04069 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B47E695D193F7F0700A04069 /* PrintIOBundle.bundle */; };
 		B4877C0A18FFB8EB00F56D33 /* mg_double_tap_balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = B4877C0918FFB8EB00F56D33 /* mg_double_tap_balloon.png */; };
 		B489518E18F59A9200C38041 /* mg_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B489518D18F59A9200C38041 /* mg_camera.png */; };
 		B489519418F59E7C00C38041 /* btn_products.png in Resources */ = {isa = PBXBuildFile; fileRef = B489518F18F59E7C00C38041 /* btn_products.png */; };
@@ -159,7 +159,7 @@
 		B471EF3D18FE6D2200BE63FB /* mg_back_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_back_new.png; sourceTree = "<group>"; };
 		B471EF4118FE794600BE63FB /* mg_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_menu.png; sourceTree = "<group>"; };
 		B471EF4518FE7A0900BE63FB /* customization_mg.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization_mg.xml; sourceTree = "<group>"; };
-		B4859330193240370016E7D6 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 5-25-14, 5.12 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
+		B47E695D193F7F0700A04069 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 6-4-14, 6.19 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B4877C0918FFB8EB00F56D33 /* mg_double_tap_balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_double_tap_balloon.png; sourceTree = "<group>"; };
 		B489518D18F59A9200C38041 /* mg_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_camera.png; sourceTree = "<group>"; };
 		B489518F18F59E7C00C38041 /* btn_products.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_products.png; sourceTree = "<group>"; };
@@ -462,7 +462,7 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B4859330193240370016E7D6 /* PrintIOBundle.bundle */,
+				B47E695D193F7F0700A04069 /* PrintIOBundle.bundle */,
 				B4A6C0C719237E9B0029537B /* PrintIO.framework */,
 			);
 			name = PrintIO;
@@ -576,7 +576,7 @@
 				B4C41F9B19013B0B00D6013F /* btn_drag_drop.png in Resources */,
 				B489518E18F59A9200C38041 /* mg_camera.png in Resources */,
 				B471EF4218FE794600BE63FB /* mg_menu.png in Resources */,
-				B4859331193240370016E7D6 /* PrintIOBundle.bundle in Resources */,
+				B47E695E193F7F0700A04069 /* PrintIOBundle.bundle in Resources */,
 				B4C41F8E19010CD500D6013F /* pb_btn_cart.png in Resources */,
 				B489519C18F5A09000C38041 /* bcg.png in Resources */,
 				B489519718F59E7C00C38041 /* btn_info.png in Resources */,
