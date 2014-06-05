@@ -523,7 +523,7 @@
     [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
                  withNumberOfProducts:YES];
     [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
-    [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"]
+    [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu_a" ofType:@"png"]
                                background:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];
     [self.printIO statusBarDark:YES hidden:YES];
     [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
@@ -533,19 +533,14 @@
     [self.printIO removePlusFromAddMoreProductsButton:YES];
     
     // Available Photo sources
-    PIOSideMenuButton *btnPhone = [[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE];
+    NSMutableArray *photoSources = [[NSMutableArray alloc]init];
+    [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE]];
+    [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
+    [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK]];
+    [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FLICKR]];
+    [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHOTOBUCKET]];
     
-    PIOSideMenuButton *btnInstagram = [[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM];
-    btnInstagram.iconPath = [[NSBundle mainBundle] pathForResource:@"pb_btn_side_menu_instagram_transparent" ofType:@"png"];
-    btnInstagram.iconPathSelected = [[NSBundle mainBundle] pathForResource:@"pb_btn_side_menu_instagram_transparent" ofType:@"png"];
-    btnInstagram.textColor = [UIColor blackColor];
-    
-    PIOSideMenuButton *btnFb = [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK];
-    btnFb.iconPath = [[NSBundle mainBundle] pathForResource:@"pb_btn_side_menu_fb_transparent" ofType:@"png"];
-    btnFb.iconPathSelected = [[NSBundle mainBundle] pathForResource:@"pb_btn_side_menu_fb_transparent" ofType:@"png"];
-    btnFb.textColor = [UIColor blackColor];
-    
-    [self.printIO availablePhotoSources:[NSArray arrayWithObjects:btnPhone,btnInstagram,btnFb, nil]];
+    [self.printIO availablePhotoSources:photoSources];
     
     // Set main buttons for Side Menu
     PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@"EXIT"
@@ -629,6 +624,9 @@
     
     [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     
+    [self.printIO slideSideMenuFromRight:YES];
+    [self.printIO useThreeButtonsBarStyle:YES];
+    
     [self.printIO open];
 }
 
@@ -700,5 +698,4 @@
     [textField resignFirstResponder];
     return NO;
 }
-
 @end
