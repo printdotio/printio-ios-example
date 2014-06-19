@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		640660F41951A27E007A0DF2 /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640660F31951A27E007A0DF2 /* PrintIO.framework */; };
-		640660F81951C22C007A0DF2 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 640660F71951C22C007A0DF2 /* PrintIOBundle.bundle */; };
 		B410D01418802A0400C20755 /* customization.xml in Resources */ = {isa = PBXBuildFile; fileRef = B410D01318802A0400C20755 /* customization.xml */; };
 		B4187AF818E595480081978D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4187AF718E595480081978D /* ViewController.xib */; };
 		B41CADBC1884186F00A91191 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B41CADBB1884186F00A91191 /* icon1.png */; };
@@ -61,6 +59,8 @@
 		B489519718F59E7C00C38041 /* btn_info.png in Resources */ = {isa = PBXBuildFile; fileRef = B489519218F59E7C00C38041 /* btn_info.png */; };
 		B489519A18F59FEA00C38041 /* btn_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B489519918F59FEA00C38041 /* btn_camera.png */; };
 		B489519C18F5A09000C38041 /* bcg.png in Resources */ = {isa = PBXBuildFile; fileRef = B489519B18F5A09000C38041 /* bcg.png */; };
+		B4897BC4195268130071D68E /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4897BC3195268130071D68E /* PrintIO.framework */; };
+		B4897BC61952681D0071D68E /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4897BC51952681D0071D68E /* PrintIOBundle.bundle */; };
 		B48ADEC318E95A5200492F00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ADEC218E95A5200492F00 /* CoreLocation.framework */; };
 		B492168018F2BBA0002D0EB2 /* touch.png in Resources */ = {isa = PBXBuildFile; fileRef = B492167F18F2BBA0002D0EB2 /* touch.png */; };
 		B497202518F7ED330017301F /* mg_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = B497202418F7ED330017301F /* mg_cart.png */; };
@@ -110,8 +110,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		640660F31951A27E007A0DF2 /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../Library/Developer/Xcode/DerivedData/PrintIO-byusjdoksaywycewmbuhzksrrepy/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
-		640660F71951C22C007A0DF2 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../PrintIO 6-18-14, 2.48 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestSDKApp-Info.plist"; sourceTree = "<group>"; };
 		B410D01318802A0400C20755 /* customization.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization.xml; sourceTree = "<group>"; };
 		B4187AF718E595480081978D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -171,6 +169,8 @@
 		B489519218F59E7C00C38041 /* btn_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_info.png; sourceTree = "<group>"; };
 		B489519918F59FEA00C38041 /* btn_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera.png; sourceTree = "<group>"; };
 		B489519B18F5A09000C38041 /* bcg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bcg.png; sourceTree = "<group>"; };
+		B4897BC3195268130071D68E /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
+		B4897BC51952681D0071D68E /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIOApp 6-19-14, 2.24 AM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B48ADEC218E95A5200492F00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B492167F18F2BBA0002D0EB2 /* touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touch.png; sourceTree = "<group>"; };
 		B497202418F7ED330017301F /* mg_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_cart.png; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 				B429BD89186B0DF2002340BB /* libxml2.dylib in Frameworks */,
 				B429BD94186B0EF5002340BB /* libsqlite3.dylib in Frameworks */,
 				B429BD8C186B0E05002340BB /* MessageUI.framework in Frameworks */,
-				640660F41951A27E007A0DF2 /* PrintIO.framework in Frameworks */,
+				B4897BC4195268130071D68E /* PrintIO.framework in Frameworks */,
 				B429BD91186B0E45002340BB /* MobileCoreServices.framework in Frameworks */,
 				B429BD92186B0E4B002340BB /* OpenGLES.framework in Frameworks */,
 				B4F5FE091861FAB2000229A0 /* QuartzCore.framework in Frameworks */,
@@ -464,8 +464,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				640660F71951C22C007A0DF2 /* PrintIOBundle.bundle */,
-				640660F31951A27E007A0DF2 /* PrintIO.framework */,
+				B4897BC51952681D0071D68E /* PrintIOBundle.bundle */,
+				B4897BC3195268130071D68E /* PrintIO.framework */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";
@@ -611,7 +611,7 @@
 				B4A00DF0188948370068A3F7 /* CaviarDreams_Bold.ttf in Resources */,
 				B4877C0A18FFB8EB00F56D33 /* mg_double_tap_balloon.png in Resources */,
 				B4C41F7E1901070700D6013F /* pb_back.png in Resources */,
-				640660F81951C22C007A0DF2 /* PrintIOBundle.bundle in Resources */,
+				B4897BC61952681D0071D68E /* PrintIOBundle.bundle in Resources */,
 				B489519618F59E7C00C38041 /* btn_email_support.png in Resources */,
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
