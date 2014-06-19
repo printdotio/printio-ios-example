@@ -684,6 +684,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -698,4 +699,5 @@
     [textField resignFirstResponder];
     return NO;
 }
+
 @end

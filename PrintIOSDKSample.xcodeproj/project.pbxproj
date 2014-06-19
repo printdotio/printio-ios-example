@@ -271,6 +271,7 @@
 			children = (
 				B43F19C9185B061000926E70 /* TestSDKApp */,
 				B43F19E8185B061000926E70 /* TestSDKAppTests */,
+				B4AAA60418D1A2DB002C2F70 /* PrintIO */,
 				B43F19C2185B061000926E70 /* Frameworks */,
 				B43F19C1185B061000926E70 /* Products */,
 			);
@@ -288,7 +289,6 @@
 		B43F19C2185B061000926E70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4AAA60418D1A2DB002C2F70 /* PrintIO */,
 				B429BD99186B0FA5002340BB /* Accounts.framework */,
 				B429BD75186B0D2F002340BB /* AudioToolbox.framework */,
 				B429BD73186B0D26002340BB /* AVFoundation.framework */,
