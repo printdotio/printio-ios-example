@@ -251,7 +251,7 @@
     
     // Set country in featured products
     if (self.switchSetCountryInFProducts.isOn){
-        [self.printIO selectCountryInFeaturedProducts:YES];
+        [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:nil];
     }
     
     // Change loading GIF animation
@@ -298,6 +298,24 @@
     if (self.swShowTermsOfService.isOn){
         [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     }
+    
+    // Side Menu Options
+    if (self.swSideMenuShowOptionsAsAList.isOn){
+        [self.printIO sideMenuShowOptionsAsList:YES];
+    }
+    
+    if (self.swSideMenuHideAccountsHeader.isOn){
+        [self.printIO sideMenuHideAccountsHeader:YES];
+    }
+    
+    if (self.swSideMenuHideInfoHeader.isOn){
+        [self.printIO sideMenuHideInfoHeader:YES];
+    }
+    
+    if (self.swSideMenuHideOptionsHeader.isOn){
+        [self.printIO sideMenuHideOptionsHeader:YES];
+    }
+    
     
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
@@ -369,9 +387,12 @@
 
 - (void)testMirrorgram:(int)path
 {
+    UIColor *mgOrange = [UIColor colorWithRed:240.0/255.0 green:94.0/255.0 blue:79.0/255.0 alpha:1.0];
+    UIColor *mgGreen = [UIColor colorWithRed:25.0/255.0 green:181.0/255.0 blue:191.0/255.0 alpha:1.0];
+    
     // TO-DO Production mode switch also
     
-    [self.printIO useSideMenuWithMenuIcon:nil background:nil];
+    [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"mg_icon_menu" ofType:@"png"] background:nil];
     
     // Available Photo sources
     [self.printIO availablePhotoSources:[NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE],[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK], nil]];
@@ -458,11 +479,11 @@
                                           [[PIOButton alloc]initWithType:PIO_BUTTON_IMAGE_EDITOR_INFO], nil]];
     
     // Customize Navigation bar
-    [self.printIO navigationBarColor:[UIColor colorWithRed:72.0/255.0 green:72.0/255.0 blue:72.0/255.0 alpha:1.0]
+    [self.printIO navigationBarColor:[UIColor colorWithRed:240.0/255.0 green:94.0/255.0 blue:79.0/255.0 alpha:1.0]
                           titleColor:[UIColor whiteColor]
            leftButtonBackgroundColor:[UIColor clearColor]
           rightButtonBackgroundColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:1.0]
-                     titleButtonIcon:[[NSBundle mainBundle] pathForResource:@"mg_menu" ofType:@"png"]];
+                     titleButtonIcon:nil];
     
     // Change shoping cart icon
     [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart" ofType:@"png"] withNumberOfProducts:NO];
@@ -486,7 +507,7 @@
     [self.printIO iconForHelpButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_icon_question_mark" ofType:@"png"]];
     [self.printIO iconForAddPhotosButton:[[NSBundle mainBundle]pathForResource:@"mg_add_photos" ofType:@"png"]];
     
-    [self.printIO selectCountryInFeaturedProducts:YES];
+    [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:mgGreen];
     
     [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"mg_back_new" ofType:@"png"]];
     
@@ -506,6 +527,9 @@
     
     [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     
+    [self.printIO setTitleForFeaturedProductsScreen:@"ALL PRODUCTS"];
+    [self.printIO featuredProductsLeftLabelTextColor:nil rightLabelTextColor:mgOrange];
+    
     // START WIDGET
     [self.printIO open];
 }
@@ -519,7 +543,7 @@
           rightButtonBackgroundColor:nil
                      titleButtonIcon:nil];
     [self.printIO payeeName:@"Photobucket"];
-    [self.printIO selectCountryInFeaturedProducts:YES];
+    [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:nil];
     [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
                  withNumberOfProducts:YES];
     [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];

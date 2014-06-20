@@ -56,9 +56,14 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchCustomGIF;
 @property (weak, nonatomic) IBOutlet UISwitch *switchPhotoArrangement;
 @property (weak, nonatomic) IBOutlet UISwitch *switchPresentViewFromRight;
+
 @property (weak, nonatomic) IBOutlet UISwitch *swSlideSideMenuFromRight;
 @property (weak, nonatomic) IBOutlet UISwitch *swJumpToShopingCart;
 @property (weak, nonatomic) IBOutlet UISwitch *swShowTermsOfService;
+@property (weak, nonatomic) IBOutlet UISwitch *swSideMenuHideAccountsHeader;
+@property (weak, nonatomic) IBOutlet UISwitch *swSideMenuHideInfoHeader;
+@property (weak, nonatomic) IBOutlet UISwitch *swSideMenuHideOptionsHeader;
+@property (weak, nonatomic) IBOutlet UISwitch *swSideMenuShowOptionsAsAList;
 
 // Partners
 @property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;
