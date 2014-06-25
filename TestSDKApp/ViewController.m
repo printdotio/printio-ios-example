@@ -388,7 +388,8 @@
 - (void)testMirrorgram:(int)path
 {
     UIColor *mgOrange = [UIColor colorWithRed:240.0/255.0 green:94.0/255.0 blue:79.0/255.0 alpha:1.0];
-    UIColor *mgGreen = [UIColor colorWithRed:25.0/255.0 green:181.0/255.0 blue:191.0/255.0 alpha:1.0];
+    UIColor *mgGreen = [UIColor colorWithRed:0.0/255.0 green:197.0/255.0 blue:204.0/255.0 alpha:1.0];
+    UIColor *mgGrey = [UIColor colorWithRed:136.0/255.0 green:136.0/255.0 blue:136.0/255.0 alpha:1.0];
     
     // TO-DO Production mode switch also
     
@@ -509,26 +510,51 @@
     
     [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:mgGreen];
     
-    [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"mg_back_new" ofType:@"png"]];
+    [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"mg_back_new_spark" ofType:@"png"]];
     
     // Path to XML customization file
     NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization_mg" ofType:@"xml"];
     NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
     [self.printIO customizationXML:xmlData];
-    
-    [self.printIO hideIconForUplaodInstructions:YES];
-    
+        
     [self.printIO setPopUpWithImage:[[NSBundle mainBundle]pathForResource:@"mg_double_tap_balloon" ofType:@"png"]
                                text:@"Double tap photo to edit"
                           textColor:[UIColor whiteColor]];
     
     [self.printIO removePlusFromAddMoreProductsButton:YES];
-    [self.printIO removeLogoFromPaymentScreen:YES];
     
     [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     
     [self.printIO setTitleForFeaturedProductsScreen:@"ALL PRODUCTS"];
+    [self.printIO setTitleForShoppingCart:@"MY SHOPPING CART"];
+    [self.printIO setTitleForOrderCompletedScreen:@"ORDER COMPLETED"];
+    [self.printIO setTitleForChooseOptionsScreen:@"CHOOSE OPTIONS"];
+    
     [self.printIO featuredProductsLeftLabelTextColor:nil rightLabelTextColor:mgOrange];
+    [self.printIO navigationBarSaveToCartBackgroundColor:mgGrey
+                                              titleColor:[UIColor whiteColor]
+                                   buttonBackgroundColor:mgOrange
+                                        buttonTitleColor:[UIColor whiteColor]];
+    
+    [self.printIO featuredProductsSetBackgroungImage:[[NSBundle mainBundle] pathForResource:@"mg_bcg" ofType:@"png"]];
+    [self.printIO doubleTapBallonVisibilityTime:-1];
+    [self.printIO showPlusSignOnAddButton:YES];
+    
+    [self.printIO orderCompletedScreenCloseButtonShouldPerformBack:YES];
+    [self.printIO setIconForOrderCompletedScreen:[[NSBundle mainBundle] pathForResource:@"mg_s_logo" ofType:@"png"]];
+    
+    // Set attributed company message
+    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc]initWithString:@"Thank you for creating in  "];
+    
+    NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
+    textAttachment.image = [UIImage imageNamed:@"mg_watermark"];
+    
+    NSAttributedString *attrStringWithImage = [NSAttributedString attributedStringWithAttachment:textAttachment];
+    [attrString replaceCharactersInRange:NSMakeRange(26, 1) withAttributedString:attrStringWithImage];
+    
+    [self.printIO setMessageForOrderCompletedScreen:attrString];
+    [self.printIO productDetailsShowTitleBelowNavBar:YES];
+    [self.printIO productDetailsShowMenuBtnInNavBar:YES];
     
     // START WIDGET
     [self.printIO open];
