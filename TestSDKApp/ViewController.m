@@ -59,8 +59,8 @@
            leftButtonBackgroundColor:nil
           rightButtonBackgroundColor:nil
                      titleButtonIcon:self.switchBtnInNavBar.isOn ? [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"] : nil];
-    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
-                 withNumberOfProducts:YES];
+    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png" ]
+                 withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
     
     // Photo Sources
     NSMutableArray *photoSources = [[NSMutableArray alloc]init];
@@ -396,27 +396,51 @@
     [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"mg_icon_menu" ofType:@"png"] background:nil];
     
     // Available Photo sources
-    [self.printIO availablePhotoSources:[NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE],[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK], nil]];
+    PIOSideMenuButton *btnSInstagram = [[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM];
+    btnSInstagram.iconPath = [[NSBundle mainBundle]pathForResource:@"s_instagram" ofType:@"png"];
+    btnSInstagram.iconPathSelected = [[NSBundle mainBundle]pathForResource:@"s_instagram" ofType:@"png"];
+    btnSInstagram.textColor = [UIColor blackColor];
+    btnSInstagram.useBoldFonts = YES;
+    
+    PIOSideMenuButton *btnSPhone = [[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE];
+    
+    PIOSideMenuButton *btnSFacebook = [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK];
+    btnSFacebook.iconPath = [[NSBundle mainBundle]pathForResource:@"s_facebook" ofType:@"png"];
+    btnSFacebook.iconPathSelected = [[NSBundle mainBundle]pathForResource:@"s_facebook" ofType:@"png"];
+    btnSFacebook.textColor = [UIColor blackColor];
+    btnSFacebook.useBoldFonts = YES;
+    
+    [self.printIO availablePhotoSources:[NSArray arrayWithObjects:btnSPhone, btnSInstagram, btnSFacebook, nil]];
     
     // Set main buttons for Side Menu
-    PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@"CAMERA"
+    PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@" GO TO IMAGE MODE"
                                                                       type:PIO_SM_EXIT_BUTTON
-                                                                  iconPath:[[NSBundle mainBundle] pathForResource:@"btn_camera" ofType:@"png"]];
+                                                                  iconPath:[[NSBundle mainBundle] pathForResource:@"s_btn_camera" ofType:@"png"]];
     btnCamera.fontSize = 15.0;
+    btnCamera.textColor = [UIColor blackColor];
+    btnCamera.useBoldFonts = YES;
     
-    PIOSideMenuButton *btnProducts = [[PIOSideMenuButton alloc]initWithTitle:@"PRODUCTS"
+    PIOSideMenuButton *btnProducts = [[PIOSideMenuButton alloc]initWithTitle:@"ALL PRODUCTS"
                                                                         type:PIO_SM_PRODUCTS
-                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"btn_products" ofType:@"png"]];
+                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"s_btn_products" ofType:@"png"]];
     btnProducts.fontSize = 15.0;
+    btnProducts.textColor = [UIColor blackColor];
+    btnProducts.useBoldFonts = YES;
     
-    PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"VIEW CART"
+    PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"MY CART"
                                                                         type:PIO_SM_VIEW_CART
-                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"btn_cart" ofType:@"png"]];
+                                                                    iconPath:[[NSBundle mainBundle] pathForResource:@"s_btn_cart" ofType:@"png"]];
+    btnViewCart.textColor = [UIColor blackColor];
+    btnViewCart.fontSize = 15.0;
+    btnViewCart.useBoldFonts = YES;
     
-    PIOSideMenuButton *btnEmailSupport = [[PIOSideMenuButton alloc]initWithTitle:@"EMAIL SUPPORT"
+    PIOSideMenuButton *btnEmailSupport = [[PIOSideMenuButton alloc]initWithTitle:@"EMAIL ORDER SUPPORT"
                                                                             type:PIO_SM_EMAIL_SUPPORT
-                                                                        iconPath:[[NSBundle mainBundle] pathForResource:@"btn_email_support" ofType:@"png"]];
+                                                                        iconPath:[[NSBundle mainBundle] pathForResource:@"s_btn_email_support" ofType:@"png"]];
     btnEmailSupport.dataHolder = @"support@mirrorgram.com";
+    btnEmailSupport.textColor = [UIColor blackColor];
+    btnEmailSupport.fontSize = 15.0;
+    btnEmailSupport.useBoldFonts = YES;
     
     NSArray *buttons;
     
@@ -429,47 +453,61 @@
         buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, btnEmailSupport, nil];
     }
     
+    btnViewCart.textColor = [UIColor blackColor];
     btnViewCart.fontSize = 15.0;
     
     // Options
     PIOSideMenuButton *btnChangeCurrency = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE CURRENCY"
                                                                               type:PIO_SM_CHANGE_CURRENCY
                                                                           iconPath:nil];
-    btnChangeCurrency.fontSize = 14.0;
+    btnChangeCurrency.fontSize = 12.0;
+    btnChangeCurrency.textColor = [UIColor blackColor];
+    btnChangeCurrency.textSecondColor = mgGrey;
+    btnChangeCurrency.useBoldFonts = YES;
     
     PIOSideMenuButton *btnChangeCountry = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE COUNTRY"
                                                                              type:PIO_SM_CHANGE_COUNTRY
                                                                          iconPath:nil];
-    btnChangeCountry.fontSize = 14.0;
+    btnChangeCountry.fontSize = 12.0;
+    btnChangeCountry.textColor = [UIColor blackColor];
+    btnChangeCountry.useBoldFonts = YES;
     
     PIOSideMenuButton *btnChangeLanguage = [[PIOSideMenuButton alloc]initWithTitle:@"CHANGE LANGUAGE"
                                                                               type:PIO_SM_CHANGE_LANGUAGE
-                                                                          iconPath:nil];
-    btnChangeLanguage.fontSize = 14.0;
+                                                                          iconPath:[[NSBundle mainBundle] pathForResource:@"s_icon_language" ofType:@"png"]];
+    btnChangeLanguage.fontSize = 12.0;
+    btnChangeLanguage.textColor = [UIColor blackColor];
+    btnChangeLanguage.useBoldFonts = YES;
     
     NSArray *options = [NSArray arrayWithObjects:btnChangeCurrency, btnChangeCountry, btnChangeLanguage, nil];
     
     // Infos
     PIOSideMenuButton *btnHowItWorks = [[PIOSideMenuButton alloc]initWithTitle:@"HOW IT WORKS"
                                                                           type:PIO_SM_HOW_IT_WORKS
-                                                                      iconPath:[[NSBundle mainBundle] pathForResource:@"btn_info" ofType:@"png"]];
+                                                                      iconPath:[[NSBundle mainBundle] pathForResource:@"s_btn_info" ofType:@"png"]];
+    btnHowItWorks.textColor = [UIColor blackColor];
     btnHowItWorks.fontSize = 15.0;
+    btnHowItWorks.useBoldFonts = YES;
     
     NSArray *infos = [NSArray arrayWithObjects:btnHowItWorks, nil];
     
     [self.printIO sideMenuAddButtons:buttons
+     
                              options:options
                         optionsTitle:@"OPTIONS"
-                   optionsTitleColor:[UIColor blackColor]
-                        optionsColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]
+                   optionsTitleColor:[UIColor whiteColor]
+                        optionsColor:mgGrey
      
                        accountsTitle:@"SOCIAL ACCOUNTS"
-                  accountsTitleColor:[UIColor blackColor]
-                       accountsColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]
+                  accountsTitleColor:[UIColor whiteColor]
+                       accountsColor:mgGrey
+     
                                 info:infos
                            infoTitle:@"INFO"
-                      infoTitleColor:[UIColor blackColor]
-                           infoColor:[UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:255.0/255.0]backgroundImageForButtons:[[NSBundle mainBundle]pathForResource:@"bcg" ofType:@"png"]];
+                      infoTitleColor:[UIColor whiteColor]
+                           infoColor:mgGrey
+     
+           backgroundImageForButtons:[[NSBundle mainBundle]pathForResource:@"s_bcg" ofType:@"png"]];
     
     // Hide tab bar in Customize Product screen
     [self.printIO showToolbarInCustomizeProduct:NO
@@ -487,8 +525,7 @@
                      titleButtonIcon:nil];
     
     // Change shoping cart icon
-    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart" ofType:@"png"] withNumberOfProducts:NO];
-    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"] withNumberOfProducts:YES];
+    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"] withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
     
     [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithInt:1], ED_PARTNERS_ID,
@@ -499,7 +536,7 @@
     [self.printIO setPassedImageAsThumbForOnePhotoTemplate:YES];
     
     // Set custom icon
-    [self.printIO changeLogo:@"mg_menu"];
+    [self.printIO changeLogo:@"mg_s_logo"];
     
     [self.printIO hideCategoriesInFeaturedProducts:YES];
     
@@ -529,6 +566,8 @@
     [self.printIO setTitleForShoppingCart:@"MY SHOPPING CART"];
     [self.printIO setTitleForOrderCompletedScreen:@"ORDER COMPLETED"];
     [self.printIO setTitleForChooseOptionsScreen:@"CHOOSE OPTIONS"];
+    [self.printIO setTitleForPhotoSourcesScreen:@"SELECT IMAGES"];
+    [self.printIO setTitleForChooseCountryScreen:@"CHOOSE COUNTRY"];
     
     [self.printIO featuredProductsLeftLabelTextColor:nil rightLabelTextColor:mgOrange];
     [self.printIO navigationBarSaveToCartBackgroundColor:mgGrey
@@ -536,8 +575,8 @@
                                    buttonBackgroundColor:mgOrange
                                         buttonTitleColor:[UIColor whiteColor]];
     
-    [self.printIO featuredProductsSetBackgroungImage:[[NSBundle mainBundle] pathForResource:@"mg_bcg" ofType:@"png"]];
-    [self.printIO doubleTapBallonVisibilityTime:-1];
+    [self.printIO featuredProductsSetBackgroundImage:[[NSBundle mainBundle] pathForResource:@"mg_bcg" ofType:@"png"]];
+    [self.printIO doubleTapBalloonVisibilityTime:-1];
     [self.printIO showPlusSignOnAddButton:YES];
     
     [self.printIO orderCompletedScreenCloseButtonShouldPerformBack:YES];
@@ -556,6 +595,9 @@
     [self.printIO productDetailsShowTitleBelowNavBar:YES];
     [self.printIO productDetailsShowMenuBtnInNavBar:YES];
     
+    [self.printIO setLoadingGIF:@"mg_loader"];
+    [self.printIO hideSearchIconInChooseCountryScreen:YES];
+    
     // START WIDGET
     [self.printIO open];
 }
@@ -571,7 +613,7 @@
     [self.printIO payeeName:@"Photobucket"];
     [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:nil];
     [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
-                 withNumberOfProducts:YES];
+                 withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
     [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
     [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu_a" ofType:@"png"]
                                background:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];

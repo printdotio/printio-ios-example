@@ -13,8 +13,8 @@
         <label name="label_4" font_color="#000000"/>
         <label name="label_5" font_color="#000000"/>
         <image_view name="icon_1" image_name="mg_small_details" image_format="png"/>
-        <image_view name="icon_2" image_name="mg_small_quality_g" image_format="png"/>
-        <image_view name="icon_3" image_name="mg_small_shipping" image_format="png"/>
+        <image_view name="icon_2" image_name="mg_small_shipping" image_format="png"/>
+        <image_view name="icon_3" image_name="mg_small_quality_g" image_format="png"/>
     </screen>
     
     <screen name="dialog_two_buttons">
