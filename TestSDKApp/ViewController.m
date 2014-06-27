@@ -316,6 +316,10 @@
         [self.printIO sideMenuHideOptionsHeader:YES];
     }
     
+    if (self.swHidePhotoSourcesInSideMenu.isOn){
+        [self.printIO hidePhotoSourcesInSideMenu:YES];
+    }
+    
     
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];

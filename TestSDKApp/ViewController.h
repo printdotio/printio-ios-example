@@ -64,6 +64,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *swSideMenuHideInfoHeader;
 @property (weak, nonatomic) IBOutlet UISwitch *swSideMenuHideOptionsHeader;
 @property (weak, nonatomic) IBOutlet UISwitch *swSideMenuShowOptionsAsAList;
+@property (weak, nonatomic) IBOutlet UISwitch *swHidePhotoSourcesInSideMenu;
 
 // Partners
 @property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;
