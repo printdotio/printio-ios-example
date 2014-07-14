@@ -320,7 +320,6 @@
         [self.printIO hidePhotoSourcesInSideMenu:YES];
     }
     
-    
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
     
@@ -425,11 +424,12 @@
     btnCamera.useBoldFonts = YES;
     
     PIOSideMenuButton *btnProducts = [[PIOSideMenuButton alloc]initWithTitle:@"ALL PRODUCTS"
-                                                                        type:PIO_SM_PRODUCTS
+                                                                        type:PIO_SM_HELP
                                                                     iconPath:[[NSBundle mainBundle] pathForResource:@"s_btn_products" ofType:@"png"]];
     btnProducts.fontSize = 15.0;
     btnProducts.textColor = [UIColor blackColor];
     btnProducts.useBoldFonts = YES;
+    btnProducts.dataHolder = @"http://support.photobucket.com/";
     
     PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"MY CART"
                                                                         type:PIO_SM_VIEW_CART
@@ -449,9 +449,13 @@
     NSArray *buttons;
     
     if (self.SwitchMGPath2.isOn){
-        PIOSideMenuButton *btnShareWithImage = [[PIOSideMenuButton alloc]initWithTitle:@"   SHARE"
+        PIOSideMenuButton *btnShareWithImage = [[PIOSideMenuButton alloc]initWithTitle:@"             SHARE"
                                                                                   type:PIO_SM_SHARE_WITH_IMAGE
-                                                                              iconPath:nil];
+                                                                              iconPath:[[NSBundle mainBundle] pathForResource:@"s_share" ofType:@"png"]];
+        btnShareWithImage.textColor = [UIColor blackColor];
+        btnShareWithImage.fontSize = 15.0;
+        btnShareWithImage.useBoldFonts = YES;
+        
         buttons = [NSArray arrayWithObjects:btnCamera, btnShareWithImage, btnProducts, btnViewCart, btnEmailSupport, nil];
     } else {
         buttons = [NSArray arrayWithObjects:btnCamera, btnProducts, btnViewCart, btnEmailSupport, nil];
