@@ -424,12 +424,11 @@
     btnCamera.useBoldFonts = YES;
     
     PIOSideMenuButton *btnProducts = [[PIOSideMenuButton alloc]initWithTitle:@"ALL PRODUCTS"
-                                                                        type:PIO_SM_HELP
+                                                                        type:PIO_SM_PRODUCTS
                                                                     iconPath:[[NSBundle mainBundle] pathForResource:@"s_btn_products" ofType:@"png"]];
     btnProducts.fontSize = 15.0;
     btnProducts.textColor = [UIColor blackColor];
     btnProducts.useBoldFonts = YES;
-    btnProducts.dataHolder = @"http://support.photobucket.com/";
     
     PIOSideMenuButton *btnViewCart = [[PIOSideMenuButton alloc]initWithTitle:@"MY CART"
                                                                         type:PIO_SM_VIEW_CART
@@ -441,7 +440,7 @@
     PIOSideMenuButton *btnEmailSupport = [[PIOSideMenuButton alloc]initWithTitle:@"EMAIL ORDER SUPPORT"
                                                                             type:PIO_SM_EMAIL_SUPPORT
                                                                         iconPath:[[NSBundle mainBundle] pathForResource:@"s_btn_email_support" ofType:@"png"]];
-    btnEmailSupport.dataHolder = @"support@mirrorgram.com";
+    btnEmailSupport.dataHolder = @"orders@entersparkmode.com";
     btnEmailSupport.textColor = [UIColor blackColor];
     btnEmailSupport.fontSize = 15.0;
     btnEmailSupport.useBoldFonts = YES;
@@ -605,6 +604,11 @@
     
     [self.printIO setLoadingGIF:@"mg_loader"];
     [self.printIO hideSearchIconInChooseCountryScreen:YES];
+    [self.printIO customizeAddMoreProductButton:@"MAKE MORE PRODUCTS" icon:[[NSBundle mainBundle]pathForResource:@"mg_add_more_products" ofType:@"png"]];
+    [self.printIO shoppingCartBackButtonIcon:[[NSBundle mainBundle]pathForResource:@"mg_all_products" ofType:@"png"]];
+    
+    [self.printIO setNavigationBarBackgroundColorForChooseCountryScreen:mgGreen];
+    [self.printIO setPlaceholderTextForSearchBarInChooseCountryScreen:@"  " hideMagnifyingGlass:YES];
     
     // START WIDGET
     [self.printIO open];
