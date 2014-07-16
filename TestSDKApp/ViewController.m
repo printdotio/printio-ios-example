@@ -320,6 +320,11 @@
         [self.printIO hidePhotoSourcesInSideMenu:YES];
     }
     
+    [self.printIO navigationBarSaveToCartBackgroundColor:nil
+                                              titleColor:[UIColor whiteColor]
+                                   buttonBackgroundColor:nil
+                                        buttonTitleColor:[UIColor whiteColor]];
+
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
     
