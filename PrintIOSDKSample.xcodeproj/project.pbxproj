@@ -33,7 +33,6 @@
 		B429BD9A186B0FA5002340BB /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD99186B0FA5002340BB /* Accounts.framework */; };
 		B429BD9C186B0FB5002340BB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD9B186B0FB5002340BB /* CoreTelephony.framework */; };
 		B4364CB1190A60B200748812 /* pb_icon_cart_black.png in Resources */ = {isa = PBXBuildFile; fileRef = B4364CB0190A60B200748812 /* pb_icon_cart_black.png */; };
-		B43D33421976ADBC00C8AD58 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B43D33411976ADBC00C8AD58 /* PrintIOBundle.bundle */; };
 		B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C3185B061000926E70 /* Foundation.framework */; };
 		B43F19C8185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19CC185B061000926E70 /* InfoPlist.strings */; };
@@ -46,12 +45,13 @@
 		B43F19E5185B061000926E70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43F19C7185B061000926E70 /* UIKit.framework */; };
 		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
 		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
+		B4443F49197948A4004D2FE5 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4443F48197948A4004D2FE5 /* PrintIOBundle.bundle */; };
 		B44AD087195ACD8200317CC9 /* mg_s_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AD086195ACD8200317CC9 /* mg_s_logo.png */; };
 		B44AD08F195AD23500317CC9 /* mg_watermark.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AD08E195AD23500317CC9 /* mg_watermark.png */; };
 		B44AD0EB195B0CDF00317CC9 /* mg_small_details.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AD0E8195B0CDF00317CC9 /* mg_small_details.png */; };
 		B44AD0EC195B0CDF00317CC9 /* mg_small_quality_g.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AD0E9195B0CDF00317CC9 /* mg_small_quality_g.png */; };
 		B44AD0ED195B0CDF00317CC9 /* mg_small_shipping.png in Resources */ = {isa = PBXBuildFile; fileRef = B44AD0EA195B0CDF00317CC9 /* mg_small_shipping.png */; };
-		B456038D1975354B000457C5 /* mg_add_more_products.png in Resources */ = {isa = PBXBuildFile; fileRef = B456038C1975354B000457C5 /* mg_add_more_products.png */; };
+		B456038D1975354B000457C5 /* mg_add_more_products@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B456038C1975354B000457C5 /* mg_add_more_products@2x.png */; };
 		B456038F197540B1000457C5 /* mg_all_products.png in Resources */ = {isa = PBXBuildFile; fileRef = B456038E197540B1000457C5 /* mg_all_products.png */; };
 		B456039119756918000457C5 /* customization_1.xml in Resources */ = {isa = PBXBuildFile; fileRef = B456039019756918000457C5 /* customization_1.xml */; };
 		B4564E6F19411478000D3CBC /* pb_menu_a.png in Resources */ = {isa = PBXBuildFile; fileRef = B4564E6E19411478000D3CBC /* pb_menu_a.png */; };
@@ -159,7 +159,6 @@
 		B429BD99186B0FA5002340BB /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B429BD9B186B0FB5002340BB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		B4364CB0190A60B200748812 /* pb_icon_cart_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_icon_cart_black.png; sourceTree = "<group>"; };
-		B43D33411976ADBC00C8AD58 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 7-16-14, 2.54 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B43F19C0185B061000926E70 /* PrintIOSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintIOSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43F19C3185B061000926E70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B43F19C5185B061000926E70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -177,12 +176,13 @@
 		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
 		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
+		B4443F48197948A4004D2FE5 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = "../../PrintIO 7-18-14, 2.20 PM/Library/Bundles/PrintIOBundle.bundle"; sourceTree = "<group>"; };
 		B44AD086195ACD8200317CC9 /* mg_s_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_s_logo.png; sourceTree = "<group>"; };
 		B44AD08E195AD23500317CC9 /* mg_watermark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_watermark.png; sourceTree = "<group>"; };
 		B44AD0E8195B0CDF00317CC9 /* mg_small_details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_small_details.png; sourceTree = "<group>"; };
 		B44AD0E9195B0CDF00317CC9 /* mg_small_quality_g.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_small_quality_g.png; sourceTree = "<group>"; };
 		B44AD0EA195B0CDF00317CC9 /* mg_small_shipping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_small_shipping.png; sourceTree = "<group>"; };
-		B456038C1975354B000457C5 /* mg_add_more_products.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_add_more_products.png; sourceTree = "<group>"; };
+		B456038C1975354B000457C5 /* mg_add_more_products@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mg_add_more_products@2x.png"; sourceTree = "<group>"; };
 		B456038E197540B1000457C5 /* mg_all_products.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mg_all_products.png; sourceTree = "<group>"; };
 		B456039019756918000457C5 /* customization_1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = customization_1.xml; sourceTree = "<group>"; };
 		B4564E6E19411478000D3CBC /* pb_menu_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_menu_a.png; sourceTree = "<group>"; };
@@ -418,7 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				B456038E197540B1000457C5 /* mg_all_products.png */,
-				B456038C1975354B000457C5 /* mg_add_more_products.png */,
+				B456038C1975354B000457C5 /* mg_add_more_products@2x.png */,
 				B492340F195C75A100E29403 /* s_instagram.png */,
 				B4923410195C75A100E29403 /* s_facebook.png */,
 				B492340D195C6F7B00E29403 /* s_icon_language.png */,
@@ -549,7 +549,7 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B43D33411976ADBC00C8AD58 /* PrintIOBundle.bundle */,
+				B4443F48197948A4004D2FE5 /* PrintIOBundle.bundle */,
 				B41E1CCB1958161A006D7B37 /* PrintIO.framework */,
 			);
 			name = PrintIO;
@@ -688,7 +688,7 @@
 				B4AB667118FD83C700308389 /* mg_toolbar_bcg.png in Resources */,
 				B410D01418802A0400C20755 /* customization.xml in Resources */,
 				6423FFA11954DC3000B5E44C /* mg_cart_new.png in Resources */,
-				B43D33421976ADBC00C8AD58 /* PrintIOBundle.bundle in Resources */,
+				B4443F49197948A4004D2FE5 /* PrintIOBundle.bundle in Resources */,
 				B497202518F7ED330017301F /* mg_cart.png in Resources */,
 				B471EF3E18FE6D2200BE63FB /* mg_back_new.png in Resources */,
 				B492340E195C6F7B00E29403 /* s_icon_language.png in Resources */,
@@ -696,7 +696,7 @@
 				B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */,
 				B4E34F6419745ECF00A351AA /* s_share.png in Resources */,
 				B4C41F8C19010CD500D6013F /* pb_btn_camera.png in Resources */,
-				B456038D1975354B000457C5 /* mg_add_more_products.png in Resources */,
+				B456038D1975354B000457C5 /* mg_add_more_products@2x.png in Resources */,
 				B41D88AD186D8791005A292A /* thunder.jpg in Resources */,
 				B4923406195C638D00E29403 /* s_btn_info.png in Resources */,
 				B4A00DF1188948370068A3F7 /* CaviarDreams_BoldItalic.ttf in Resources */,

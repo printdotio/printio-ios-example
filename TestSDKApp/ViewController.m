@@ -320,6 +320,20 @@
         [self.printIO hidePhotoSourcesInSideMenu:YES];
     }
     
+    if (self.swPositiveButtons.isOn){
+        [self.printIO setPositiveButtonsBackgroundColor:[UIColor blueColor]
+                                             titleColor:[UIColor whiteColor]];
+    }
+    
+    if (self.swNegativeButtons.isOn){
+        [self.printIO setNegativeButtonsBackgroundColor:[UIColor redColor]
+                                             titleColor:[UIColor whiteColor]];
+    }
+    
+    if (self.swDisablePreviewScreen.isOn){
+        [self.printIO disablePreviewScreen:YES];
+    }
+    
     [self.printIO navigationBarSaveToCartBackgroundColor:nil
                                               titleColor:[UIColor whiteColor]
                                    buttonBackgroundColor:nil
@@ -609,7 +623,7 @@
     
     [self.printIO setLoadingGIF:@"mg_loader"];
     [self.printIO hideSearchIconInChooseCountryScreen:YES];
-    [self.printIO customizeAddMoreProductButton:@"MAKE MORE PRODUCTS" icon:[[NSBundle mainBundle]pathForResource:@"mg_add_more_products" ofType:@"png"]];
+    [self.printIO customizeAddMoreProductButton:@"MAKE MORE PRODUCTS" icon:[[NSBundle mainBundle]pathForResource:@"mg_add_more_products@2x" ofType:@"png"]];
     [self.printIO shoppingCartBackButtonIcon:[[NSBundle mainBundle]pathForResource:@"mg_all_products" ofType:@"png"]];
     
     [self.printIO setNavigationBarBackgroundColorForChooseCountryScreen:mgGreen];
