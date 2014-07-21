@@ -628,6 +628,7 @@
     
     [self.printIO setNavigationBarBackgroundColorForChooseCountryScreen:mgGreen];
     [self.printIO setPlaceholderTextForSearchBarInChooseCountryScreen:@"  " hideMagnifyingGlass:YES];
+    [self.printIO setShareText:@"I'm using Mirrorgram! Here is a <a href=\"https://itunes.apple.com/US/app/id559500608?mt=8\">link</a> for you to download."];
     
     // START WIDGET
     [self.printIO open];

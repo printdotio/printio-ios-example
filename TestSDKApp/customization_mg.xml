@@ -6,7 +6,7 @@
     </screen>
     
     <screen name="product_details">
-        <button name="button_create" bcg_color="#f05e4f" font_color="#ffffff" title="CREATE IT "/>
+        <button name="button_create" bcg_color="#f05e4f" font_color="#ffffff" title="" bcg_image_name="btn_mg_create_it" bcg_image_format="png"/>
         <label name="label_1" font_color="#000000"/>
         <label name="label_2" font_color="#000000"/>
         <label name="label_3" font_color="#000000"/>
@@ -55,6 +55,7 @@
     </screen>
     
     <screen name="add_address">
+        <button name="button_1" bcg_color="#00c5cc" font_color="#ffffff" />
         <button name="button_save" bcg_color="#00c5cc" font_color="#ffffff" />
     </screen>
     
