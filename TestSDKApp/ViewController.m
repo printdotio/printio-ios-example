@@ -291,7 +291,7 @@
     
     // Jump to shoping cart
     if (self.swJumpToShopingCart.isOn){
-        [self.printIO goToScreen:PRINTIO_SCREEN_SHOPING_CART];
+        [self.printIO goToScreen:PRINTIO_SCREEN_SHOPPING_CART];
     }
     
     // Show terms of service
