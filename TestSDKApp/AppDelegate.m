@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <PrintIO/PrintIO.h>
+#import <printIO/PIOSideMenuButton.h>
 
 @implementation AppDelegate
 
@@ -16,7 +17,7 @@
 {
     ViewController *vc = [[ViewController alloc]init];
     UINavigationController *nc = [[UINavigationController alloc]initWithRootViewController:vc];
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = nc;
     

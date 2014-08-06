@@ -134,7 +134,6 @@
     if (self.switchCustomFonts.isOn){
         NSArray *fonts = @[@"timess.ttf", @"timess.ttf",
                            @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
-        
         [self.printIO customFonts:fonts];
     }
     
@@ -157,13 +156,17 @@
     if (self.switchEnableSideMenu.isOn){
         [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"] background:nil];
         
+        PIOSideMenuButton *pioSmHelp =  [[PIOSideMenuButton alloc]initWithType:PIO_SM_HELP];
+        pioSmHelp.dataHolder  = @"http://www.google.com";
+        
         // Set options for Side Menu
         NSArray *buttons = [NSArray arrayWithObjects:
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_SEARCH_BAR],
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_EXIT_BUTTON],
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRODUCTS],
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_FEATURED_PRODUCTS],
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_VIEW_CART], nil];
+                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_VIEW_CART],
+                            pioSmHelp, nil];
         
         NSArray *options = [NSArray arrayWithObjects:
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_CURRENCY],
@@ -291,7 +294,7 @@
     
     // Jump to shoping cart
     if (self.swJumpToShopingCart.isOn){
-        [self.printIO goToScreen:PRINTIO_SCREEN_SHOPPING_CART];
+        [self.printIO goToScreen:PRINTIO_JUMP_TO_SCREEN_SHOPPING_CART];
     }
     
     // Show terms of service
@@ -338,7 +341,11 @@
                                               titleColor:[UIColor whiteColor]
                                    buttonBackgroundColor:nil
                                         buttonTitleColor:[UIColor whiteColor]];
-
+    
+    [self.printIO iconForSaveButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"icon_cart_white" ofType:@"png"]];
+    
+    //[self.printIO setSamePhotoOnFrontAndBackSideOfProduct:PRODUCT_THROW_PILLOWS()];
+    
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
     
@@ -412,6 +419,7 @@
     UIColor *mgOrange = [UIColor colorWithRed:240.0/255.0 green:94.0/255.0 blue:79.0/255.0 alpha:1.0];
     UIColor *mgGreen = [UIColor colorWithRed:0.0/255.0 green:197.0/255.0 blue:204.0/255.0 alpha:1.0];
     UIColor *mgGrey = [UIColor colorWithRed:136.0/255.0 green:136.0/255.0 blue:136.0/255.0 alpha:1.0];
+    UIColor *mgAddressSelectionColor = [UIColor colorWithRed:80.0/255.0 green:163.0/255.0 blue:255.0/255.0 alpha:1.0];
     
     // TO-DO Production mode switch also
     
@@ -518,7 +526,6 @@
     NSArray *infos = [NSArray arrayWithObjects:btnHowItWorks, nil];
     
     [self.printIO sideMenuAddButtons:buttons
-     
                              options:options
                         optionsTitle:@"OPTIONS"
                    optionsTitleColor:[UIColor whiteColor]
@@ -551,7 +558,10 @@
                      titleButtonIcon:nil];
     
     // Change shoping cart icon
-    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"] withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
+    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"]
+                 withNumberOfProducts:YES
+                        labelPosition:CGPointZero
+                            textColor:[UIColor whiteColor]];
     
     [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithInt:1], ED_PARTNERS_ID,
@@ -568,7 +578,7 @@
     
     [self.printIO statusBarDark:NO hidden:YES];
     
-    [self.printIO iconForHelpButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_icon_question_mark" ofType:@"png"]];
+    [self.printIO iconForHelpButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_icon_question_mark" ofType:@"png"] visible:YES];
     [self.printIO iconForAddPhotosButton:[[NSBundle mainBundle]pathForResource:@"mg_add_photos" ofType:@"png"]];
     
     [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:mgGreen];
@@ -629,6 +639,7 @@
     [self.printIO setNavigationBarBackgroundColorForChooseCountryScreen:mgGreen];
     [self.printIO setPlaceholderTextForSearchBarInChooseCountryScreen:@"  " hideMagnifyingGlass:YES];
     [self.printIO setShareText:@"I'm using Mirrorgram! Here is a <a href=\"https://itunes.apple.com/US/app/id559500608?mt=8\">link</a> for you to download."];
+    [self.printIO colorForAddressSelection:mgAddressSelectionColor];
     
     // START WIDGET
     [self.printIO open];
@@ -751,6 +762,11 @@
     [self.printIO slideSideMenuFromRight:YES];
     [self.printIO useThreeButtonsBarStyle:YES];
     
+    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"]
+                 withNumberOfProducts:YES
+                        labelPosition:CGPointMake(23, 5)
+                            textColor:[UIColor whiteColor]];
+    
     [self.printIO open];
 }
 
@@ -784,6 +800,7 @@
         _printIO = [[PrintIO alloc]initWithViewController:self
                                               environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
                                        productionRecipeId:@"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
+                                       //productionRecipeId:@"46f999dd-814d-428f-b0ff-47954b4181b2"
                                           stagingRecipeId:@"00000000-0000-0000-0000-000000000000"];
         // Set Delegate
         [_printIO setDelegate:self];

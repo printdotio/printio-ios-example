@@ -55,7 +55,7 @@
     </screen>
     
     <screen name="add_address">
-        <button name="button_1" bcg_color="#00c5cc" font_color="#ffffff" />
+        <button name="button_pick" bcg_color="#00c5cc" font_color="#ffffff" />
         <button name="button_save" bcg_color="#00c5cc" font_color="#ffffff" />
     </screen>
     
@@ -98,6 +98,10 @@
     
     <screen name="payment_date_picker">
         <button name="button_1" bcg_color="#00c5cc" font_color="#ffffff" />
+    </screen>
+    
+    <screen name="dialog_select_zip">
+        <button name="button_cancel" bcg_color="#00c5cc" font_color="#ffffff" />
     </screen>
     
 </customization>
