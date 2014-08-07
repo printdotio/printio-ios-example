@@ -59,7 +59,7 @@
            leftButtonBackgroundColor:nil
           rightButtonBackgroundColor:nil
                      titleButtonIcon:self.switchBtnInNavBar.isOn ? [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"] : nil];
-    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png" ]
+    [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png" ]
                  withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
     
     // Photo Sources
@@ -93,7 +93,7 @@
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHOTOBUCKET]];
     }
     
-    [self.printIO availablePhotoSources:photoSources];
+    [self.printIO setAvailablePhotoSources:photoSources];
     
     UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
     //UIImage *image2 = [UIImage imageNamed:@"thunder.jpg"];
@@ -111,35 +111,35 @@
     
     // Set customization file
     if (self.switchCustomization.isOn){
-        [self.printIO customizationXML:xmlData];
-        [self.printIO changeLogo:@"icon1"];
+        [self.printIO setCustomizationXML:xmlData];
+        [self.printIO setLogoFileName:@"icon1"];
     }
     
     // Set country code
     if (self.switchCountryCode.isOn){
-        [self.printIO countryCode:@"US"];
+        [self.printIO setCountryCode:@"US"];
     }
     
     // Set currency code
     if (self.switchCurrencyCode.isOn){
-        [self.printIO currencyCode:@"USD"];
+        [self.printIO setCurrencyCode:@"USD"];
     }
     
     // Set language code
     if (self.switchLanguageCode.isOn){
-        [self.printIO languageCode:@"en"];
+        [self.printIO setLanguageCode:@"en"];
     }
     
     // Set custom fonts
     if (self.switchCustomFonts.isOn){
         NSArray *fonts = @[@"timess.ttf", @"timess.ttf",
                            @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
-        [self.printIO customFonts:fonts];
+        [self.printIO setFonts:fonts];
     }
     
     // Set Payee name
     if (self.txtPayeeName.text){
-        [self.printIO payeeName:self.txtPayeeName.text];
+        [self.printIO setPayeeName:self.txtPayeeName.text];
     }
     
     // Jumps directly to product
@@ -222,7 +222,7 @@
     
     // Pass photos in SDK
     if (self.switchPassPhotosInSDK.isOn){
-        [self.printIO images:images];
+        [self.printIO setImages:images];
     }
     
     // Disable photo sources when photos are passed
@@ -247,14 +247,14 @@
     
     // Hide status bar
     if (self.switchHideStatusBar.isOn){
-        [self.printIO statusBarDark:NO hidden:YES];
+        [self.printIO setStatusBarDark:NO hidden:YES];
     } else {
-        [self.printIO statusBarDark:YES hidden:NO];
+        [self.printIO setStatusBarDark:YES hidden:NO];
     }
     
     // Set country in featured products
     if (self.switchSetCountryInFProducts.isOn){
-        [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:nil];
+        [self.printIO setCountryInFeaturedProducts:YES backgroundColor:nil];
     }
     
     // Change loading GIF animation
@@ -294,12 +294,12 @@
     
     // Jump to shoping cart
     if (self.swJumpToShopingCart.isOn){
-        [self.printIO goToScreen:PRINTIO_JUMP_TO_SCREEN_SHOPPING_CART];
+        [self.printIO setJumpToScreen:PRINTIO_JUMP_TO_SCREEN_SHOPPING_CART];
     }
     
     // Show terms of service
     if (self.swShowTermsOfService.isOn){
-        [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
+        [self.printIO setTermsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     }
     
     // Side Menu Options
@@ -337,14 +337,21 @@
         [self.printIO disablePreviewScreen:YES];
     }
     
-    [self.printIO navigationBarSaveToCartBackgroundColor:nil
+    [self.printIO setNavigationBarSaveToCartBackgroundColor:nil
                                               titleColor:[UIColor whiteColor]
                                    buttonBackgroundColor:nil
                                         buttonTitleColor:[UIColor whiteColor]];
     
-    [self.printIO iconForSaveButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"icon_cart_white" ofType:@"png"]];
+    [self.printIO setIconForSaveButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"icon_cart_white" ofType:@"png"]];
     
-    //[self.printIO setSamePhotoOnFrontAndBackSideOfProduct:PRODUCT_THROW_PILLOWS()];
+    if (self.txtPromoCode.text.length){
+        [self.printIO setPromoCode:self.txtPromoCode.text];
+    }
+    
+//    [self.printIO setInstagramClientID:@"7b1543af26494afb89eaa8577ef5d6b8" redirectUrl:@"sdktest://auth"];
+//    [self.printIO setFacebookAppId:@"350655545090474" redirectUrl:@"http://sdktest.test"];
+//    [self.printIO setDropboxKey:@"ti6645cx5i2vc04" redirectUrl:@"photobucket://auth"];
+
     
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
@@ -371,7 +378,7 @@
     [self.printIO removeLogoFromPaymentScreen:YES];
     [self.printIO removePlusFromAddMoreProductsButton:YES];
     
-    [self.printIO availablePhotoSources:[NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE],[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK], nil]];
+    [self.printIO setAvailablePhotoSources:[NSArray arrayWithObjects:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE],[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM], [[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK], nil]];
     
     
     // Set options for Side Menu
@@ -394,7 +401,7 @@
                       infoTitleColor:[UIColor whiteColor]
                            infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]backgroundImageForButtons:nil];
     
-    [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
+    [self.printIO setTermsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     
     [self.printIO open];
 }
@@ -409,7 +416,7 @@
     // Pass in one image
     UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
     NSArray *images = [NSArray arrayWithObjects:image1, nil];
-    [self.printIO images:images];
+    [self.printIO setImages:images];
     
     [self testMirrorgram:path];
 }
@@ -440,7 +447,7 @@
     btnSFacebook.textColor = [UIColor blackColor];
     btnSFacebook.useBoldFonts = YES;
     
-    [self.printIO availablePhotoSources:[NSArray arrayWithObjects:btnSPhone, btnSInstagram, btnSFacebook, nil]];
+    [self.printIO setAvailablePhotoSources:[NSArray arrayWithObjects:btnSPhone, btnSInstagram, btnSFacebook, nil]];
     
     // Set main buttons for Side Menu
     PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@" GO TO IMAGE MODE"
@@ -558,37 +565,37 @@
                      titleButtonIcon:nil];
     
     // Change shoping cart icon
-    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"]
+    [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"]
                  withNumberOfProducts:YES
                         labelPosition:CGPointZero
                             textColor:[UIColor whiteColor]];
     
-    [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+    [self.printIO setExtraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithInt:1], ED_PARTNERS_ID,
                              [NSNumber numberWithInt:path], ED_MG_PATH_NUMBER, nil]];
     
-    [self.printIO payeeName:@"Mirrorgram"];
+    [self.printIO setPayeeName:@"Mirrorgram"];
     
     [self.printIO setPassedImageAsThumbForOnePhotoTemplate:YES];
     
     // Set custom icon
-    [self.printIO changeLogo:@"mg_s_logo"];
+    [self.printIO setLogoFileName:@"mg_s_logo"];
     
     [self.printIO hideCategoriesInFeaturedProducts:YES];
     
-    [self.printIO statusBarDark:NO hidden:YES];
+    [self.printIO setStatusBarDark:NO hidden:YES];
     
-    [self.printIO iconForHelpButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_icon_question_mark" ofType:@"png"] visible:YES];
-    [self.printIO iconForAddPhotosButton:[[NSBundle mainBundle]pathForResource:@"mg_add_photos" ofType:@"png"]];
+    [self.printIO setIconForHelpButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"mg_icon_question_mark" ofType:@"png"] visible:YES];
+    [self.printIO setIconForAddPhotosButton:[[NSBundle mainBundle]pathForResource:@"mg_add_photos" ofType:@"png"]];
     
-    [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:mgGreen];
+    [self.printIO setCountryInFeaturedProducts:YES backgroundColor:mgGreen];
     
-    [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"mg_back_new_spark" ofType:@"png"]];
+    [self.printIO setIconForBackButton:[[NSBundle mainBundle]pathForResource:@"mg_back_new_spark" ofType:@"png"]];
     
     // Path to XML customization file
     NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization_mg" ofType:@"xml"];
     NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
-    [self.printIO customizationXML:xmlData];
+    [self.printIO setCustomizationXML:xmlData];
         
     [self.printIO setPopUpWithImage:[[NSBundle mainBundle]pathForResource:@"mg_double_tap_balloon" ofType:@"png"]
                                text:@"Double tap photo to edit"
@@ -596,7 +603,7 @@
     
     [self.printIO removePlusFromAddMoreProductsButton:YES];
     
-    [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
+    [self.printIO setTermsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     
     [self.printIO setTitleForFeaturedProductsScreen:@"ALL PRODUCTS"];
     [self.printIO setTitleForShoppingCart:@"MY SHOPPING CART"];
@@ -605,14 +612,14 @@
     [self.printIO setTitleForPhotoSourcesScreen:@"SELECT IMAGES"];
     [self.printIO setTitleForChooseCountryScreen:@"CHOOSE COUNTRY"];
     
-    [self.printIO featuredProductsLeftLabelTextColor:nil rightLabelTextColor:mgOrange];
-    [self.printIO navigationBarSaveToCartBackgroundColor:mgGrey
+    [self.printIO setFeaturedProductsLeftLabelTextColor:nil rightLabelTextColor:mgOrange];
+    [self.printIO setNavigationBarSaveToCartBackgroundColor:mgGrey
                                               titleColor:[UIColor whiteColor]
                                    buttonBackgroundColor:mgOrange
                                         buttonTitleColor:[UIColor whiteColor]];
     
-    [self.printIO featuredProductsSetBackgroundImage:[[NSBundle mainBundle] pathForResource:@"mg_bcg" ofType:@"png"]];
-    [self.printIO doubleTapBalloonVisibilityTime:-1];
+    [self.printIO setFeaturedProductsBackgroungImage:[[NSBundle mainBundle] pathForResource:@"mg_bcg" ofType:@"png"]];
+    [self.printIO setDoubleTapBalloonVisibilityTime:-1];
     [self.printIO showPlusSignOnAddButton:YES];
     
     [self.printIO orderCompletedScreenCloseButtonShouldPerformBack:YES];
@@ -634,12 +641,12 @@
     [self.printIO setLoadingGIF:@"mg_loader"];
     [self.printIO hideSearchIconInChooseCountryScreen:YES];
     [self.printIO customizeAddMoreProductButton:@"MAKE MORE PRODUCTS" icon:[[NSBundle mainBundle]pathForResource:@"mg_add_more_products@2x" ofType:@"png"]];
-    [self.printIO shoppingCartBackButtonIcon:[[NSBundle mainBundle]pathForResource:@"mg_all_products" ofType:@"png"]];
+    [self.printIO setIconForShoppingCartBackButton:[[NSBundle mainBundle]pathForResource:@"mg_all_products" ofType:@"png"]];
     
     [self.printIO setNavigationBarBackgroundColorForChooseCountryScreen:mgGreen];
     [self.printIO setPlaceholderTextForSearchBarInChooseCountryScreen:@"  " hideMagnifyingGlass:YES];
     [self.printIO setShareText:@"I'm using Mirrorgram! Here is a <a href=\"https://itunes.apple.com/US/app/id559500608?mt=8\">link</a> for you to download."];
-    [self.printIO colorForAddressSelection:mgAddressSelectionColor];
+    [self.printIO setColorForAddressSelection:mgAddressSelectionColor];
     
     // START WIDGET
     [self.printIO open];
@@ -653,17 +660,17 @@
            leftButtonBackgroundColor:nil
           rightButtonBackgroundColor:nil
                      titleButtonIcon:nil];
-    [self.printIO payeeName:@"Photobucket"];
-    [self.printIO selectCountryInFeaturedProducts:YES backgroundColor:nil];
-    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
+    [self.printIO setPayeeName:@"Photobucket"];
+    [self.printIO setCountryInFeaturedProducts:YES backgroundColor:nil];
+    [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
                  withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
-    [self.printIO iconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
+    [self.printIO setIconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
     [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu_a" ofType:@"png"]
                                background:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];
-    [self.printIO statusBarDark:YES hidden:YES];
-    [self.printIO extraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+    [self.printIO setStatusBarDark:YES hidden:YES];
+    [self.printIO setExtraData:[NSMutableDictionary dictionaryWithObjectsAndKeys:
                              [NSNumber numberWithInt:2], ED_PARTNERS_ID, nil]];
-    [self.printIO changeLogo:@""];
+    [self.printIO setLogoFileName:@""];
     [self.printIO removeLogoFromPaymentScreen:YES];
     [self.printIO removePlusFromAddMoreProductsButton:YES];
     
@@ -675,7 +682,7 @@
     [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FLICKR]];
     [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHOTOBUCKET]];
     
-    [self.printIO availablePhotoSources:photoSources];
+    [self.printIO setAvailablePhotoSources:photoSources];
     
     // Set main buttons for Side Menu
     PIOSideMenuButton *btnCamera = [[PIOSideMenuButton alloc]initWithTitle:@"EXIT"
@@ -757,12 +764,12 @@
                       infoTitleColor:[UIColor whiteColor]
                            infoColor:[UIColor colorWithRed:34.0/255.0 green:119.0/255.0 blue:212.0/255.0 alpha:255.0/255.0] backgroundImageForButtons:[[NSBundle mainBundle]pathForResource:@"pb_bcg" ofType:@"png"]];
     
-    [self.printIO termsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
+    [self.printIO setTermsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     
     [self.printIO slideSideMenuFromRight:YES];
-    [self.printIO useThreeButtonsBarStyle:YES];
+    [self.printIO setThreeButtonsNavigationBarSytle:YES];
     
-    [self.printIO iconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"]
+    [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"mg_cart_new" ofType:@"png"]
                  withNumberOfProducts:YES
                         labelPosition:CGPointMake(23, 5)
                             textColor:[UIColor whiteColor]];
@@ -802,6 +809,10 @@
                                        productionRecipeId:@"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
                                        //productionRecipeId:@"46f999dd-814d-428f-b0ff-47954b4181b2"
                                           stagingRecipeId:@"00000000-0000-0000-0000-000000000000"];
+        
+//        _printIO = [[PrintIO alloc]initWithEnvironment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
+//                                    productionRecipeId:@"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
+//                                       stagingRecipeId:@"00000000-0000-0000-0000-000000000000"];
         // Set Delegate
         [_printIO setDelegate:self];
     }

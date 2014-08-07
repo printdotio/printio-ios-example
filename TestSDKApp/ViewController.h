@@ -20,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIView *panelView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (weak, nonatomic) IBOutlet UITextField *txtPayeeName;
+@property (weak, nonatomic) IBOutlet UITextField *txtPromoCode;
+
 @property (weak, nonatomic) IBOutlet UISwitch *switchPhotoSources;
 @property (weak, nonatomic) IBOutlet UISwitch *switchCountryCode;
 @property (weak, nonatomic) IBOutlet UISwitch *switchCurrencyCode;
@@ -31,7 +34,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchProduction;
 @property (weak, nonatomic) IBOutlet UISwitch *switchJumpToSKU;
 @property (weak, nonatomic) IBOutlet UISwitch *switchEnableSideMenu;
-@property (weak, nonatomic) IBOutlet UITextField *txtPayeeName;
 
 @property (weak, nonatomic) IBOutlet UISwitch *switchPSPhone;
 @property (weak, nonatomic) IBOutlet UISwitch *switchPSFacebook;
