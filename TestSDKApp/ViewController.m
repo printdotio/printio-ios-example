@@ -59,6 +59,7 @@
            leftButtonBackgroundColor:nil
           rightButtonBackgroundColor:nil
                      titleButtonIcon:self.switchBtnInNavBar.isOn ? [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"] : nil];
+    
     [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png" ]
                  withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
     
@@ -104,13 +105,13 @@
     //@"http://photographylife.com/wp-content/uploads/2012/10/Nikon-D600-Sample-11.jpg",
     //@"http://www.digitaltrends.com/wp-content/uploads/2013/03/vertu-constellation-review-sample-image-flowers.jpg",
     
-    // Path to XML customization file
-    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization"
-                                                        ofType:@"xml"];
-    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
-    
     // Set customization file
     if (self.switchCustomization.isOn){
+        // Path to XML customization file
+        NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization"
+                                                            ofType:@"xml"];
+        NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+        
         [self.printIO setCustomizationXML:xmlData];
         [self.printIO setLogoFileName:@"icon1"];
     }
@@ -275,7 +276,9 @@
         [self.printIO setVariantsOptions:[NSArray arrayWithArray:[self.userData allValues]]];
         
         // TEST  !!!!!!!!!!!!!
-        //[self.printIO goToProductId:PRODUCT_THROW_PILLOWS()];
+//        [self.printIO goToProductId:PRODUCT_THROW_PILLOWS()];
+//        [self.printIO setSamePhotoOnFrontAndBackSideOfProduct:PRODUCT_THROW_PILLOWS()];
+//        [self.printIO autoSelectOnePhotoTemplateForProductID:PRODUCT_THROW_PILLOWS()];
         
         // Count = 36
         PIOVariantOption *p1 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_THROW_PILLOWS()
@@ -288,7 +291,7 @@
                                                                  optionId:@"677d9d4c10a74e4d8f30b4d104b61681"
                                                                   valueId:@"46d2cdbfed6547e385ba9ff56b405c72"];
         
-        //[self.printIO setVariantsOptions:[NSArray arrayWithObjects:p1, p2, nil]];
+        [self.printIO setVariantsOptions:[NSArray arrayWithObjects:p1, p2, nil]];
         
     }
     
@@ -351,8 +354,14 @@
 //    [self.printIO setInstagramClientID:@"7b1543af26494afb89eaa8577ef5d6b8" redirectUrl:@"sdktest://auth"];
 //    [self.printIO setFacebookAppId:@"350655545090474" redirectUrl:@"http://sdktest.test"];
 //    [self.printIO setDropboxKey:@"ti6645cx5i2vc04" redirectUrl:@"photobucket://auth"];
-
     
+//    [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
+//                    withNumberOfProducts:YES
+//                           labelPosition:CGPointMake(10, 10)
+//                             circleColor:[UIColor blueColor]
+//                               textColor:[UIColor whiteColor]];
+    
+
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
     
@@ -363,6 +372,7 @@
 {
     VCVariantsOptions *vc = [[VCVariantsOptions alloc]init];
     [self.navigationController presentViewController:vc animated:YES completion:nil];
+    //[self.printIO open];
 }
 
 - (void)onVariantsOptionsSelected:(NSNotification *)notification
@@ -787,7 +797,7 @@
 - (void)PrintIOWidgetOnCloseWithData:(NSDictionary *)data
 {
     NSLog(@"data: %@", data);
-    _printIO = nil;
+    //_printIO = nil;
 }
 
 #pragma mark - Init

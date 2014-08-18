@@ -50,6 +50,9 @@
     </screen>
     
     <screen name="customize_product">
+        <image_view name="pop_up_image_view" image_name="mg_double_tap_balloon" image_format="png"/>
+        <label name="pop_up_label" font_color="#446723" title="boro je car"/>
+            
         <button name="button_buy" bcg_color="#446723" font_color="#ffffff" />
         <button name="button_back" bcg_color="#990022" font_color="#ffffff" />
         <button name="button_help" bcg_color="#990022" font_color="#ffffff" />
