@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
-                <outlet property="SwitchMGPath2" destination="VVd-eN-Jxe" id="nXH-F5-WXO"/>
-                <outlet property="SwitchMGPath3" destination="4QM-QT-t2K" id="BOq-Gr-IHo"/>
                 <outlet property="hideCategoriesView" destination="5LM-jO-g4f" id="qmx-ef-1ll"/>
                 <outlet property="panelView" destination="tnN-HY-Os2" id="9sn-5u-ylg"/>
                 <outlet property="scrollView" destination="8vs-RM-dSZ" id="fvG-xz-4Kw"/>
@@ -39,7 +36,6 @@
                 <outlet property="switchJumpToProduct" destination="C5R-AD-B7F" id="dyK-tW-xe5"/>
                 <outlet property="switchJumpToSKU" destination="Ybs-hE-nOz" id="QIo-e2-5xK"/>
                 <outlet property="switchLanguageCode" destination="cDy-2o-fe5" id="gN1-rp-17f"/>
-                <outlet property="switchMirrorgram" destination="U7g-yl-onP" id="uxk-nv-TEe"/>
                 <outlet property="switchPSDropbox" destination="nGA-3e-xjg" id="9yZ-ph-5TT"/>
                 <outlet property="switchPSFacebook" destination="AVz-OI-gQs" id="P0J-ms-VRR"/>
                 <outlet property="switchPSFlickr" destination="vkj-A6-SP7" id="qie-Cm-PNo"/>
@@ -49,7 +45,6 @@
                 <outlet property="switchPSPicasa" destination="t7E-zA-mHD" id="4ir-Kf-6nI"/>
                 <outlet property="switchPassPhotosInSDK" destination="brV-cq-gEu" id="Qef-Bt-6Tu"/>
                 <outlet property="switchPhotoArrangement" destination="M2P-pY-Qa3" id="blt-dU-OfX"/>
-                <outlet property="switchPhotobucket" destination="M4p-sd-zo6" id="frj-fs-Kkn"/>
                 <outlet property="switchPresentViewFromRight" destination="hng-Bv-gN0" id="0mS-Pv-EkP"/>
                 <outlet property="switchProduction" destination="2RD-1e-L6O" id="vq9-bo-pRX"/>
                 <outlet property="switchSetCountryInFProducts" destination="tR1-pW-FpO" id="c1R-7R-TVz"/>
@@ -57,7 +52,6 @@
                 <outlet property="switchTestVariantsOptions" destination="jQI-Gh-IXb" id="gNP-ii-xlQ"/>
                 <outlet property="switchTitleBarColor" destination="A4d-Xu-sKd" id="E0D-iC-7IZ"/>
                 <outlet property="switchUsePassedImageAsThumbForOnePhotoTemplate" destination="Doj-gI-PZq" id="JR1-93-vte"/>
-                <outlet property="switchYellowLab500px" destination="MMY-C3-1VY" id="pSE-Mo-sb4"/>
                 <outlet property="txtPayeeName" destination="dbL-gX-ykF" id="ogE-8l-jaP"/>
                 <outlet property="txtPromoCode" destination="gWd-Fd-7Pv" id="9Wy-FY-6Fv"/>
                 <outlet property="view" destination="iN0-l3-epB" id="QkH-AZ-SR8"/>
@@ -73,11 +67,11 @@
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
         <view contentMode="scaleToFill" id="tnN-HY-Os2">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="2418"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="2196"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PrintIO SDK sample" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zVv-n1-qCu">
@@ -587,78 +581,8 @@
                     <rect key="frame" x="228" y="1987" width="51" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </switch>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example SDK settings (switches above have no effect when one of switches bellow is ON)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ems-eU-kGu">
-                    <rect key="frame" x="2" y="2068" width="320" height="39"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.78671077810000001" green="0.47377379629999999" blue="0.42949742629999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 1:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dl8-Kb-heU">
-                    <rect key="frame" x="23" y="2127" width="188" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="U7g-yl-onP">
-                    <rect key="frame" x="228" y="2122" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 2:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bhk-iK-Ngm">
-                    <rect key="frame" x="22" y="2166" width="188" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="VVd-eN-Jxe">
-                    <rect key="frame" x="228" y="2161" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 3:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AJY-qU-DA7">
-                    <rect key="frame" x="22" y="2205" width="188" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="4QM-QT-t2K">
-                    <rect key="frame" x="228" y="2200" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 4:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MjI-c2-O4v">
-                    <rect key="frame" x="22" y="2244" width="188" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="M4p-sd-zo6">
-                    <rect key="frame" x="230" y="2239" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="8" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example 5:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eNS-I2-X9G">
-                    <rect key="frame" x="23" y="2282" width="188" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="MMY-C3-1VY">
-                    <rect key="frame" x="230" y="2277" width="51" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </switch>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DW0-8y-S5q">
-                    <rect key="frame" x="20" y="2374" width="284" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.78671077810000001" green="0.47377379629999999" blue="0.42949742629999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Test variants options">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="onClickTestVariantsOptions:" destination="-1" eventType="touchUpInside" id="vXy-ad-Kka"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5rA-bH-t2H">
-                    <rect key="frame" x="21" y="2324" width="283" height="35"/>
+                    <rect key="frame" x="15" y="2087" width="283" height="35"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.32941177490000001" green="0.45098042490000001" blue="0.56862747670000002" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="Print something">
@@ -669,9 +593,29 @@
                         <action selector="onClickTestSDK:" destination="-1" eventType="touchUpInside" id="nfr-rZ-ZXK"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DW0-8y-S5q">
+                    <rect key="frame" x="14" y="2141" width="284" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.78671077810000001" green="0.47377379629999999" blue="0.42949742629999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Test variants options">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickTestVariantsOptions:" destination="-1" eventType="touchUpInside" id="vXy-ad-Kka"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="434" y="66"/>
         </view>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

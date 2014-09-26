@@ -70,13 +70,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *swNegativeButtons;
 @property (weak, nonatomic) IBOutlet UISwitch *swPositiveButtons;
 @property (weak, nonatomic) IBOutlet UISwitch *swDisablePreviewScreen;
-
-// Partners
-@property (weak, nonatomic) IBOutlet UISwitch *switchMirrorgram;
-@property (weak, nonatomic) IBOutlet UISwitch *SwitchMGPath2;
-@property (weak, nonatomic) IBOutlet UISwitch *SwitchMGPath3;
-@property (weak, nonatomic) IBOutlet UISwitch *switchPhotobucket;
-@property (weak, nonatomic) IBOutlet UISwitch *switchYellowLab500px;
 @property (weak, nonatomic) IBOutlet UISwitch *switchTestVariantsOptions;
 
 @end
