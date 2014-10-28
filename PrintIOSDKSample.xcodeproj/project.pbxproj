@@ -34,6 +34,7 @@
 		B4732A0119D04FA500838983 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48ADEC218E95A5200492F00 /* CoreLocation.framework */; };
 		B4732A0319D04FE500838983 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD7B186B0D55002340BB /* libxml2.dylib */; };
 		B4732A0419D0501B00838983 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD77186B0D3E002340BB /* CoreMedia.framework */; };
+		B48BEEC119D9B57C0057F2A0 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B48BEEC019D9B57C0057F2A0 /* PrintIOBundle.bundle */; };
 		B492168018F2BBA0002D0EB2 /* touch.png in Resources */ = {isa = PBXBuildFile; fileRef = B492167F18F2BBA0002D0EB2 /* touch.png */; };
 		B4A00DE0188947A50068A3F7 /* timess.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DDF188947A50068A3F7 /* timess.ttf */; };
 		B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */; };
@@ -44,6 +45,7 @@
 		B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEE188948370068A3F7 /* CaviarDreams_Italic.ttf */; };
 		B4A00DF3188948370068A3F7 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */; };
 		B4A00DF6188948570068A3F7 /* aubrey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4A00DF5188948570068A3F7 /* aubrey.ttf */; };
+		B4B4731319E828DA0060A8B7 /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B4731219E828DA0060A8B7 /* PrintIO.framework */; };
 		B4C41F7A1901061F00D6013F /* pb_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F791901061F00D6013F /* pb_cart.png */; };
 		B4C41F7E1901070700D6013F /* pb_back.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F7D1901070700D6013F /* pb_back.png */; };
 		B4C41F80190109D500D6013F /* pb_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F7F190109D500D6013F /* pb_menu.png */; };
@@ -55,8 +57,6 @@
 		B4C41F9019010FDE00D6013F /* pb_bcg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F8F19010FDE00D6013F /* pb_bcg.png */; };
 		B4C41F931901124900D6013F /* pb_btn_side_menu_fb_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F911901124900D6013F /* pb_btn_side_menu_fb_transparent.png */; };
 		B4C41F941901124900D6013F /* pb_btn_side_menu_instagram_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F921901124900D6013F /* pb_btn_side_menu_instagram_transparent.png */; };
-		B4C5E99D19D2D993004FA802 /* PrintIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4C5E99C19D2D993004FA802 /* PrintIO.framework */; };
-		B4C5E99F19D2DACD004FA802 /* PrintIOBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B4C5E99E19D2DACD004FA802 /* PrintIOBundle.bundle */; };
 		B4C758A219B74DD800C45634 /* navbariphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C758A119B74DD800C45634 /* navbariphone.png */; };
 		B4C758A419B75B8B00C45634 /* navbariphone1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C758A319B75B8B00C45634 /* navbariphone1.png */; };
 /* End PBXBuildFile section */
@@ -121,6 +121,7 @@
 		B47329FC19D04EF900838983 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B47329FE19D04F0300838983 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B48ADEC218E95A5200492F00 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B48BEEC019D9B57C0057F2A0 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = ../../PrintIO/Library/Bundles/PrintIOBundle.bundle; sourceTree = "<group>"; };
 		B492167F18F2BBA0002D0EB2 /* touch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touch.png; sourceTree = "<group>"; };
 		B4A00DDF188947A50068A3F7 /* timess.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = timess.ttf; sourceTree = "<group>"; };
 		B4A00DE5188947F90068A3F7 /* steelfish rg it.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "steelfish rg it.otf"; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		B4A00DEF188948370068A3F7 /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		B4A00DF5188948570068A3F7 /* aubrey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aubrey.ttf; sourceTree = "<group>"; };
 		B4A38A881929EBC60071EBFD /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		B4B4731219E828DA0060A8B7 /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-hdqmmslvvjfflpedczmsjkqqcirr/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
 		B4C41F791901061F00D6013F /* pb_cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_cart.png; sourceTree = "<group>"; };
 		B4C41F7D1901070700D6013F /* pb_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_back.png; sourceTree = "<group>"; };
 		B4C41F7F190109D500D6013F /* pb_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_menu.png; sourceTree = "<group>"; };
@@ -143,8 +145,6 @@
 		B4C41F8F19010FDE00D6013F /* pb_bcg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_bcg.png; sourceTree = "<group>"; };
 		B4C41F911901124900D6013F /* pb_btn_side_menu_fb_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_btn_side_menu_fb_transparent.png; sourceTree = "<group>"; };
 		B4C41F921901124900D6013F /* pb_btn_side_menu_instagram_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_btn_side_menu_instagram_transparent.png; sourceTree = "<group>"; };
-		B4C5E99C19D2D993004FA802 /* PrintIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PrintIO.framework; path = "../../../Library/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/PrintIO.framework"; sourceTree = "<group>"; };
-		B4C5E99E19D2DACD004FA802 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = ../../PrintIO/Library/Bundles/PrintIOBundle.bundle; sourceTree = "<group>"; };
 		B4C758A119B74DD800C45634 /* navbariphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbariphone.png; sourceTree = "<group>"; };
 		B4C758A319B75B8B00C45634 /* navbariphone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbariphone1.png; sourceTree = "<group>"; };
 		B4F5FE071861FAA1000229A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -159,7 +159,7 @@
 				B47329EB19D04E4F00838983 /* AudioToolbox.framework in Frameworks */,
 				B4732A0419D0501B00838983 /* CoreMedia.framework in Frameworks */,
 				B4732A0119D04FA500838983 /* CoreLocation.framework in Frameworks */,
-				B4C5E99D19D2D993004FA802 /* PrintIO.framework in Frameworks */,
+				B4B4731319E828DA0060A8B7 /* PrintIO.framework in Frameworks */,
 				B43F19C4185B061000926E70 /* Foundation.framework in Frameworks */,
 				B4732A0319D04FE500838983 /* libxml2.dylib in Frameworks */,
 				B47329FF19D04F0300838983 /* libsqlite3.dylib in Frameworks */,
@@ -390,8 +390,8 @@
 		B4AAA60418D1A2DB002C2F70 /* PrintIO */ = {
 			isa = PBXGroup;
 			children = (
-				B4C5E99E19D2DACD004FA802 /* PrintIOBundle.bundle */,
-				B4C5E99C19D2D993004FA802 /* PrintIO.framework */,
+				B4B4731219E828DA0060A8B7 /* PrintIO.framework */,
+				B48BEEC019D9B57C0057F2A0 /* PrintIOBundle.bundle */,
 			);
 			name = PrintIO;
 			sourceTree = "<group>";
@@ -492,7 +492,6 @@
 				B4A00DF1188948370068A3F7 /* CaviarDreams_BoldItalic.ttf in Resources */,
 				B4A00DE8188947F90068A3F7 /* steelfish rg it.otf in Resources */,
 				B4C41F8619010C4100D6013F /* pb_btn_info.png in Resources */,
-				B4C5E99F19D2DACD004FA802 /* PrintIOBundle.bundle in Resources */,
 				B4187AF818E595480081978D /* ViewController.xib in Resources */,
 				B4A00DF2188948370068A3F7 /* CaviarDreams_Italic.ttf in Resources */,
 				B460D3C0191BA7DA0067DAAE /* VCVariantsOptions.xib in Resources */,
@@ -503,6 +502,7 @@
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
 				B4C41F931901124900D6013F /* pb_btn_side_menu_fb_transparent.png in Resources */,
+				B48BEEC119D9B57C0057F2A0 /* PrintIOBundle.bundle in Resources */,
 				B4C758A419B75B8B00C45634 /* navbariphone1.png in Resources */,
 				B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */,
 				B45AAF4F198B8D2C00A568DB /* icon_cart_white.png in Resources */,
@@ -607,7 +607,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "98811753-3C5B-4A41-B66E-2B855754B9B1";
 				SDKROOT = iphoneos;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
@@ -643,7 +642,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "98811753-3C5B-4A41-B66E-2B855754B9B1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv7 arm64 armv7s";
@@ -656,11 +654,12 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-hdqmmslvvjfflpedczmsjkqqcirr/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
@@ -673,7 +672,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "937758b6-6612-441c-992d-8259fdbc3365";
+				PROVISIONING_PROFILE = "77e89c05-4f29-4e03-98a1-89e0310dfa6f";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -686,11 +685,12 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-elstajyiekgquyglzsjuocsjiadk/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-hdqmmslvvjfflpedczmsjkqqcirr/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestSDKApp/PrintIOSDKSample-Prefix.pch";
@@ -703,7 +703,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "937758b6-6612-441c-992d-8259fdbc3365";
+				PROVISIONING_PROFILE = "77e89c05-4f29-4e03-98a1-89e0310dfa6f";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <PrintIO/PrintIO.h>
 #import <PrintIO/PIOSideMenuButton.h>
 #import <PrintIO/PIOVariantOption.h>
 #import "VCVariantsOptions.h"
@@ -223,11 +224,6 @@
         [self.printIO setStatusBarDark:YES hidden:NO];
     }
     
-    // Set country in featured products
-    if (self.switchSetCountryInFProducts.isOn){
-        [self.printIO setCountryInFeaturedProducts:YES backgroundColor:nil];
-    }
-    
     // Change loading GIF animation
     if (self.switchCustomGIF.isOn){
         [self.printIO setLoadingGIF:@"load"];
@@ -264,12 +260,7 @@
         [self.printIO setVariantsOptions:[NSArray arrayWithObjects:p1, p2, nil]];
         
     }
-    
-    // Jump to shoping cart
-    if (self.swJumpToShopingCart.isOn){
-        [self.printIO setJumpToScreen:PRINTIO_JUMP_TO_SCREEN_SHOPPING_CART];
-    }
-    
+
     // Show terms of service
     if (self.swShowTermsOfService.isOn){
         [self.printIO setTermsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
@@ -365,11 +356,16 @@
         
         // Init HelloPics widget
         BOOL isProduction = self.switchProduction.isOn;
-        
+
+        //UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
         _printIO = [[PrintIO alloc]initWithViewController:self
                                               environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
+//                                                           productionRecipeId:@"46f999dd-814d-428f-b0ff-47954b4181b2"
+//                                                              stagingRecipeId:@"7b4e12e3-c60f-47ed-bf75-ce848726cfcc"];
                                        productionRecipeId:@"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
+                                       //productionRecipeId:@"07e3e00a-8e84-4e0b-bd6f-a80c877b8428"
                                           stagingRecipeId:@"00000000-0000-0000-0000-000000000000"];
+        
         // Set Delegate
         [_printIO setDelegate:self];
     }
@@ -391,10 +387,10 @@
                                                 name:NOTIF_VARIANTS_SELECTED object:nil];
 }
 
-- (BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
+//- (BOOL)prefersStatusBarHidden
+//{
+//    return YES;
+//}
 
 #pragma mark - UITextField Delegate
 

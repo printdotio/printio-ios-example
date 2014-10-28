@@ -14,7 +14,7 @@
 		<string>https://github.com/printdotio/printio-ios-example.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PrintIOSDKSample.xcodeproj/project.xcworkspace</string>
+	<string>PrintIOSDKSample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9ADF178D01D9F990604BB26BE3BFAF70BE6C2D93</key>
