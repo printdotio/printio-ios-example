@@ -311,7 +311,7 @@
     if (self.txtPromoCode.text.length){
         [self.printIO setPromoCode:self.txtPromoCode.text];
     }
-    
+        
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
     
@@ -320,8 +320,9 @@
 
 - (IBAction)onClickTestVariantsOptions:(id)sender
 {
-    VCVariantsOptions *vc = [[VCVariantsOptions alloc]init];
-    [self.navigationController presentViewController:vc animated:YES completion:nil];
+    //VCVariantsOptions *vc = [[VCVariantsOptions alloc]init];
+    //[self.navigationController presentViewController:vc animated:YES completion:nil];
+    [self.printIO open];
 }
 
 - (void)onVariantsOptionsSelected:(NSNotification *)notification
@@ -374,23 +375,38 @@
 
 #pragma mark - View Lifecycle
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    [self.scrollView addSubview:self.panelView];
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.panelView.frame.size.height);
+    [super viewWillAppear:animated];
     
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(onVariantsOptionsSelected:)
                                                 name:NOTIF_VARIANTS_SELECTED object:nil];
 }
 
-//- (BOOL)prefersStatusBarHidden
-//{
-//    return YES;
-//}
+- (void)viewDidLayoutSubviews
+{
+    CGRect panelRect = self.panelView.frame;
+    panelRect.size.width = self.scrollView.frame.size.width;
+    self.panelView.frame = panelRect;
+    
+    [self.scrollView addSubview:self.panelView];
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.panelView.frame.size.height);
+    
+    [super viewDidLayoutSubviews];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NOTIF_VARIANTS_SELECTED object:nil];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 
 #pragma mark - UITextField Delegate
 
