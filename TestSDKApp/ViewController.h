@@ -72,4 +72,9 @@
 @property (weak, nonatomic) IBOutlet UISwitch *swDisablePreviewScreen;
 @property (weak, nonatomic) IBOutlet UISwitch *switchTestVariantsOptions;
 
+@property (weak, nonatomic) IBOutlet UISwitch *switchCreditCard;
+@property (weak, nonatomic) IBOutlet UISwitch *switchPaypal;
+@property (weak, nonatomic) IBOutlet UISwitch *switchShowPassedImagesPhotosource;
+
+
 @end

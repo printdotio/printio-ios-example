@@ -34,6 +34,17 @@
     [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png" ]
                     withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
     
+    // Payment options
+    int paymentOpts = 0;
+    if(self.switchCreditCard.isOn){
+        paymentOpts = paymentOpts | PaymentOptionCreditCard;
+    }
+    
+    if(self.switchPaypal.isOn){
+        paymentOpts = paymentOpts | PaymentOptionPayPal;
+    }
+    [self.printIO setPaymentOptions:paymentOpts];
+    
     // Photo Sources
     NSMutableArray *photoSources = [[NSMutableArray alloc]init];
     
@@ -65,7 +76,8 @@
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHOTOBUCKET]];
     }
     
-    [self.printIO setAvailablePhotoSources:photoSources];
+    
+    
     
     UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
     //UIImage *image2 = [UIImage imageNamed:@"thunder.jpg"];
@@ -195,7 +207,13 @@
     // Pass photos in SDK
     if (self.switchPassPhotosInSDK.isOn){
         [self.printIO setImages:images];
+        
+        if(self.switchShowPassedImagesPhotosource){
+            [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PASSED_PHOTOS]];
+        }
     }
+    
+    [self.printIO setAvailablePhotoSources:photoSources]; // photo sources setter is moved here, so we can potentially add the passed images photo source
     
     // Disable photo sources when photos are passed
     if (self.switchDisablePSWhenPhotosArePassed.isOn){
