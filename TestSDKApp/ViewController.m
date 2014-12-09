@@ -329,18 +329,19 @@
     if (self.txtPromoCode.text.length){
         [self.printIO setPromoCode:self.txtPromoCode.text];
     }
-        
+                
     // Open widget
     [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
+
     
     NSLog(@"widget starting");
 }
 
 - (IBAction)onClickTestVariantsOptions:(id)sender
 {
-    //VCVariantsOptions *vc = [[VCVariantsOptions alloc]init];
-    //[self.navigationController presentViewController:vc animated:YES completion:nil];
-    [self.printIO open];
+    VCVariantsOptions *vc = [[VCVariantsOptions alloc]init];
+    [self.navigationController presentViewController:vc animated:YES completion:nil];
+    //[self.printIO open];
 }
 
 - (void)onVariantsOptionsSelected:(NSNotification *)notification
@@ -379,9 +380,9 @@
         //UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
         _printIO = [[PrintIO alloc]initWithViewController:self
                                               environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
-//                                                           productionRecipeId:@"46f999dd-814d-428f-b0ff-47954b4181b2"
+                                                           productionRecipeId:@"46f999dd-814d-428f-b0ff-47954b4181b2"
 //                                                              stagingRecipeId:@"7b4e12e3-c60f-47ed-bf75-ce848726cfcc"];
-                                       productionRecipeId:@"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
+                                       //productionRecipeId:@"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
                                        //productionRecipeId:@"07e3e00a-8e84-4e0b-bd6f-a80c877b8428"
                                           stagingRecipeId:@"00000000-0000-0000-0000-000000000000"];
         
@@ -393,6 +394,19 @@
 
 #pragma mark - View Lifecycle
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    CGRect sBounds = [[UIScreen mainScreen]bounds];
+    CGRect panelRect = self.panelView.frame;
+    panelRect.size.width = sBounds.size.width;
+    self.panelView.frame = panelRect;
+    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.panelView.frame.size.height);
+    [self.scrollView addSubview:self.panelView];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -400,18 +414,6 @@
     [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(onVariantsOptionsSelected:)
                                                 name:NOTIF_VARIANTS_SELECTED object:nil];
-}
-
-- (void)viewDidLayoutSubviews
-{
-    CGRect panelRect = self.panelView.frame;
-    panelRect.size.width = self.scrollView.frame.size.width;
-    self.panelView.frame = panelRect;
-    
-    [self.scrollView addSubview:self.panelView];
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, self.panelView.frame.size.height);
-    
-    [super viewDidLayoutSubviews];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

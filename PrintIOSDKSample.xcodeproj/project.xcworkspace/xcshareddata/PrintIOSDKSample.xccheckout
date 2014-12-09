@@ -10,6 +10,8 @@
 	<string>PrintIOSDKSample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>91B8EC2DD0D11D9C0F846AA7592AE77615DD62EE</key>
+		<string>https://github.com/printdotio/printio-ios-sdk.git</string>
 		<key>9ADF178D01D9F990604BB26BE3BFAF70BE6C2D93</key>
 		<string>https://github.com/printdotio/printio-ios-example.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>PrintIOSDKSample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>91B8EC2DD0D11D9C0F846AA7592AE77615DD62EE</key>
+		<string>../../../printio-ios-sdk</string>
 		<key>9ADF178D01D9F990604BB26BE3BFAF70BE6C2D93</key>
 		<string>../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>9ADF178D01D9F990604BB26BE3BFAF70BE6C2D93</string>
 			<key>IDESourceControlWCCName</key>
 			<string>printio-ios-example</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>91B8EC2DD0D11D9C0F846AA7592AE77615DD62EE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>printio-ios-sdk</string>
 		</dict>
 	</array>
 </dict>
