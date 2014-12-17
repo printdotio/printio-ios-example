@@ -302,8 +302,8 @@
 		B47C1645197D52DD00C37C30 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				B4187AF718E595480081978D /* ViewController.xib */,
 				B460D3BE191BA7DA0067DAAE /* VCVariantsOptions.xib */,
+				B4187AF718E595480081978D /* ViewController.xib */,
 			);
 			name = XIB;
 			sourceTree = "<group>";

@@ -22,74 +22,69 @@
 
 @implementation ViewController
 
-- (IBAction)onClickTestSDK:(id)sender
+- (IBAction)tapOnPrintSomething:(id)sender;
 {
     // Navigation bar
-    [self.printIO navigationBarColor:self.switchTitleBarColor.isOn ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
-                          titleColor:self.switchTitleBarColor.isOn ? [UIColor whiteColor] : [UIColor blackColor]
+    [self.printIO navigationBarColor:[self isSwitchON:14] ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
+                          titleColor:[self isSwitchON:14] ? [UIColor whiteColor] : [UIColor blackColor]
            leftButtonBackgroundColor:nil
           rightButtonBackgroundColor:nil
-                     titleButtonIcon:self.switchBtnInNavBar.isOn ? [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"] : nil];
+                     titleButtonIcon:[self isSwitchON:21] ? [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"] : nil];
     
     [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png" ]
                     withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
     
     // Payment options
     int paymentOpts = 0;
-    if(self.switchCreditCard.isOn){
+    if([self isSwitchON:46]){
         paymentOpts = paymentOpts | PaymentOptionCreditCard;
     }
     
-    if(self.switchPaypal.isOn){
+    if([self isSwitchON:47]){
         paymentOpts = paymentOpts | PaymentOptionPayPal;
     }
+    
     [self.printIO setPaymentOptions:paymentOpts];
     
     // Photo Sources
     NSMutableArray *photoSources = [[NSMutableArray alloc]init];
     
-    if (self.switchPSPhone.isOn){
+    if ([self isSwitchON:5]){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE]];
     }
     
-    if (self.switchPSInstagram.isOn){
+    if ([self isSwitchON:7]){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
     }
     
-    if (self.switchPSFacebook.isOn){
+    if ([self isSwitchON:6]){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK]];
     }
     
-    if (self.switchPSFlickr.isOn){
+    if ([self isSwitchON:9]){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FLICKR]];
     }
     
-    if (self.switchPSPicasa.isOn){
+    if ([self isSwitchON:8]){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PICASA]];
     }
     
-    if (self.switchPSDropbox.isOn){
+    if ([self isSwitchON:10]){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_DROPBOX]];
     }
     
-    if (self.switchPSPhotobucket.isOn){
+    if ([self isSwitchON:11]){
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHOTOBUCKET]];
     }
     
-    
-    
-    
     UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
-    //UIImage *image2 = [UIImage imageNamed:@"thunder.jpg"];
     
-    NSArray *images = [NSArray arrayWithObjects:image1, nil];
-    
-    //@"http://res.cloudinary.com/demo/image/upload/sample.jpg",
+    NSArray *images = [NSArray arrayWithObjects:image1, @"http://res.cloudinary.com/demo/image/upload/sample.jpg", nil];
     //@"http://photographylife.com/wp-content/uploads/2012/10/Nikon-D600-Sample-11.jpg",
     //@"http://www.digitaltrends.com/wp-content/uploads/2013/03/vertu-constellation-review-sample-image-flowers.jpg",
     
     // Set customization file
-    if (self.switchCustomization.isOn){
+    if ([self isSwitchON:13]){
         // Path to XML customization file
         NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization"
                                                             ofType:@"xml"];
@@ -100,22 +95,22 @@
     }
     
     // Set country code
-    if (self.switchCountryCode.isOn){
+    if ([self isSwitchON:2]){
         [self.printIO setCountryCode:@"US"];
     }
     
     // Set currency code
-    if (self.switchCurrencyCode.isOn){
+    if ([self isSwitchON:4]){
         [self.printIO setCurrencyCode:@"USD"];
     }
     
     // Set language code
-    if (self.switchLanguageCode.isOn){
+    if ([self isSwitchON:3]){
         [self.printIO setLanguageCode:@"en"];
     }
     
     // Set custom fonts
-    if (self.switchCustomFonts.isOn){
+    if ([self isSwitchON:16]){
         NSArray *fonts = @[@"timess.ttf", @"timess.ttf",
                            @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
         [self.printIO setFonts:fonts];
@@ -127,17 +122,17 @@
     }
     
     // Jumps directly to product
-    if (self.switchJumpToProduct.isOn)
+    if ([self isSwitchON:15])
         [self.printIO goToProductId:PRODUCT_PHONE_CASES()];
     
     // Jump To SKU
-    if (self.switchJumpToSKU.isOn){
+    if ([self isSwitchON:17]){
         [self.printIO goToProductId:PRODUCT_PHONE_CASES()
                             withSKU:@"PhoneCase-BlackberryZ10-Gloss"];
     }
     
     // Enable or disable Side Menu
-    if (self.switchEnableSideMenu.isOn){
+    if ([self isSwitchON:18]){
         [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"] background:nil];
         
         PIOSideMenuButton *pioSmHelp =  [[PIOSideMenuButton alloc]initWithType:PIO_SM_HELP];
@@ -181,81 +176,58 @@
                backgroundImageForButtons:nil];
     }
     
-    // Slide Side Menu from right
-    if (self.swSlideSideMenuFromRight.isOn){
-        [self.printIO slideSideMenuFromRight:YES];
-    }
-    
     // Custom share text. Will be used form side menu button.
-    if (self.switchCustomShareText.isOn){
+    if ([self isSwitchON:19]){
         [self.printIO setShareText:@"Example share app text with link http://www.google.com" additionalText:@"@PrintIO"];
     }
     
     // Show custom double tap screen when customizing product
-    if (self.switchCustomDoubleTapScreen.isOn){
+    if ([self isSwitchON:30]){
         [self.printIO showHelpDialogWithImage:[[NSBundle mainBundle] pathForResource:@"touch" ofType:@"png"]];
     }
     
     // Show/hide tab bar in Customization Screen
-    [self.printIO showToolbarInCustomizeProduct:self.switchShowTabBarInCustomizationScreen.isOn backgroundImage:nil];
-    
-    // Hide image list in Customize Product screen
-    if (self.switchHideImagesListInCustomization.isOn){
-        [self.printIO hideImagesListInCustomizeProduct:YES];
-    }
+    [self.printIO showToolbarInCustomizeProduct:[self isSwitchON:22] backgroundImage:nil];
     
     // Pass photos in SDK
-    if (self.switchPassPhotosInSDK.isOn){
+    if ([self isSwitchON:24]){
         [self.printIO setImages:images];
         
-        if(self.switchShowPassedImagesPhotosource){
+        if([self isSwitchON:45]){
             [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PASSED_PHOTOS]];
         }
     }
     
     [self.printIO setAvailablePhotoSources:photoSources]; // photo sources setter is moved here, so we can potentially add the passed images photo source
-    
-    // Disable photo sources when photos are passed
-    if (self.switchDisablePSWhenPhotosArePassed.isOn){
-        [self.printIO disablePhotoSourcesWhenImagesArePassedIn:YES];
-    }
-    
-    // Disable photo sources when photo is passed in SDK for one photo template
-    if (self.switchDisablePSWhenPhotoIsPassedForOnePhototemplate.isOn){
-        [self.printIO disablePhotoSourcesForOnePhotoTemplate:YES];
-    }
-    
-    // Use passed image as thumbnail for one phtoo template
-    if (self.switchUsePassedImageAsThumbForOnePhotoTemplate.isOn){
-        [self.printIO setPassedImageAsThumbForOnePhotoTemplate:YES];
-    }
-    
-    // Hide Category/Search view in Featured Products screen
-    if (self.hideCategoriesView.isOn){
-        [self.printIO hideCategoriesInFeaturedProducts:YES];
-    }
-    
+
+    [self.printIO slideSideMenuFromRight:[self isSwitchON:34]];
+    [self.printIO hideImagesListInCustomizeProduct:[self isSwitchON:23]];
+    [self.printIO disablePhotoSourcesWhenImagesArePassedIn:[self isSwitchON:25]];
+    [self.printIO disablePhotoSourcesForOnePhotoTemplate:[self isSwitchON:26]];
+    [self.printIO setPassedImageAsThumbForOnePhotoTemplate:[self isSwitchON:27]];
+    [self.printIO hideCategoriesInFeaturedProducts:[self isSwitchON:28]];
+
     // Hide status bar
-    if (self.switchHideStatusBar.isOn){
+    if ([self isSwitchON:29]){
         [self.printIO setStatusBarDark:NO hidden:YES];
     } else {
         [self.printIO setStatusBarDark:YES hidden:NO];
     }
     
     // Change loading GIF animation
-    if (self.switchCustomGIF.isOn){
+    if ([self isSwitchON:31]){
         [self.printIO setLoadingGIF:@"load"];
     }
     
     // Photo Arrangement option
-    if (self.switchPhotoArrangement.isOn){
+    if ([self isSwitchON:32]){
         [self.printIO setPhotoArrangement:PIO_PHOTO_ARRANGEMENT_AUTO];
     }
     
     [self.printIO removePlusFromAddMoreProductsButton:YES];
     
     // Variants options test
-    if (self.switchTestVariantsOptions.isOn){
+    if ([self isSwitchON:44]){
         NSLog(@"all_values: %@", [self.userData allValues]);
         [self.printIO setVariantsOptions:[NSArray arrayWithArray:[self.userData allValues]]];
         
@@ -280,43 +252,25 @@
     }
 
     // Show terms of service
-    if (self.swShowTermsOfService.isOn){
+    if ([self isSwitchON:36]){
         [self.printIO setTermsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
     }
     
     // Side Menu Options
-    if (self.swSideMenuShowOptionsAsAList.isOn){
-        [self.printIO sideMenuShowOptionsAsList:YES];
-    }
+    [self.printIO sideMenuShowOptionsAsList:[self isSwitchON:37]];
+    [self.printIO sideMenuHideAccountsHeader:[self isSwitchON:38]];
+    [self.printIO sideMenuHideInfoHeader:[self isSwitchON:39]];
+    [self.printIO sideMenuHideOptionsHeader:[self isSwitchON:40]];
+    [self.printIO hidePhotoSourcesInSideMenu:[self isSwitchON:12]];
     
-    if (self.swSideMenuHideAccountsHeader.isOn){
-        [self.printIO sideMenuHideAccountsHeader:YES];
-    }
-    
-    if (self.swSideMenuHideInfoHeader.isOn){
-        [self.printIO sideMenuHideInfoHeader:YES];
-    }
-    
-    if (self.swSideMenuHideOptionsHeader.isOn){
-        [self.printIO sideMenuHideOptionsHeader:YES];
-    }
-    
-    if (self.swHidePhotoSourcesInSideMenu.isOn){
-        [self.printIO hidePhotoSourcesInSideMenu:YES];
-    }
-    
-    if (self.swPositiveButtons.isOn){
+    if ([self isSwitchON:41]){
         [self.printIO setPositiveButtonsBackgroundColor:[UIColor blueColor]
                                              titleColor:[UIColor whiteColor]];
     }
     
-    if (self.swNegativeButtons.isOn){
+    if ([self isSwitchON:42]){
         [self.printIO setNegativeButtonsBackgroundColor:[UIColor redColor]
                                              titleColor:[UIColor whiteColor]];
-    }
-    
-    if (self.swDisablePreviewScreen.isOn){
-        [self.printIO disablePreviewScreen:YES];
     }
     
     [self.printIO setNavigationBarSaveToCartBackgroundColor:nil
@@ -329,19 +283,15 @@
     if (self.txtPromoCode.text.length){
         [self.printIO setPromoCode:self.txtPromoCode.text];
     }
-                
-    // Open widget
-    [self.printIO openWithOption:self.switchPresentViewFromRight.isOn ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
-
     
-    NSLog(@"widget starting");
+    // Open widget
+    [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
 }
 
-- (IBAction)onClickTestVariantsOptions:(id)sender
+- (IBAction)tapOnVariantOptions:(id)sender;
 {
     VCVariantsOptions *vc = [[VCVariantsOptions alloc]init];
     [self.navigationController presentViewController:vc animated:YES completion:nil];
-    //[self.printIO open];
 }
 
 - (void)onVariantsOptionsSelected:(NSNotification *)notification
@@ -360,7 +310,7 @@
 - (void)PrintIOWidgetOnCloseWithData:(NSDictionary *)data
 {
     NSLog(@"data: %@", data);
-    _printIO = nil;
+    //_printIO = nil;
 }
 
 #pragma mark - Init
@@ -375,7 +325,7 @@
     if (!_printIO){
         
         // Init HelloPics widget
-        BOOL isProduction = self.switchProduction.isOn;
+        BOOL isProduction = [self isSwitchON:1];
 
         //UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
         _printIO = [[PrintIO alloc]initWithViewController:self
@@ -386,7 +336,6 @@
                                        //productionRecipeId:@"07e3e00a-8e84-4e0b-bd6f-a80c877b8428"
                                           stagingRecipeId:@"00000000-0000-0000-0000-000000000000"];
         
-        // Set Delegate
         [_printIO setDelegate:self];
     }
     return _printIO;
@@ -433,6 +382,18 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
+    return NO;
+}
+
+#pragma mark - Get switch state
+
+- (BOOL)isSwitchON:(NSInteger)tag
+{
+    for (UISwitch *s in self.switches){
+        if (s.tag == tag){
+            return s.isOn;
+        }
+    }
     return NO;
 }
 
