@@ -28,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B43F19E0185B061000926E70"
-               BuildableName = "PrintIOSDKSampleTests.xctest"
-               BlueprintName = "PrintIOSDKSampleTests"
-               ReferencedContainer = "container:PrintIOSDKSample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

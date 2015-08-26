@@ -26,8 +26,6 @@
 		B43F19D4185B061000926E70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19D3185B061000926E70 /* AppDelegate.m */; };
 		B43F19DA185B061000926E70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19D9185B061000926E70 /* ViewController.m */; };
 		B43F19DC185B061000926E70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43F19DB185B061000926E70 /* Images.xcassets */; };
-		B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B43F19EB185B061000926E70 /* InfoPlist.strings */; };
-		B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B43F19EE185B061000926E70 /* TestSDKAppTests.m */; };
 		B4564E6F19411478000D3CBC /* pb_menu_a.png in Resources */ = {isa = PBXBuildFile; fileRef = B4564E6E19411478000D3CBC /* pb_menu_a.png */; };
 		B45AAF4F198B8D2C00A568DB /* icon_cart_white.png in Resources */ = {isa = PBXBuildFile; fileRef = B45AAF4E198B8D2C00A568DB /* icon_cart_white.png */; };
 		B463BC7B19AB216E000AACB1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B429BD73186B0D26002340BB /* AVFoundation.framework */; };
@@ -62,16 +60,6 @@
 		B4C758A219B74DD800C45634 /* navbariphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C758A119B74DD800C45634 /* navbariphone.png */; };
 		B4C758A419B75B8B00C45634 /* navbariphone1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C758A319B75B8B00C45634 /* navbariphone1.png */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		B43F19E6185B061000926E70 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B43F19B8185B061000926E70 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B43F19BF185B061000926E70;
-			remoteInfo = TestSDKApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TestSDKApp-Info.plist"; sourceTree = "<group>"; };
@@ -113,10 +101,6 @@
 		B43F19D8185B061000926E70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B43F19D9185B061000926E70 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B43F19DB185B061000926E70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B43F19E1185B061000926E70 /* PrintIOSDKSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintIOSDKSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrintIOSDKSampleTests-Info.plist"; sourceTree = "<group>"; };
-		B43F19EC185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B43F19EE185B061000926E70 /* TestSDKAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDKAppTests.m; sourceTree = "<group>"; };
 		B4564E6E19411478000D3CBC /* pb_menu_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_menu_a.png; sourceTree = "<group>"; };
 		B45AAF4E198B8D2C00A568DB /* icon_cart_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_cart_white.png; sourceTree = "<group>"; };
 		B46F0F991B39782B009CE2BE /* MyPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPhotoSource.h; sourceTree = "<group>"; };
@@ -174,13 +158,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B43F19DE185B061000926E70 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -203,7 +180,6 @@
 			children = (
 				B4C134EA1AD7DCCF00C411C6 /* PrintIOSDKSample.entitlements */,
 				B43F19C9185B061000926E70 /* TestSDKApp */,
-				B43F19E8185B061000926E70 /* TestSDKAppTests */,
 				B4AAA60418D1A2DB002C2F70 /* PrintIO */,
 				B43F19C2185B061000926E70 /* Frameworks */,
 				B43F19C1185B061000926E70 /* Products */,
@@ -214,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				B43F19C0185B061000926E70 /* PrintIOSDKSample.app */,
-				B43F19E1185B061000926E70 /* PrintIOSDKSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,24 +246,6 @@
 				B43F19CC185B061000926E70 /* InfoPlist.strings */,
 				B43F19CF185B061000926E70 /* main.m */,
 				B43F19D1185B061000926E70 /* PrintIOSDKSample-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B43F19E8185B061000926E70 /* TestSDKAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				B43F19EE185B061000926E70 /* TestSDKAppTests.m */,
-				B43F19E9185B061000926E70 /* Supporting Files */,
-			);
-			path = TestSDKAppTests;
-			sourceTree = "<group>";
-		};
-		B43F19E9185B061000926E70 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B43F19EA185B061000926E70 /* PrintIOSDKSampleTests-Info.plist */,
-				B43F19EB185B061000926E70 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -433,24 +390,6 @@
 			productReference = B43F19C0185B061000926E70 /* PrintIOSDKSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B43F19E0185B061000926E70 /* PrintIOSDKSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B43F19F5185B061000926E70 /* Build configuration list for PBXNativeTarget "PrintIOSDKSampleTests" */;
-			buildPhases = (
-				B43F19DD185B061000926E70 /* Sources */,
-				B43F19DE185B061000926E70 /* Frameworks */,
-				B43F19DF185B061000926E70 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B43F19E7185B061000926E70 /* PBXTargetDependency */,
-			);
-			name = PrintIOSDKSampleTests;
-			productName = TestSDKAppTests;
-			productReference = B43F19E1185B061000926E70 /* PrintIOSDKSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -490,7 +429,6 @@
 			projectRoot = "";
 			targets = (
 				B43F19BF185B061000926E70 /* PrintIOSDKSample */,
-				B43F19E0185B061000926E70 /* PrintIOSDKSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -539,14 +477,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B43F19DF185B061000926E70 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B43F19ED185B061000926E70 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -562,37 +492,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B43F19DD185B061000926E70 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B43F19EF185B061000926E70 /* TestSDKAppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B43F19E7185B061000926E70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B43F19BF185B061000926E70 /* PrintIOSDKSample */;
-			targetProxy = B43F19E6185B061000926E70 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B43F19CC185B061000926E70 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B43F19CD185B061000926E70 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		B43F19EB185B061000926E70 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B43F19EC185B061000926E70 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -741,44 +647,6 @@
 			};
 			name = Release;
 		};
-		B43F19F6185B061000926E70 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"/Users/tengai/Desktop/app-printmee.ios/TestSDKApp",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TestSDKApp/TestSDKApp-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "TestSDKAppTests/PrintIOSDKSampleTests-Info.plist";
-				PRODUCT_NAME = PrintIOSDKSampleTests;
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B43F19F7185B061000926E70 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"/Users/tengai/Desktop/app-printmee.ios/TestSDKApp",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TestSDKApp/TestSDKApp-Prefix.pch";
-				INFOPLIST_FILE = "TestSDKAppTests/PrintIOSDKSampleTests-Info.plist";
-				PRODUCT_NAME = PrintIOSDKSampleTests;
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -796,15 +664,6 @@
 			buildConfigurations = (
 				B43F19F3185B061000926E70 /* Debug */,
 				B43F19F4185B061000926E70 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B43F19F5185B061000926E70 /* Build configuration list for PBXNativeTarget "PrintIOSDKSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B43F19F6185B061000926E70 /* Debug */,
-				B43F19F7185B061000926E70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
