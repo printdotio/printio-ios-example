@@ -10,20 +10,21 @@
 #import <PrintIO/PrintIO.h>
 #import <PrintIO/PIOSideMenuButton.h>
 #import <PrintIO/PIOVariantOption.h>
-#import "VCVariantsOptions.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <PassKit/PassKit.h>
+#import "MyPhotoSource.h"
+#import <PrintIO/PaymentOptions.h>
 
 @interface ViewController ()
 
 @property (nonatomic, strong) PrintIO *printIO;
 
-@property (nonatomic, strong) NSDictionary *userData;
-
 @end
 
 @implementation ViewController
 
-- (IBAction)tapOnPrintSomething:(id)sender;
-{
+- (IBAction)tapOnPrintSomething:(id)sender{
+    
     // Navigation bar
     [self.printIO navigationBarColor:[self isSwitchON:14] ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
                           titleColor:[self isSwitchON:14] ? [UIColor whiteColor] : [UIColor blackColor]
@@ -42,6 +43,11 @@
     
     if([self isSwitchON:47]){
         paymentOpts = paymentOpts | PaymentOptionPayPal;
+    }
+    
+    if ([self isSwitchON:48]){
+        paymentOpts = paymentOpts | PaymentOptionApplePay;
+        [self.printIO setApplePayMerchantIdentifier:@"merchant.sampleapp"];
     }
     
     [self.printIO setPaymentOptions:paymentOpts];
@@ -77,17 +83,14 @@
         [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHOTOBUCKET]];
     }
     
-    UIImage *image1 = [UIImage imageNamed:@"dream.jpg"];
-    
-    NSArray *images = [NSArray arrayWithObjects:image1, @"http://res.cloudinary.com/demo/image/upload/sample.jpg", nil];
+    NSArray *images = [NSArray arrayWithObjects:[UIImage imageNamed:@"dream.jpg"], [UIImage imageNamed:@"thunder.jpg"], nil];
     //@"http://photographylife.com/wp-content/uploads/2012/10/Nikon-D600-Sample-11.jpg",
     //@"http://www.digitaltrends.com/wp-content/uploads/2013/03/vertu-constellation-review-sample-image-flowers.jpg",
     
     // Set customization file
     if ([self isSwitchON:13]){
         // Path to XML customization file
-        NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization"
-                                                            ofType:@"xml"];
+        NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization" ofType:@"xml"];
         NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
         
         [self.printIO setCustomizationXML:xmlData];
@@ -111,8 +114,7 @@
     
     // Set custom fonts
     if ([self isSwitchON:16]){
-        NSArray *fonts = @[@"timess.ttf", @"timess.ttf",
-                           @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
+        NSArray *fonts = @[@"timess.ttf", @"timess.ttf", @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
         [self.printIO setFonts:fonts];
     }
     
@@ -127,8 +129,7 @@
     
     // Jump To SKU
     if ([self isSwitchON:17]){
-        [self.printIO goToProductId:PRODUCT_PHONE_CASES()
-                            withSKU:@"PhoneCase-BlackberryZ10-Gloss"];
+        [self.printIO goToProductId:PRODUCT_PHONE_CASES() withSKU:@"PhoneCase-BlackberryZ10-Gloss"];
     }
     
     // Enable or disable Side Menu
@@ -159,7 +160,9 @@
                           [[PIOSideMenuButton alloc]initWithType:PIO_SM_RATE_APP],
                           [[PIOSideMenuButton alloc]initWithType:PIO_SM_ABOUT],
                           [[PIOSideMenuButton alloc]initWithType:PIO_SM_HOW_IT_WORKS],
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_PAST_ORDERS], nil];
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_PAST_ORDERS],
+                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_ORDER_STATUS],
+                          nil];
         
         [self.printIO sideMenuAddButtons:buttons
                                  options:options
@@ -194,19 +197,19 @@
         [self.printIO setImages:images];
         
         if([self isSwitchON:45]){
+            // PIOSideMenuButton *passBtn = [[PIOSideMenuButton alloc]initWithTitle:@"Boo" type:PIO_SM_PASSED_PHOTOS iconPath:[[NSBundle mainBundle]pathForResource:@"icon1" ofType:@"png"]];
             [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PASSED_PHOTOS]];
         }
     }
     
     [self.printIO setAvailablePhotoSources:photoSources]; // photo sources setter is moved here, so we can potentially add the passed images photo source
-
+    
     [self.printIO slideSideMenuFromRight:[self isSwitchON:34]];
     [self.printIO hideImagesListInCustomizeProduct:[self isSwitchON:23]];
     [self.printIO disablePhotoSourcesWhenImagesArePassedIn:[self isSwitchON:25]];
     [self.printIO disablePhotoSourcesForOnePhotoTemplate:[self isSwitchON:26]];
-    [self.printIO setPassedImageAsThumbForOnePhotoTemplate:[self isSwitchON:27]];
     [self.printIO hideCategoriesInFeaturedProducts:[self isSwitchON:28]];
-
+        
     // Hide status bar
     if ([self isSwitchON:29]){
         [self.printIO setStatusBarDark:NO hidden:YES];
@@ -224,33 +227,6 @@
         [self.printIO setPhotoArrangement:PIO_PHOTO_ARRANGEMENT_AUTO];
     }
     
-    [self.printIO removePlusFromAddMoreProductsButton:YES];
-    
-    // Variants options test
-    if ([self isSwitchON:44]){
-        NSLog(@"all_values: %@", [self.userData allValues]);
-        [self.printIO setVariantsOptions:[NSArray arrayWithArray:[self.userData allValues]]];
-        
-        // TEST  !!!!!!!!!!!!!
-        //        [self.printIO goToProductId:PRODUCT_THROW_PILLOWS()];
-        //        [self.printIO setSamePhotoOnFrontAndBackSideOfProduct:PRODUCT_THROW_PILLOWS()];
-        //        [self.printIO autoSelectOnePhotoTemplateForProductID:PRODUCT_THROW_PILLOWS()];
-        
-        // Count = 36
-        PIOVariantOption *p1 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_THROW_PILLOWS()
-                                                                 optionId:@"bf375e734bfc4b28b9a79b3511ec331a"
-                                                                  valueId:@"5a12312691fd42788a7bdfe295447122"];
-        //p1.color = [UIColor redColor];
-        
-        // 3x3 inch
-        PIOVariantOption *p2 = [[PIOVariantOption alloc]initWithProductId:PRODUCT_THROW_PILLOWS()
-                                                                 optionId:@"677d9d4c10a74e4d8f30b4d104b61681"
-                                                                  valueId:@"46d2cdbfed6547e385ba9ff56b405c72"];
-        
-        [self.printIO setVariantsOptions:[NSArray arrayWithObjects:p1, p2, nil]];
-        
-    }
-
     // Show terms of service
     if ([self isSwitchON:36]){
         [self.printIO setTermsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
@@ -288,53 +264,30 @@
     [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
 }
 
-- (IBAction)tapOnVariantOptions:(id)sender;
-{
-    VCVariantsOptions *vc = [[VCVariantsOptions alloc]init];
-    [self.navigationController presentViewController:vc animated:YES completion:nil];
-}
-
-- (void)onVariantsOptionsSelected:(NSNotification *)notification
-{
-    self.userData = [notification userInfo];
-    NSLog(@"self.userData: %@", self.userData);
-}
-
 #pragma mark - PrintIO Delegate
 
-- (void)PrintIOWidgetOnOpen
-{
-    NSLog(@"PrintIOWidgetOnOpen");
+- (void)PrintIOWidgetOnOpen{
 }
 
-- (void)PrintIOWidgetOnCloseWithData:(NSDictionary *)data
-{
+- (void)PrintIOWidgetOnCloseWithData:(NSDictionary *)data{
     NSLog(@"data: %@", data);
-    //_printIO = nil;
+    _printIO = nil;
+}
+
+- (void)printIO:(PrintIO *)printIO didCompleteOrderWithData:(NSDictionary *)data{
+    
 }
 
 #pragma mark - Init
 
-- (void)dummyStart
-{
-    [self.printIO open];
-}
-
-- (PrintIO *)printIO
-{
+- (PrintIO *)printIO{
     if (!_printIO){
-        
-        // Init HelloPics widget
         BOOL isProduction = [self isSwitchON:1];
-
-        //UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        NSString *recipeId = self.tfRecipeID.text;
         _printIO = [[PrintIO alloc]initWithViewController:self
                                               environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
-                                                           productionRecipeId:@"46f999dd-814d-428f-b0ff-47954b4181b2"
-//                                                              stagingRecipeId:@"7b4e12e3-c60f-47ed-bf75-ce848726cfcc"];
-                                       //productionRecipeId:@"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
-                                       //productionRecipeId:@"07e3e00a-8e84-4e0b-bd6f-a80c877b8428"
-                                          stagingRecipeId:@"00000000-0000-0000-0000-000000000000"];
+                                       productionRecipeId:isProduction && recipeId.length ? recipeId : @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
+                                          stagingRecipeId:!isProduction && recipeId.length ? recipeId : @"00000000-0000-0000-0000-000000000000"];
         
         [_printIO setDelegate:self];
     }
@@ -343,8 +296,7 @@
 
 #pragma mark - View Lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
     CGRect sBounds = [[UIScreen mainScreen]bounds];
@@ -356,45 +308,101 @@
     [self.scrollView addSubview:self.panelView];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter]addObserver:self
-                                            selector:@selector(onVariantsOptionsSelected:)
-                                                name:NOTIF_VARIANTS_SELECTED object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
+- (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NOTIF_VARIANTS_SELECTED object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
-- (BOOL)prefersStatusBarHidden
-{
+- (BOOL)prefersStatusBarHidden{
     return YES;
+}
+
+#pragma mark - Keyboard
+
+- (void)keyboardWillShow{
+    if (self.scrollView.contentOffset.y > [[UIScreen mainScreen]bounds].size.height){
+        self.scrollView.contentOffset = CGPointMake(self.scrollView.contentOffset.x, self.scrollView.contentOffset.y + 216.0);
+    }
+}
+
+- (void)keyboardWillHide{
+    if (self.scrollView.contentOffset.y > [[UIScreen mainScreen]bounds].size.height){
+        self.scrollView.contentOffset = CGPointMake(self.scrollView.contentOffset.x, self.scrollView.contentOffset.y - 216.0);
+    }
 }
 
 #pragma mark - UITextField Delegate
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return NO;
 }
 
 #pragma mark - Get switch state
 
-- (BOOL)isSwitchON:(NSInteger)tag
-{
+- (BOOL)isSwitchON:(NSInteger)tag{
     for (UISwitch *s in self.switches){
         if (s.tag == tag){
             return s.isOn;
         }
     }
     return NO;
+}
+
+#pragma mark - get all images for test
+
+- (void)getAllPicturesFromPhone:(void(^)(NSArray *images))completion{
+    ALAssetsLibrary *library;
+    NSMutableArray *mutableArray;
+    __block NSInteger count = 0;
+    
+    mutableArray =[[NSMutableArray alloc]init];
+    NSMutableArray* assetURLDictionaries = [[NSMutableArray alloc] init];
+    
+    library = [[ALAssetsLibrary alloc] init];
+    
+    void (^assetEnumerator)( ALAsset *, NSUInteger, BOOL *) = ^(ALAsset *result, NSUInteger index, BOOL *stop) {
+        if(result != nil) {
+            if([[result valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypePhoto]) {
+                [assetURLDictionaries addObject:[result valueForProperty:ALAssetPropertyURLs]];
+                
+                NSURL *url= (NSURL*) [[result defaultRepresentation]url];
+                
+                [library assetForURL:url
+                         resultBlock:^(ALAsset *asset) {
+                             [mutableArray addObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]]];
+                             
+                             if ([mutableArray count]==count){
+                                 completion([[NSArray alloc] initWithArray:mutableArray]);
+                             }
+                         }
+                        failureBlock:^(NSError *error){ NSLog(@"operation was not successfull!"); } ];
+            }
+        }
+    };
+    
+    NSMutableArray *assetGroups = [[NSMutableArray alloc] init];
+    
+    void (^ assetGroupEnumerator) ( ALAssetsGroup *, BOOL *)= ^(ALAssetsGroup *group, BOOL *stop) {
+        if(group != nil) {
+            [group enumerateAssetsUsingBlock:assetEnumerator];
+            [assetGroups addObject:group];
+            count=[group numberOfAssets];
+        }
+    };
+    
+    assetGroups = [[NSMutableArray alloc] init];
+    
+    [library enumerateGroupsWithTypes:ALAssetsGroupAll
+                           usingBlock:assetGroupEnumerator
+                         failureBlock:^(NSError *error) {NSLog(@"There is an error");}];
 }
 
 @end

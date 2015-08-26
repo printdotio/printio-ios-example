@@ -12,13 +12,13 @@
 @interface ViewController : UIViewController <PrintIODelegate, UITextFieldDelegate>
 
 - (IBAction)tapOnPrintSomething:(id)sender;
-- (IBAction)tapOnVariantOptions:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIView *panelView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (weak, nonatomic) IBOutlet UITextField *txtPayeeName;
 @property (weak, nonatomic) IBOutlet UITextField *txtPromoCode;
+@property (weak, nonatomic) IBOutlet UITextField *tfRecipeID;
 
 @property (strong, nonatomic) IBOutletCollection(UISwitch) NSArray *switches;
 
