@@ -592,7 +592,7 @@
 				CODE_SIGN_ENTITLEMENTS = PrintIOSDKSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-hdqmmslvvjfflpedczmsjkqqcirr/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
@@ -608,7 +608,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "e284034e-47ae-46c0-81b9-abb8113d85b2";
+				PROVISIONING_PROFILE = "6ac8a1fe-1142-4bd8-960e-e0c159de4f9f";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -624,7 +624,7 @@
 				CODE_SIGN_ENTITLEMENTS = PrintIOSDKSample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Austen Bernstein (5AM3ZDHA7T)";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/PrintIO-hdqmmslvvjfflpedczmsjkqqcirr/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts",
@@ -640,7 +640,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = PrintIOSDKSample;
-				PROVISIONING_PROFILE = "e284034e-47ae-46c0-81b9-abb8113d85b2";
+				PROVISIONING_PROFILE = "6ac8a1fe-1142-4bd8-960e-e0c159de4f9f";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;

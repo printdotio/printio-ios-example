@@ -48,6 +48,7 @@
     if ([self isSwitchON:48]){
         paymentOpts = paymentOpts | PaymentOptionApplePay;
         [self.printIO setApplePayMerchantIdentifier:@"merchant.sampleapp"];
+        [self.printIO setApplePayBusinessName:@"MAKEABLE" yourAppName:@"SampleApp"];
     }
     
     [self.printIO setPaymentOptions:paymentOpts];
@@ -72,7 +73,7 @@
     }
     
     if ([self isSwitchON:8]){
-        [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PICASA]];
+        [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_GOOGLE_PHOTOS]];
     }
     
     if ([self isSwitchON:10]){
@@ -209,7 +210,7 @@
     [self.printIO disablePhotoSourcesWhenImagesArePassedIn:[self isSwitchON:25]];
     [self.printIO disablePhotoSourcesForOnePhotoTemplate:[self isSwitchON:26]];
     [self.printIO hideCategoriesInFeaturedProducts:[self isSwitchON:28]];
-        
+    
     // Hide status bar
     if ([self isSwitchON:29]){
         [self.printIO setStatusBarDark:NO hidden:YES];
@@ -260,6 +261,24 @@
         [self.printIO setPromoCode:self.txtPromoCode.text];
     }
     
+    if ([self isSwitchON:43]){
+        [self.printIO setProductsScreenVersion:PIOProductsScreenV2];
+        [self.printIO setProductsScreenImageUrl:@"http://www.bmw.com/_common/shared/newvehicles/x/x3/2014/showroom/01_start_page/background.jpg"];
+    }
+    
+    if ([self isSwitchON:44]){
+        [self.printIO showCancelOptionsButton:YES];
+    }
+    
+    if ([self isSwitchON:50]){
+        [self.printIO useSinglePageCustomization:YES];
+    }
+    /////////
+    //    MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
+    //    [self.printIO setAvailablePhotoSources:nil];
+    //    [self.printIO setCustomPhotoSources:@[myPhotoSource]];
+    /////////
+        
     // Open widget
     [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
 }
@@ -287,7 +306,7 @@
         _printIO = [[PrintIO alloc]initWithViewController:self
                                               environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
                                        productionRecipeId:isProduction && recipeId.length ? recipeId : @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
-                                          stagingRecipeId:!isProduction && recipeId.length ? recipeId : @"00000000-0000-0000-0000-000000000000"];
+                                          stagingRecipeId:!isProduction && recipeId.length ? recipeId : @"00000000-0000-0000-0000-000000000000"]; // @"809ddb7d-c3d6-4c44-ba75-1ef620074b84"
         
         [_printIO setDelegate:self];
     }

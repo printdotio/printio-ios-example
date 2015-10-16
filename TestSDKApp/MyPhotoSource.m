@@ -24,6 +24,7 @@
 }
 
 -(void)fetchImageForItem:(id<PIOPhotoSourceItem>)item thumbnail:(BOOL)isThumbnail withCompletionHandler:(void(^)(UIImage*))imageFetchCompletionHandler{
+    
     UIImage *image = [UIImage imageNamed:@"touch"];
     imageFetchCompletionHandler(image);
 }
@@ -31,7 +32,7 @@
 -(void)requestPhotoSourceItemsForItem:(id<PIOPhotoSourceItem>)item currentScope:(id<PIOPhotoSourceItem>)currentScope count:(NSUInteger)count page:(NSUInteger)page withCompletionHandler:(PIOItemsCompletionHandler)completionHandler errorHandler:(PIOPhotoSourceErrorHandler)errorHandler{
     
     NSMutableArray *array = [NSMutableArray new];
-    for (int i=0; i<1; i++){
+    for (int i=0; i<20; i++){
         MyPhotoSourceItem *item = [[MyPhotoSourceItem alloc]init];
         [array addObject:item];
     }
