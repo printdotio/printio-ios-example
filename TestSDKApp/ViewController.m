@@ -273,12 +273,22 @@
     if ([self isSwitchON:50]){
         [self.printIO useSinglePageCustomization:YES];
     }
+    
+    if (self.tfRetailDiscount.text.length){
+        float percent = [self.tfRetailDiscount.text floatValue];
+        [self.printIO setRetailDiscountPercent:percent];
+    }
+    
+    if ([self isSwitchON:51]){
+        [self.printIO setWhatsNewDailogText:@"- bug fixes\n- new products added\n- new feature added"];
+    }
+    
     /////////
     //    MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
     //    [self.printIO setAvailablePhotoSources:nil];
     //    [self.printIO setCustomPhotoSources:@[myPhotoSource]];
     /////////
-        
+    
     // Open widget
     [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
 }

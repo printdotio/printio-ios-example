@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtPayeeName;
 @property (weak, nonatomic) IBOutlet UITextField *txtPromoCode;
 @property (weak, nonatomic) IBOutlet UITextField *tfRecipeID;
+@property (weak, nonatomic) IBOutlet UITextField *tfRetailDiscount;
 
 @property (strong, nonatomic) IBOutletCollection(UISwitch) NSArray *switches;
 
