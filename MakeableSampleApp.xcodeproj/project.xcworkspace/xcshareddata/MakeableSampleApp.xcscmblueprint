@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9ADF178D01D9F990604BB26BE3BFAF70BE6C2D93",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9ADF178D01D9F990604BB26BE3BFAF70BE6C2D93" : 0,
+    "91B8EC2DD0D11D9C0F846AA7592AE77615DD62EE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BA56BAF9-AEFE-43FC-B2FD-20E8B68A4F6D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9ADF178D01D9F990604BB26BE3BFAF70BE6C2D93" : "printio-ios-example\/",
+    "91B8EC2DD0D11D9C0F846AA7592AE77615DD62EE" : "printio-ios-sdk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MakeableSampleApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MakeableSampleApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/printdotio\/printio-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "91B8EC2DD0D11D9C0F846AA7592AE77615DD62EE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/printdotio\/printio-ios-example.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9ADF178D01D9F990604BB26BE3BFAF70BE6C2D93"
+    }
+  ]
+}

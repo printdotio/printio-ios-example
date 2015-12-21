@@ -48,7 +48,6 @@
     if ([self isSwitchON:48]){
         paymentOpts = paymentOpts | PaymentOptionApplePay;
         [self.printIO setApplePayMerchantIdentifier:@"merchant.sampleapp"];
-        [self.printIO setApplePayBusinessName:@"MAKEABLE" yourAppName:@"SampleApp"];
     }
     
     [self.printIO setPaymentOptions:paymentOpts];
@@ -145,7 +144,6 @@
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_SEARCH_BAR],
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_EXIT_BUTTON],
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRODUCTS],
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_FEATURED_PRODUCTS],
                             [[PIOSideMenuButton alloc]initWithType:PIO_SM_VIEW_CART],
                             pioSmHelp, nil];
         
@@ -270,10 +268,6 @@
         [self.printIO showCancelOptionsButton:YES];
     }
     
-    if ([self isSwitchON:50]){
-        [self.printIO useSinglePageCustomization:YES];
-    }
-    
     if (self.tfRetailDiscount.text.length){
         float percent = [self.tfRetailDiscount.text floatValue];
         [self.printIO setRetailDiscountPercent:percent];
@@ -283,10 +277,15 @@
         [self.printIO setWhatsNewDailogText:@"- bug fixes\n- new products added\n- new feature added"];
     }
     
+    if ([self isSwitchON:52]){
+        [self.printIO showBottomBarWithLikeUsURL:[NSURL URLWithString:@"fb://profile/642169949144369"] rateUsAppId:@"731593327" shareText:@"This is sample share text http://www.makeable.com"];
+    }
+    
     /////////
-    //    MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
-    //    [self.printIO setAvailablePhotoSources:nil];
-    //    [self.printIO setCustomPhotoSources:@[myPhotoSource]];
+//        MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
+//        [self.printIO setAvailablePhotoSources:nil];
+//    [self.printIO hidePhotoSourcesInSideMenu:YES];
+//        [self.printIO setCustomPhotoSources:@[myPhotoSource]];
     /////////
     
     // Open widget
