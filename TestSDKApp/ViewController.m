@@ -24,7 +24,6 @@
 @implementation ViewController
 
 - (IBAction)tapOnPrintSomething:(id)sender{
-    
     // Navigation bar
     [self.printIO navigationBarColor:[self isSwitchON:14] ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
                           titleColor:[self isSwitchON:14] ? [UIColor whiteColor] : [UIColor blackColor]
@@ -134,53 +133,12 @@
     
     // Enable or disable Side Menu
     if ([self isSwitchON:18]){
-        [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"] background:nil];
-        
-        PIOSideMenuButton *pioSmHelp =  [[PIOSideMenuButton alloc]initWithType:PIO_SM_HELP];
-        pioSmHelp.dataHolder  = @"http://www.google.com";
-        
-        // Set options for Side Menu
-        NSArray *buttons = [NSArray arrayWithObjects:
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_SEARCH_BAR],
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_EXIT_BUTTON],
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRODUCTS],
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_VIEW_CART],
-                            pioSmHelp, nil];
-        
-        NSArray *options = [NSArray arrayWithObjects:
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_CURRENCY],
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_COUNTRY],
-                            [[PIOSideMenuButton alloc]initWithType:PIO_SM_CHANGE_LANGUAGE], nil];
-        
-        NSArray *infos = [NSArray arrayWithObjects:
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_PRICING_CHART],
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_SHARE_APP],
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_LIKE_US_FB],
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_RATE_APP],
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_ABOUT],
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_HOW_IT_WORKS],
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_PAST_ORDERS],
-                          [[PIOSideMenuButton alloc]initWithType:PIO_SM_ORDER_STATUS],
-                          nil];
-        
-        [self.printIO sideMenuAddButtons:buttons
-                                 options:options
-                            optionsTitle:@"Options"
-                       optionsTitleColor:[UIColor whiteColor]
-                            optionsColor:[UIColor colorWithRed:34.0/255.0 green:160.0/255.0 blue:221.0/255.0 alpha:255.0/255.0]
-                           accountsTitle:@"Accounts"
-                      accountsTitleColor:[UIColor whiteColor]
-                           accountsColor:[UIColor colorWithRed:26.0/255.0 green:188.0/255.0 blue:156.0/255.0 alpha:255.0/255.0]
-                                    info:infos
-                               infoTitle:@"Info"
-                          infoTitleColor:[UIColor whiteColor]
-                               infoColor:[UIColor colorWithRed:100.0/255.0 green:106.0/255.0 blue:166.0/255.0 alpha:255.0/255.0]
-               backgroundImageForButtons:nil];
+        [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"]];
     }
     
     // Custom share text. Will be used form side menu button.
     if ([self isSwitchON:19]){
-        [self.printIO setShareText:@"Example share app text with link http://www.google.com" additionalText:@"@PrintIO"];
+        
     }
     
     // Show custom double tap screen when customizing product
@@ -232,10 +190,6 @@
     }
     
     // Side Menu Options
-    [self.printIO sideMenuShowOptionsAsList:[self isSwitchON:37]];
-    [self.printIO sideMenuHideAccountsHeader:[self isSwitchON:38]];
-    [self.printIO sideMenuHideInfoHeader:[self isSwitchON:39]];
-    [self.printIO sideMenuHideOptionsHeader:[self isSwitchON:40]];
     [self.printIO hidePhotoSourcesInSideMenu:[self isSwitchON:12]];
     
     if ([self isSwitchON:41]){
