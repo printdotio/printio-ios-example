@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B43F19BF185B061000926E70"
                BuildableName = "MakeableSampleApp.app"
-               BlueprintName = "MakeableSampleApp"
-               ReferencedContainer = "container:MakeableSampleApp.xcodeproj">
+               BlueprintName = "GootenApp"
+               ReferencedContainer = "container:GootenApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
             BuildableName = "MakeableSampleApp.app"
-            BlueprintName = "MakeableSampleApp"
-            ReferencedContainer = "container:MakeableSampleApp.xcodeproj">
+            BlueprintName = "GootenApp"
+            ReferencedContainer = "container:GootenApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
             BuildableName = "MakeableSampleApp.app"
-            BlueprintName = "MakeableSampleApp"
-            ReferencedContainer = "container:MakeableSampleApp.xcodeproj">
+            BlueprintName = "GootenApp"
+            ReferencedContainer = "container:GootenApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -76,8 +76,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
             BuildableName = "MakeableSampleApp.app"
-            BlueprintName = "MakeableSampleApp"
-            ReferencedContainer = "container:MakeableSampleApp.xcodeproj">
+            BlueprintName = "GootenApp"
+            ReferencedContainer = "container:GootenApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

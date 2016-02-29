@@ -24,12 +24,13 @@
 @implementation ViewController
 
 - (IBAction)tapOnPrintSomething:(id)sender{
+    
     // Navigation bar
     [self.printIO navigationBarColor:[self isSwitchON:14] ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
                           titleColor:[self isSwitchON:14] ? [UIColor whiteColor] : [UIColor blackColor]
            leftButtonBackgroundColor:nil
           rightButtonBackgroundColor:nil
-                     titleButtonIcon:[self isSwitchON:21] ? [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"] : nil];
+                     titleButtonIcon:nil];
     
     [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png" ]
                     withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
@@ -232,18 +233,59 @@
     }
     
     if ([self isSwitchON:52]){
-        [self.printIO showBottomBarWithLikeUsURL:[NSURL URLWithString:@"fb://profile/642169949144369"] rateUsAppId:@"731593327" shareText:@"This is sample share text http://www.makeable.com"];
+        [self.printIO showBottomBarWithLikeUsURL:[NSURL URLWithString:@"fb://profile/642169949144369"] rateUsAppId:@"731593327" shareText:@"This is sample share text http://www.gooten.com"];
     }
     
-    /////////
-//        MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
-//        [self.printIO setAvailablePhotoSources:nil];
-//    [self.printIO hidePhotoSourcesInSideMenu:YES];
-//        [self.printIO setCustomPhotoSources:@[myPhotoSource]];
-    /////////
+    if ([self isSwitchON:53]){
+        [self.printIO setProductsInHero:@[[NSNumber numberWithInt:PRODUCT_PHONE_CASES()], [NSNumber numberWithInt:PRODUCT_TABLET_CASES()]]];
+    }
     
+    if ([self isSwitchON:54]){
+        [self.printIO setImageInHero:[UIImage imageNamed:@"sample_image.jpg"] url:[NSURL URLWithString:@"youtube://www.youtube.com/watch?v=pLrS1q242eE"]];
+    }
+    
+    if ([self isSwitchON:55]){
+        [self.printIO setThreeButtonsNavigationBarStyle:YES];
+    }
+    
+    if ([self isSwitchON:56]){
+        [self.printIO setProductsScreenVersion:PIOProductsScreenV3];
+    }
+    
+    ///////
+//    MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
+//    [self.printIO setAvailablePhotoSources:nil];
+//    [self.printIO hidePhotoSourcesInSideMenu:YES];
+//    [self.printIO setCustomPhotoSources:@[myPhotoSource]];
+    ///////
+
+    //
+//    NSMutableArray *photoSources1 = [[NSMutableArray alloc]init];
+//    [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
+//    [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PASSED_PHOTOS]];
+//    
+//    [self getAllPicturesFromPhone:^(NSArray *images, NSMutableArray *urls) {
+//        NSLog(@"urls: %@", urls);
+//        
+//        [self.printIO setAvailablePhotoSources:photoSources1];
+//        [self.printIO setImages:urls];
+//        [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
+//    }];
+    //
+    NSArray *defaultItems = [self.printIO defaultSideMenuItems];
+    NSMutableArray *sideMenuItems = [[NSMutableArray alloc]initWithArray:defaultItems];
+    NSArray *helpBtnArr = [sideMenuItems filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.type==%li", (long)PIOSMButtonTypeHelp]]];
+    
+    PIOSideMenuButton *helpButton = [helpBtnArr firstObject];
+    helpButton.dataHolder = @"http://support.photobucket.com/hc/en-us/categories/200154330";
+    [self.printIO setSideMenuItems:sideMenuItems];
+        
     // Open widget
-    [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
+    if ([self isSwitchON:21]){
+        [self.printIO openWithOption:PRINTIO_JUMP_TO_SCREEN_SHOPPING_CART];
+    } else {
+        [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
+    }
 }
 
 #pragma mark - PrintIO Delegate
@@ -340,7 +382,7 @@
 
 #pragma mark - get all images for test
 
-- (void)getAllPicturesFromPhone:(void(^)(NSArray *images))completion{
+- (void)getAllPicturesFromPhone:(void(^)(NSArray *images, NSMutableArray *urls))completion{
     ALAssetsLibrary *library;
     NSMutableArray *mutableArray;
     __block NSInteger count = 0;
@@ -353,16 +395,17 @@
     void (^assetEnumerator)( ALAsset *, NSUInteger, BOOL *) = ^(ALAsset *result, NSUInteger index, BOOL *stop) {
         if(result != nil) {
             if([[result valueForProperty:ALAssetPropertyType] isEqualToString:ALAssetTypePhoto]) {
-                [assetURLDictionaries addObject:[result valueForProperty:ALAssetPropertyURLs]];
+                //[assetURLDictionaries addObject:[result valueForProperty:ALAssetPropertyURLs]];
                 
                 NSURL *url= (NSURL*) [[result defaultRepresentation]url];
-                
+                [assetURLDictionaries addObject:result];
+                NSLog(@"url: %@", url);
                 [library assetForURL:url
                          resultBlock:^(ALAsset *asset) {
                              [mutableArray addObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]]];
                              
                              if ([mutableArray count]==count){
-                                 completion([[NSArray alloc] initWithArray:mutableArray]);
+                                 completion([[NSArray alloc] initWithArray:mutableArray], assetURLDictionaries);
                              }
                          }
                         failureBlock:^(NSError *error){ NSLog(@"operation was not successfull!"); } ];
@@ -385,6 +428,62 @@
     [library enumerateGroupsWithTypes:ALAssetsGroupAll
                            usingBlock:assetGroupEnumerator
                          failureBlock:^(NSError *error) {NSLog(@"There is an error");}];
+}
+
+#pragma mark - PB init
+
+- (void)configurePrintIO{
+    // Basic setup
+    NSArray *fonts = @[ @"MuseoSans_300.otf", @"MuseoSans_500.otf", @"MuseoSans_500.otf", @"MuseoSans_700.otf" ];
+    [self.printIO setFonts:fonts];
+    [self.printIO showCountrySelectionOnScreen:PIO_SCREEN_FEATURED_PRODUCTS backgroundColor:[UIColor blueColor]];
+    [self.printIO hideCategoriesInFeaturedProducts:NO];
+    //[self.printIO setPassedImageAsThumbForOnePhotoTemplate:YES];
+    //[self.printIO setPhotoArrangement:PIO_PHOTO_ARRANGEMENT_AUTO];
+    
+    [self.printIO setLoadingGIF:@"greyspinner"];
+    [self.printIO setLoadingText:@"Loading..."];
+    
+    // Color customization
+    NSData *xmlData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"printio" ofType:@"xml"]];
+    [self.printIO setCustomizationXML:xmlData];
+    
+    // Photo sources setup
+    [self.printIO hidePhotoSourcesInSideMenu:YES];
+    
+    // Navbar setup
+    [self.printIO setStatusBarDark:YES hidden:NO];
+    [self.printIO navigationBarColor:[UIColor blueColor]
+                          titleColor:[UIColor blackColor]
+           leftButtonBackgroundColor:[UIColor whiteColor]
+          rightButtonBackgroundColor:[UIColor whiteColor]
+                     titleButtonIcon:nil];
+    [self.printIO setThreeButtonsNavigationBarSytle:YES];
+    [self.printIO setNavigationBarSaveToCartBackgroundColor:nil
+                                                 titleColor:[UIColor whiteColor]
+                                      buttonBackgroundColor:nil
+                                           buttonTitleColor:[UIColor whiteColor]];
+    
+    [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
+                    withNumberOfProducts:YES labelPosition:CGPointMake(15, 6.5) textColor:[UIColor whiteColor]];
+    [self.printIO setIconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
+    [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu_a" ofType:@"png"]
+                               background:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];
+    
+    // Sidebar menu setup
+    [self.printIO slideSideMenuFromRight:YES];
+    
+    [self.printIO showToolbarInCustomizeProduct:NO backgroundImage:nil];
+    [self.printIO removePlusFromAddMoreProductsButton:YES];
+    [self.printIO setLogoFileName:@""];
+    [self.printIO removeLogoFromPaymentScreen:YES];
+
+    [self.printIO hideWatchVideoButton:NO];
+    [self.printIO setQualityGuaranteeText:@"okasokosk"];
+    [self.printIO hideComingSoonProducts:YES];
+    
+    [self.printIO setDefaultPhotoSource:PIO_PS_PHOTOBUCKET albumId:@""];
+    [self.printIO openWithOption:PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM | PRINTIO_ENABLE_BACK_BUTTON];
 }
 
 @end

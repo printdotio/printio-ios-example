@@ -60,6 +60,7 @@
 		B4C41F941901124900D6013F /* pb_btn_side_menu_instagram_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C41F921901124900D6013F /* pb_btn_side_menu_instagram_transparent.png */; };
 		B4C758A219B74DD800C45634 /* navbariphone.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C758A119B74DD800C45634 /* navbariphone.png */; };
 		B4C758A419B75B8B00C45634 /* navbariphone1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C758A319B75B8B00C45634 /* navbariphone1.png */; };
+		B4CFBE701C5F89E400AA2D2C /* sample_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4CFBE6F1C5F89E400AA2D2C /* sample_image.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,13 +91,13 @@
 		B433FB5E1C17462C00F1B390 /* PrintIOBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PrintIOBundle.bundle; path = ../../PrintIOBundle.bundle; sourceTree = "<group>"; };
 		B433FB5F1C17462C00F1B390 /* TextBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TextBundle.bundle; path = ../../TextBundle.bundle; sourceTree = "<group>"; };
 		B4364CB0190A60B200748812 /* pb_icon_cart_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_icon_cart_black.png; sourceTree = "<group>"; };
-		B43F19C0185B061000926E70 /* MakeableSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeableSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B43F19C0185B061000926E70 /* GootenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GootenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43F19C3185B061000926E70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B43F19C5185B061000926E70 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B43F19C7185B061000926E70 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B43F19CD185B061000926E70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B43F19CF185B061000926E70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B43F19D1185B061000926E70 /* MakeableSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MakeableSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		B43F19D1185B061000926E70 /* GootenApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GootenApp-Prefix.pch"; sourceTree = "<group>"; };
 		B43F19D2185B061000926E70 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B43F19D3185B061000926E70 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B43F19D8185B061000926E70 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 		B4C41F921901124900D6013F /* pb_btn_side_menu_instagram_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pb_btn_side_menu_instagram_transparent.png; sourceTree = "<group>"; };
 		B4C758A119B74DD800C45634 /* navbariphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbariphone.png; sourceTree = "<group>"; };
 		B4C758A319B75B8B00C45634 /* navbariphone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbariphone1.png; sourceTree = "<group>"; };
+		B4CFBE6F1C5F89E400AA2D2C /* sample_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_image.jpg; sourceTree = "<group>"; };
 		B4DAD9C51B8B0BBF009F81B6 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B4F5FE071861FAA1000229A0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -170,6 +172,7 @@
 				B4A00DDD188946700068A3F7 /* Customization XML */,
 				B4A00DDC188946620068A3F7 /* Custom Fonts */,
 				B41CADBB1884186F00A91191 /* icon1.png */,
+				B4CFBE6F1C5F89E400AA2D2C /* sample_image.jpg */,
 				B492167F18F2BBA0002D0EB2 /* touch.png */,
 				B41CADCE18843AFB00A91191 /* dream.jpg */,
 				B41D88AC186D8791005A292A /* thunder.jpg */,
@@ -191,7 +194,7 @@
 		B43F19C1185B061000926E70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B43F19C0185B061000926E70 /* MakeableSampleApp.app */,
+				B43F19C0185B061000926E70 /* GootenApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,7 +250,7 @@
 				B40FF42F1887DA3F005B09E7 /* TestSDKApp-Info.plist */,
 				B43F19CC185B061000926E70 /* InfoPlist.strings */,
 				B43F19CF185B061000926E70 /* main.m */,
-				B43F19D1185B061000926E70 /* MakeableSampleApp-Prefix.pch */,
+				B43F19D1185B061000926E70 /* GootenApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -375,9 +378,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B43F19BF185B061000926E70 /* MakeableSampleApp */ = {
+		B43F19BF185B061000926E70 /* GootenApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B43F19F2185B061000926E70 /* Build configuration list for PBXNativeTarget "MakeableSampleApp" */;
+			buildConfigurationList = B43F19F2185B061000926E70 /* Build configuration list for PBXNativeTarget "GootenApp" */;
 			buildPhases = (
 				B43F19BC185B061000926E70 /* Sources */,
 				B43F19BD185B061000926E70 /* Frameworks */,
@@ -387,9 +390,9 @@
 			);
 			dependencies = (
 			);
-			name = MakeableSampleApp;
+			name = GootenApp;
 			productName = TestSDKApp;
-			productReference = B43F19C0185B061000926E70 /* MakeableSampleApp.app */;
+			productReference = B43F19C0185B061000926E70 /* GootenApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -417,7 +420,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B43F19BB185B061000926E70 /* Build configuration list for PBXProject "MakeableSampleApp" */;
+			buildConfigurationList = B43F19BB185B061000926E70 /* Build configuration list for PBXProject "GootenApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -430,7 +433,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B43F19BF185B061000926E70 /* MakeableSampleApp */,
+				B43F19BF185B061000926E70 /* GootenApp */,
 			);
 		};
 /* End PBXProject section */
@@ -471,6 +474,7 @@
 				B43F19DC185B061000926E70 /* Images.xcassets in Resources */,
 				B43F19CE185B061000926E70 /* InfoPlist.strings in Resources */,
 				B4C41F931901124900D6013F /* pb_btn_side_menu_fb_transparent.png in Resources */,
+				B4CFBE701C5F89E400AA2D2C /* sample_image.jpg in Resources */,
 				B433FB601C17462C00F1B390 /* PrintIOBundle.bundle in Resources */,
 				B4C758A419B75B8B00C45634 /* navbariphone1.png in Resources */,
 				B4A00DE9188947F90068A3F7 /* steelfish_outline.otf in Resources */,
@@ -597,7 +601,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "/Users/tengai/Library/Developer/Xcode/DerivedData/PrintIO-hdqmmslvvjfflpedczmsjkqqcirr/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TestSDKApp/MakeableSampleApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "TestSDKApp/GootenApp-Prefix.pch";
 				INFOPLIST_FILE = "TestSDKApp/TestSDKApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = NO;
@@ -606,8 +610,8 @@
 					"-lstdc++",
 					"-lc++",
 				);
-				PRODUCT_NAME = MakeableSampleApp;
-				PROVISIONING_PROFILE = "a96711f1-d6f2-4f2d-a855-3a1ebbcd9f8e";
+				PRODUCT_NAME = GootenApp;
+				PROVISIONING_PROFILE = "9c18acfb-3af7-4717-8079-bdbcb96c167d";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -626,7 +630,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "/Users/tengai/Library/Developer/Xcode/DerivedData/PrintIO-hdqmmslvvjfflpedczmsjkqqcirr/Build/Intermediates/ArchiveIntermediates/PrintIO/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TestSDKApp/MakeableSampleApp-Prefix.pch";
+				GCC_PREFIX_HEADER = "TestSDKApp/GootenApp-Prefix.pch";
 				INFOPLIST_FILE = "TestSDKApp/TestSDKApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = NO;
@@ -635,8 +639,8 @@
 					"-lstdc++",
 					"-lc++",
 				);
-				PRODUCT_NAME = MakeableSampleApp;
-				PROVISIONING_PROFILE = "a96711f1-d6f2-4f2d-a855-3a1ebbcd9f8e";
+				PRODUCT_NAME = GootenApp;
+				PROVISIONING_PROFILE = "9c18acfb-3af7-4717-8079-bdbcb96c167d";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -646,7 +650,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B43F19BB185B061000926E70 /* Build configuration list for PBXProject "MakeableSampleApp" */ = {
+		B43F19BB185B061000926E70 /* Build configuration list for PBXProject "GootenApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B43F19F0185B061000926E70 /* Debug */,
@@ -655,7 +659,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B43F19F2185B061000926E70 /* Build configuration list for PBXNativeTarget "MakeableSampleApp" */ = {
+		B43F19F2185B061000926E70 /* Build configuration list for PBXNativeTarget "GootenApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B43F19F3185B061000926E70 /* Debug */,
