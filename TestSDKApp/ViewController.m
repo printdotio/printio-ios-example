@@ -15,13 +15,33 @@
 #import "MyPhotoSource.h"
 #import <PrintIO/PaymentOptions.h>
 
-@interface ViewController ()
+@interface ViewController () <GTAnalyticsDelegate>
 
 @property (nonatomic, strong) PrintIO *printIO;
 
 @end
 
 @implementation ViewController
+
+#pragma mark - Anaytics delegate
+
+-(void)gtAnalyticsOnEnterScreen:(GTAnalyticsScreen *)screen{
+    NSLog(@"ANALYTICS SCREEN: %@", screen.name);
+}
+
+-(void)gtAnalyticsOnEvent:(GTAnalyticsEvent *)event{
+    NSLog(@"ANALYTICS EVENT: %@ : %@", event.name, event.value);
+}
+
+-(void)gtAnalyticsOnTimedEvent:(GTAnalyticsEvent *)event{
+    NSLog(@"ANALYTICS EVENT: %@ : %@", event.name, event.value);
+}
+
+-(void)gtAnalyticsOnEndTimedEvent:(GTAnalyticsEvent *)event{
+    NSLog(@"ANALYTICS STOP CAPTURING: %@", event.name);
+}
+
+#pragma mark - Initialization code
 
 - (IBAction)tapOnPrintSomething:(id)sender{
     
@@ -135,6 +155,14 @@
     // Enable or disable Side Menu
     if ([self isSwitchON:18]){
         [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"]];
+        
+        NSArray *defaultItems = [self.printIO defaultSideMenuItems];
+        NSMutableArray *sideMenuItems = [[NSMutableArray alloc]initWithArray:defaultItems];
+        NSArray *helpBtnArr = [sideMenuItems filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.type==%li", (long)PIOSMButtonTypeHelp]]];
+        
+        PIOSideMenuButton *helpButton = [helpBtnArr firstObject];
+        helpButton.dataHolder = @"http://support.photobucket.com/hc/en-us/categories/200154330";
+        [self.printIO setSideMenuItems:sideMenuItems];
     }
     
     // Custom share text. Will be used form side menu button.
@@ -272,13 +300,6 @@
 //        [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
 //    }];
     //
-    NSArray *defaultItems = [self.printIO defaultSideMenuItems];
-    NSMutableArray *sideMenuItems = [[NSMutableArray alloc]initWithArray:defaultItems];
-    NSArray *helpBtnArr = [sideMenuItems filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.type==%li", (long)PIOSMButtonTypeHelp]]];
-    
-    PIOSideMenuButton *helpButton = [helpBtnArr firstObject];
-    helpButton.dataHolder = @"http://support.photobucket.com/hc/en-us/categories/200154330";
-    [self.printIO setSideMenuItems:sideMenuItems];
         
     // Open widget
     if ([self isSwitchON:21]){
@@ -311,9 +332,11 @@
         _printIO = [[PrintIO alloc]initWithViewController:self
                                               environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
                                        productionRecipeId:isProduction && recipeId.length ? recipeId : @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
-                                          stagingRecipeId:!isProduction && recipeId.length ? recipeId : @"00000000-0000-0000-0000-000000000000"]; // @"809ddb7d-c3d6-4c44-ba75-1ef620074b84"
+                    stagingRecipeId:!isProduction && recipeId.length ? recipeId : @"00000000-0000-0000-0000-000000000000"];
+        //stagingRecipeId:!isProduction && recipeId.length ? recipeId : @"1AB4E1F8-DBCB-4D6C-829F-EE0B2A60C0B3"];
         
         [_printIO setDelegate:self];
+        [_printIO setAnalyticsDelegate:self];
     }
     return _printIO;
 }

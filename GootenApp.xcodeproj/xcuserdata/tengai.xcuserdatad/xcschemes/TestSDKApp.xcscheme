@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B43F19BF185B061000926E70"
-               BuildableName = "MakeableSampleApp.app"
+               BuildableName = "GootenApp.app"
                BlueprintName = "GootenApp"
                ReferencedContainer = "container:GootenApp.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
-            BuildableName = "MakeableSampleApp.app"
+            BuildableName = "GootenApp.app"
             BlueprintName = "GootenApp"
             ReferencedContainer = "container:GootenApp.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
-            BuildableName = "MakeableSampleApp.app"
+            BuildableName = "GootenApp.app"
             BlueprintName = "GootenApp"
             ReferencedContainer = "container:GootenApp.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B43F19BF185B061000926E70"
-            BuildableName = "MakeableSampleApp.app"
+            BuildableName = "GootenApp.app"
             BlueprintName = "GootenApp"
             ReferencedContainer = "container:GootenApp.xcodeproj">
          </BuildableReference>
