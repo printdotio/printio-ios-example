@@ -40,4 +40,10 @@
     completionHandler(array);
 }
 
+#define kCustomPhotoSourceID 123
+
+-(NSNumber *)customID{
+    return [NSNumber numberWithInt:kCustomPhotoSourceID];
+}
+
 @end

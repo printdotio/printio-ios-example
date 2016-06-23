@@ -26,24 +26,32 @@
 #pragma mark - Anaytics delegate
 
 -(void)gtAnalyticsOnEnterScreen:(GTAnalyticsScreen *)screen{
-    NSLog(@"ANALYTICS SCREEN: %@", screen.name);
+    //NSLog(@"ANALYTICS SCREEN: %@", screen.name);
 }
 
 -(void)gtAnalyticsOnEvent:(GTAnalyticsEvent *)event{
-    NSLog(@"ANALYTICS EVENT: %@ : %@", event.name, event.value);
+    //NSLog(@"ANALYTICS EVENT: %@ : %@", event.name, event.value);
 }
 
 -(void)gtAnalyticsOnTimedEvent:(GTAnalyticsEvent *)event{
-    NSLog(@"ANALYTICS EVENT: %@ : %@", event.name, event.value);
+    //NSLog(@"ANALYTICS EVENT: %@ : %@", event.name, event.value);
 }
 
 -(void)gtAnalyticsOnEndTimedEvent:(GTAnalyticsEvent *)event{
-    NSLog(@"ANALYTICS STOP CAPTURING: %@", event.name);
+    //NSLog(@"ANALYTICS STOP CAPTURING: %@", event.name);
 }
 
 #pragma mark - Initialization code
 
 - (IBAction)tapOnPrintSomething:(id)sender{
+    if ([self isSwitchON:60]){
+        [self.printIO useStagingModeWithRecipeID:@"00000000-0000-0000-0000-000000000000"];
+    }
+    
+    if ([self isSwitchON:61]){
+        [self.printIO open];
+        return;
+    }
     
     // Navigation bar
     [self.printIO navigationBarColor:[self isSwitchON:14] ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
@@ -71,6 +79,10 @@
     }
     
     [self.printIO setPaymentOptions:paymentOpts];
+    
+    if ([self isSwitchON:1]){
+        [self.printIO setIsInTestMode:YES];
+    }
     
     // Photo Sources
     NSMutableArray *photoSources = [[NSMutableArray alloc]init];
@@ -243,8 +255,6 @@
     }
     
     if ([self isSwitchON:43]){
-        [self.printIO setProductsScreenVersion:PIOProductsScreenV2];
-        [self.printIO setProductsScreenImageUrl:@"http://www.bmw.com/_common/shared/newvehicles/x/x3/2014/showroom/01_start_page/background.jpg"];
     }
     
     if ([self isSwitchON:44]){
@@ -280,33 +290,45 @@
         [self.printIO setProductsScreenVersion:PIOProductsScreenV3];
     }
     
-    ///////
-//    MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
-//    [self.printIO setAvailablePhotoSources:nil];
-//    [self.printIO hidePhotoSourcesInSideMenu:YES];
-//    [self.printIO setCustomPhotoSources:@[myPhotoSource]];
-    ///////
-
+    if ([self isSwitchON:58]){
+        [self.printIO setUseDefaultProductSettings:YES];
+    }
+    
+    if ([self isSwitchON:59]){
+        self.tfRecipeID.text = @"1AB4E1F8-DBCB-4D6C-829F-EE0B2A60C0B3";
+        [self.printIO setQAEnvironment:YES];
+    }
+    
+    /////
+    //    MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
+    //    [self.printIO setAvailablePhotoSources:nil];
+    //    [self.printIO hidePhotoSourcesInSideMenu:YES];
+    //    [self.printIO setCustomPhotoSources:@[myPhotoSource]];
+    //    [self.printIO setDefaultPhotoSource:123 albumId:@""];
+    /////
+    
     //
-//    NSMutableArray *photoSources1 = [[NSMutableArray alloc]init];
-//    [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
-//    [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PASSED_PHOTOS]];
-//    
-//    [self getAllPicturesFromPhone:^(NSArray *images, NSMutableArray *urls) {
-//        NSLog(@"urls: %@", urls);
-//        
-//        [self.printIO setAvailablePhotoSources:photoSources1];
-//        [self.printIO setImages:urls];
-//        [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
-//    }];
+    //    NSMutableArray *photoSources1 = [[NSMutableArray alloc]init];
+    //    [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
+    //    [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PASSED_PHOTOS]];
     //
-        
+    //    [self getAllPicturesFromPhone:^(NSArray *images, NSMutableArray *urls) {
+    //        NSLog(@"urls: %@", urls);
+    //
+    //        [self.printIO setAvailablePhotoSources:photoSources1];
+    //        [self.printIO setImages:urls];
+    //        [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
+    //    }];
+    //
+    
     // Open widget
     if ([self isSwitchON:21]){
         [self.printIO openWithOption:PRINTIO_JUMP_TO_SCREEN_SHOPPING_CART];
     } else {
         [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
     }
+    
+    NSLog(@"screen size: %@", NSStringFromCGSize([UIScreen mainScreen].nativeBounds.size));
 }
 
 #pragma mark - PrintIO Delegate
@@ -327,14 +349,8 @@
 
 - (PrintIO *)printIO{
     if (!_printIO){
-        BOOL isProduction = [self isSwitchON:1];
         NSString *recipeId = self.tfRecipeID.text;
-        _printIO = [[PrintIO alloc]initWithViewController:self
-                                              environment:isProduction ? PRINTIO_PRODUCTION : PRINTIO_STAGING
-                                       productionRecipeId:isProduction && recipeId.length ? recipeId : @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6"
-                    stagingRecipeId:!isProduction && recipeId.length ? recipeId : @"00000000-0000-0000-0000-000000000000"];
-        //stagingRecipeId:!isProduction && recipeId.length ? recipeId : @"1AB4E1F8-DBCB-4D6C-829F-EE0B2A60C0B3"];
-        
+        _printIO = [[PrintIO alloc]initWithViewController:self recipeId:recipeId.length ? recipeId : @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6" isInTestMode:[self isSwitchON:1]];
         [_printIO setDelegate:self];
         [_printIO setAnalyticsDelegate:self];
     }
@@ -451,62 +467,6 @@
     [library enumerateGroupsWithTypes:ALAssetsGroupAll
                            usingBlock:assetGroupEnumerator
                          failureBlock:^(NSError *error) {NSLog(@"There is an error");}];
-}
-
-#pragma mark - PB init
-
-- (void)configurePrintIO{
-    // Basic setup
-    NSArray *fonts = @[ @"MuseoSans_300.otf", @"MuseoSans_500.otf", @"MuseoSans_500.otf", @"MuseoSans_700.otf" ];
-    [self.printIO setFonts:fonts];
-    [self.printIO showCountrySelectionOnScreen:PIO_SCREEN_FEATURED_PRODUCTS backgroundColor:[UIColor blueColor]];
-    [self.printIO hideCategoriesInFeaturedProducts:NO];
-    //[self.printIO setPassedImageAsThumbForOnePhotoTemplate:YES];
-    //[self.printIO setPhotoArrangement:PIO_PHOTO_ARRANGEMENT_AUTO];
-    
-    [self.printIO setLoadingGIF:@"greyspinner"];
-    [self.printIO setLoadingText:@"Loading..."];
-    
-    // Color customization
-    NSData *xmlData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"printio" ofType:@"xml"]];
-    [self.printIO setCustomizationXML:xmlData];
-    
-    // Photo sources setup
-    [self.printIO hidePhotoSourcesInSideMenu:YES];
-    
-    // Navbar setup
-    [self.printIO setStatusBarDark:YES hidden:NO];
-    [self.printIO navigationBarColor:[UIColor blueColor]
-                          titleColor:[UIColor blackColor]
-           leftButtonBackgroundColor:[UIColor whiteColor]
-          rightButtonBackgroundColor:[UIColor whiteColor]
-                     titleButtonIcon:nil];
-    [self.printIO setThreeButtonsNavigationBarSytle:YES];
-    [self.printIO setNavigationBarSaveToCartBackgroundColor:nil
-                                                 titleColor:[UIColor whiteColor]
-                                      buttonBackgroundColor:nil
-                                           buttonTitleColor:[UIColor whiteColor]];
-    
-    [self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png"]
-                    withNumberOfProducts:YES labelPosition:CGPointMake(15, 6.5) textColor:[UIColor whiteColor]];
-    [self.printIO setIconForBackButton:[[NSBundle mainBundle]pathForResource:@"pb_back" ofType:@"png"]];
-    [self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu_a" ofType:@"png"]
-                               background:[UIColor colorWithRed:227.0/255.0 green:227.0/255.0 blue:225.0/255.0 alpha:1.0]];
-    
-    // Sidebar menu setup
-    [self.printIO slideSideMenuFromRight:YES];
-    
-    [self.printIO showToolbarInCustomizeProduct:NO backgroundImage:nil];
-    [self.printIO removePlusFromAddMoreProductsButton:YES];
-    [self.printIO setLogoFileName:@""];
-    [self.printIO removeLogoFromPaymentScreen:YES];
-
-    [self.printIO hideWatchVideoButton:NO];
-    [self.printIO setQualityGuaranteeText:@"okasokosk"];
-    [self.printIO hideComingSoonProducts:YES];
-    
-    [self.printIO setDefaultPhotoSource:PIO_PS_PHOTOBUCKET albumId:@""];
-    [self.printIO openWithOption:PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM | PRINTIO_ENABLE_BACK_BUTTON];
 }
 
 @end

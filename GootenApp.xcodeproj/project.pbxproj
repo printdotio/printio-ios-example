@@ -611,8 +611,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = GootenApp;
-				PROVISIONING_PROFILE = "9c18acfb-3af7-4717-8079-bdbcb96c167d";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "4c591ef1-7087-40b8-99f8-610711fb39b6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -640,8 +640,8 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = GootenApp;
-				PROVISIONING_PROFILE = "9c18acfb-3af7-4717-8079-bdbcb96c167d";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "4c591ef1-7087-40b8-99f8-610711fb39b6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
