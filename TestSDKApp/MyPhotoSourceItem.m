@@ -20,8 +20,13 @@
 
 -(void)fetchImageInPhotoSource:(id<PIOPhotoSource>)photoSource isThumbnail:(BOOL)thumbnail withCompletionHandler:(void(^)(UIImage*))imageFetchCompletionHandler{
     
-    UIImage *image = [UIImage imageNamed:@"touch"];
-    imageFetchCompletionHandler(image);
+    if (thumbnail){
+        UIImage *image = [UIImage imageNamed:@"touch"];
+        imageFetchCompletionHandler(image);
+    } else {
+        UIImage *image = [UIImage imageNamed:@"icon1"];
+        imageFetchCompletionHandler(image);
+    }
 }
 
 //-(NSString *)publicURLPath{

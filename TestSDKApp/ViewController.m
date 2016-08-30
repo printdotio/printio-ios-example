@@ -44,6 +44,7 @@
 #pragma mark - Initialization code
 
 - (IBAction)tapOnPrintSomething:(id)sender{
+    
     if ([self isSwitchON:60]){
         [self.printIO useStagingModeWithRecipeID:@"00000000-0000-0000-0000-000000000000"];
     }
@@ -299,27 +300,21 @@
         [self.printIO setQAEnvironment:YES];
     }
     
-    /////
+    // Custom photo source
     //    MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
     //    [self.printIO setAvailablePhotoSources:nil];
     //    [self.printIO hidePhotoSourcesInSideMenu:YES];
     //    [self.printIO setCustomPhotoSources:@[myPhotoSource]];
+    //    [self.printIO turnOffLogs:YES];
     //    [self.printIO setDefaultPhotoSource:123 albumId:@""];
-    /////
     
-    //
+    
+    // Passed in images
     //    NSMutableArray *photoSources1 = [[NSMutableArray alloc]init];
     //    [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
     //    [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PASSED_PHOTOS]];
-    //
-    //    [self getAllPicturesFromPhone:^(NSArray *images, NSMutableArray *urls) {
-    //        NSLog(@"urls: %@", urls);
-    //
-    //        [self.printIO setAvailablePhotoSources:photoSources1];
-    //        [self.printIO setImages:urls];
-    //        [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
-    //    }];
-    //
+    //    [self.printIO setAvailablePhotoSources:photoSources1];
+    //    [self.printIO setImages:images];
     
     // Open widget
     if ([self isSwitchON:21]){
@@ -327,8 +322,6 @@
     } else {
         [self.printIO openWithOption:[self isSwitchON:33] ? PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT : PRINTIO_OPTION_PRESENT_VIEW_FROM_BOTTOM];
     }
-    
-    NSLog(@"screen size: %@", NSStringFromCGSize([UIScreen mainScreen].nativeBounds.size));
 }
 
 #pragma mark - PrintIO Delegate
@@ -353,6 +346,7 @@
         _printIO = [[PrintIO alloc]initWithViewController:self recipeId:recipeId.length ? recipeId : @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6" isInTestMode:[self isSwitchON:1]];
         [_printIO setDelegate:self];
         [_printIO setAnalyticsDelegate:self];
+        [_printIO useStagingModeWithRecipeID:@""];
     }
     return _printIO;
 }
@@ -438,7 +432,7 @@
                 
                 NSURL *url= (NSURL*) [[result defaultRepresentation]url];
                 [assetURLDictionaries addObject:result];
-                NSLog(@"url: %@", url);
+
                 [library assetForURL:url
                          resultBlock:^(ALAsset *asset) {
                              [mutableArray addObject:[UIImage imageWithCGImage:[[asset defaultRepresentation] fullScreenImage]]];

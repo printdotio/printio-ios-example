@@ -16,17 +16,11 @@
 }
 
 - (NSString *)buttonIconPath{
-    return [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"];
+    return [[NSBundle mainBundle] pathForResource:@"pb_menu_a" ofType:@"png"];
 }
 
 - (BOOL)isAuthed{
     return YES;
-}
-
--(void)fetchImageForItem:(id<PIOPhotoSourceItem>)item thumbnail:(BOOL)isThumbnail withCompletionHandler:(void(^)(UIImage*))imageFetchCompletionHandler{
-    
-    UIImage *image = [UIImage imageNamed:@"touch"];
-    imageFetchCompletionHandler(image);
 }
 
 -(void)requestPhotoSourceItemsForItem:(id<PIOPhotoSourceItem>)item currentScope:(id<PIOPhotoSourceItem>)currentScope count:(NSUInteger)count page:(NSUInteger)page withCompletionHandler:(PIOItemsCompletionHandler)completionHandler errorHandler:(PIOPhotoSourceErrorHandler)errorHandler{
