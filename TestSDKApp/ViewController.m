@@ -346,7 +346,6 @@
         _printIO = [[PrintIO alloc]initWithViewController:self recipeId:recipeId.length ? recipeId : @"f255af6f-9614-4fe2-aa8b-1b77b936d9d6" isInTestMode:[self isSwitchON:1]];
         [_printIO setDelegate:self];
         [_printIO setAnalyticsDelegate:self];
-        [_printIO useStagingModeWithRecipeID:@""];
     }
     return _printIO;
 }
