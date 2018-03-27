@@ -1,0 +1,255 @@
+
+-(void)luis{
+PrintIO *printIO = [[PrintIO alloc] initWithViewController:self recipeId:GOOTEN_KEY isInTestMode:IS_GOOTEN_TEST_MODE];
+[printIO setTitleForFeaturedProductsScreen:@"Shopping"];
+[printIO hideCategoriesInFeaturedProducts:NO];
+[printIO hideComingSoonProducts:YES];
+[printIO navigationBarColor:[UIColor whiteColor] titleColor:[UIColor blackColor] leftButtonBackgroundColor:[UIColor whiteColor] rightButtonBackgroundColor:[UIColor whiteColor] titleButtonIcon:nil];
+[printIO showCountrySelectionOnScreen:PIO_SCREEN_PRODUCT_DETAILS backgroundColor:[UIColor blackColor]];
+[printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"cart" ofType:@"png"] withNumberOfProducts:YES labelPosition:CGPointMake(20, 16) circleColor:[UIColor redColor] textColor:[UIColor whiteColor]];
+
+NSArray *fonts = @[@"Gotham-Book.ttf", @"Gotham-Book.ttf", @"Gotham-Book.ttf", @"Gotham-Book.ttf"];
+[printIO setFonts:fonts];
+
+// Product Details
+[printIO productDetailsShowTitleBelowNavBar:NO];
+[printIO productDetailsShowMenuBtnInNavBar:NO];
+[printIO setQualityGuaranteeText:@" "];
+[printIO setTitleForChooseOptionsScreen:@"Choose Options"];
+[printIO setSelectionColor:[UIColor blackColor]];
+
+MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc]init];
+[printIO setAvailablePhotoSources:nil];
+[printIO hidePhotoSourcesInSideMenu:YES];
+[printIO setCustomPhotoSources:@[myPhotoSource]];
+
+[printIO disablePhotoSourcesWhenImagesArePassedIn:YES];
+
+[printIO setProductsScreenVersion:PIOProductsScreenV3];
+
+[printIO setDefaultPhotoSource:kCustomPhotoSourceID albumId:@""];
+
+[printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"mg_icon_menu" ofType:@"png"]];
+
+[printIO setColorForAddressSelection:[UIColor grayColor]];
+
+[printIO setLoadingGIF:@"loader_gif"];
+[printIO setLoadingText:@"Loading..."];
+
+NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"gooten_layout" ofType:@"xml"];
+NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+
+[printIO setCustomizationXML:xmlData];
+
+[printIO open];
+}
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+- (void) presentThePrintFlow:(UIViewController *)vc{
+
+//Enable QA
+//[self.printIO useStagingModeWithRecipeID:@"00000000-0000-0000-0000-000000000000"];
+
+//No Customization
+//        [self.printIO open];
+//        return;
+
+// Navigation bar
+[self.printIO navigationBarColor:[self isSwitchON:14] ? [UIColor colorWithRed:59.0/255.0 green:89.0/255.0 blue:152.0/255.0 alpha:1.0] : [UIColor whiteColor]
+titleColor:[self isSwitchON:14] ? [UIColor whiteColor] : [UIColor blackColor]
+leftButtonBackgroundColor:nil
+rightButtonBackgroundColor:nil
+titleButtonIcon:nil];
+
+[self.printIO setIconForShoppingCart:[[NSBundle mainBundle]pathForResource:@"pb_icon_cart_black" ofType:@"png" ]
+withNumberOfProducts:YES labelPosition:CGPointZero textColor:[UIColor whiteColor]];
+
+[self.printIO hideCartInPhotoSources:YES];
+[self.printIO hideCartButtonWhenCartIsEmpty:YES];
+
+
+// Payment options
+int paymentOpts = 0;
+//CC
+paymentOpts = paymentOpts | PaymentOptionCreditCard;
+//Pay Pal
+paymentOpts = paymentOpts | PaymentOptionPayPal;
+//Apple Pay
+paymentOpts = paymentOpts | PaymentOptionApplePay;
+[self.printIO setApplePayMerchantIdentifier:@"merchant.sampleapp"];
+
+[self.printIO setPaymentOptions:paymentOpts];
+
+//Test Mode
+//        [self.printIO setIsInTestMode:YES];
+
+// Photo Sources
+NSMutableArray *photoSources = [[NSMutableArray alloc] init];
+[photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHONE]];
+[photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
+[photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FACEBOOK]];
+[photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_FLICKR]];
+[photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_GOOGLE_PHOTOS]];
+[photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_DROPBOX]];
+[photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PHOTOBUCKET]];
+
+//TODO: place UIImage that was processed..
+NSArray *images = [NSArray arrayWithObjects:/*[UIImage imageNamed:@"dream.jpg"],*/ [UIImage imageNamed:@"thunder.jpg"], nil];
+//@"http://photographylife.com/wp-content/uploads/2012/10/Nikon-D600-Sample-11.jpg",
+//@"http://www.digitaltrends.com/wp-content/uploads/2013/03/vertu-constellation-review-sample-image-flowers.jpg",
+
+// Set customization file
+// Path to XML customization file
+//        NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"customization" ofType:@"xml"];
+//        NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+//        [self.printIO setCustomizationXML:xmlData];
+//        [self.printIO setLogoFileName:@"icon1"];
+
+// Set country code
+[self.printIO setCountryCode:@"US"];
+
+// Set currency code
+[self.printIO setCurrencyCode:@"USD"];
+
+// Set language code
+[self.printIO setLanguageCode:@"en"];
+
+// Set custom fonts
+//        NSArray *fonts = @[@"timess.ttf", @"timess.ttf", @"aubrey.ttf", @"CaviarDreams_Bold.ttf"];
+//        [self.printIO setFonts:fonts];
+
+// Set Payee name
+[self.printIO setPayeeName:self.txtPayeeName.text];
+
+// Jumps directly to product
+[self.printIO goToProductId:PRODUCT_CANVAS_WRAPS()];
+//    [self.printIO goToProductId:PRODUCT_ACRYLIC_PRINTS()];
+
+// Jump To SKU
+//    [self.printIO goToProductId:PRODUCT_PHONE_CASES() withSKU:@"PhoneCase-BlackberryZ10-Gloss"];
+
+// Enable or disable Side Menu
+[self.printIO useSideMenuWithMenuIcon:[[NSBundle mainBundle]pathForResource:@"pb_menu" ofType:@"png"]];
+
+[self.printIO showKeepShoppingButtonInShoppingCart:NO];
+
+NSArray *defaultItems = [self.printIO defaultSideMenuItems];
+NSMutableArray *sideMenuItems = [[NSMutableArray alloc]initWithArray:defaultItems];
+NSArray *helpBtnArr = [sideMenuItems filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.type==%li", (long)PIOSMButtonTypeHelp]]];
+
+PIOSideMenuButton *helpButton = [helpBtnArr firstObject];
+helpButton.dataHolder = @"http://support.photobucket.com/hc/en-us/categories/200154330";
+[self.printIO setSideMenuItems:sideMenuItems];
+
+// Show custom double tap screen when customizing product
+[self.printIO showHelpDialogWithImage:[[NSBundle mainBundle] pathForResource:@"touch" ofType:@"png"]];
+
+// Show/hide tab bar in Customization Screen
+[self.printIO showToolbarInCustomizeProduct:true backgroundImage:nil];
+
+// Pass photos in SDK
+[self.printIO setImages:images];
+
+//         PIOSideMenuButton *passBtn = [[PIOSideMenuButton alloc]initWithTitle:@"Boo" type:PIO_SM_PASSED_PHOTOS iconPath:[[NSBundle mainBundle]pathForResource:@"icon1" ofType:@"png"]];
+//        [photoSources addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_PASSED_PHOTOS]];
+
+
+[self.printIO setAvailablePhotoSources:photoSources]; // photo sources setter is moved here, so we can potentially add the passed images photo source
+
+//    [self.printIO slideSideMenuFromRight:[self isSwitchON:34]];
+[self.printIO hideImagesListInCustomizeProduct:[self isSwitchON:23]];
+[self.printIO disablePhotoSourcesWhenImagesArePassedIn:YES];
+[self.printIO disablePhotoSourcesForOnePhotoTemplate:YES];
+//    [self.printIO hideCategoriesInFeaturedProducts:[self isSwitchON:28]];
+
+// Hide status bar
+if ([self isSwitchON:29]){
+[self.printIO setStatusBarDark:NO hidden:YES];
+} else {
+[self.printIO setStatusBarDark:YES hidden:NO];
+}
+
+// Change loading GIF animation
+[self.printIO setLoadingGIF:@"load"];
+
+// Photo Arrangement option
+[self.printIO setPhotoArrangement:PIO_PHOTO_ARRANGEMENT_AUTO];
+
+// Show terms of service
+[self.printIO setTermsAndConditionsURL:[NSURL URLWithString:@"http://www.wikihow.com/images/sampledocs/9/Terms-and-Conditions.txt"]];
+
+// Side Menu Options
+[self.printIO hidePhotoSourcesInSideMenu:YES];
+
+UIColor* tea = [UIColor colorWithRed:96.0/255.0 green:171.0/255.0 blue:137.0/255.0 alpha:1.0];
+[self.printIO setPositiveButtonsBackgroundColor:tea
+titleColor:[UIColor whiteColor]];
+
+[self.printIO setNegativeButtonsBackgroundColor:[UIColor redColor]
+titleColor:[UIColor whiteColor]];
+
+[self.printIO setNavigationBarSaveToCartBackgroundColor:nil
+titleColor:[UIColor whiteColor] // 'Next' button title color
+buttonBackgroundColor:nil
+buttonTitleColor:[UIColor whiteColor]]; // 'Save to' button
+
+[self.printIO setIconForSaveButtonInCustomizeProduct:[[NSBundle mainBundle]pathForResource:@"icon_cart_white" ofType:@"png"]];
+
+if (self.txtPromoCode.text.length){
+[self.printIO setPromoCode:self.txtPromoCode.text];
+}
+
+
+
+[self.printIO showCancelOptionsButton:YES];
+
+//    if (self.tfRetailDiscount.text.length){
+//        float percent = [self.tfRetailDiscount.text floatValue];
+//        [self.printIO setRetailDiscountPercent:percent];
+//    }
+
+//    if ([self isSwitchON:51]){
+//        [self.printIO setWhatsNewDailogText:@"- bug fixes\n- new products added\n- new feature added"];
+//    }
+
+//        [self.printIO showBottomBarWithLikeUsURL:[NSURL URLWithString:@"fb://profile/642169949144369"] rateUsAppId:@"731593327" shareText:@"This is sample share text http://www.gooten.com"];
+
+//    if ([self isSwitchON:53]){
+[self.printIO setProductsInHero:@[[NSNumber numberWithInt:PRODUCT_PHONE_CASES()], [NSNumber numberWithInt:PRODUCT_TABLET_CASES()]]];
+//    }
+
+//        [self.printIO setImageInHero:[UIImage imageNamed:@"sample_image.jpg"] url:[NSURL URLWithString:@"youtube://www.youtube.com/watch?v=pLrS1q242eE"]];
+
+[self.printIO setThreeButtonsNavigationBarStyle:YES];
+
+//        [self.printIO setProductsScreenVersion:PIOProductsScreenV3];
+
+[self.printIO setUseDefaultProductSettings:YES];
+
+//        self.tfRecipeID.text = @"1AB4E1F8-DBCB-4D6C-829F-EE0B2A60C0B3";
+//        [self.printIO setQAEnvironment:YES];
+
+// Custom photo source
+//        MyPhotoSource *myPhotoSource = [[MyPhotoSource alloc] init];
+[self.printIO setAvailablePhotoSources:nil];
+//        [self.printIO hidePhotoSourcesInSideMenu:YES];
+//        [self.printIO setCustomPhotoSources:@[myPhotoSource]];
+//        [self.printIO turnOffLogs:YES];
+//        [self.printIO setDefaultPhotoSource:123 albumId:@""];
+
+
+// Passed in images
+NSMutableArray *photoSources1 = [[NSMutableArray alloc] init];
+//        [photoSources1 addObject:[[PIOSideMenuButton alloc]initWithType:PIO_SM_INSTAGRAM]];
+[photoSources1 addObject:[[PIOSideMenuButton alloc] initWithType:PIO_SM_PASSED_PHOTOS]];
+[self.printIO setAvailablePhotoSources:photoSources1];
+[self.printIO setImages:images];
+
+[self.printIO autoSelectOnePhotoTemplateForProductID:PRODUCT_CANVAS_WRAPS()];
+
+// Open widget
+[self.printIO presentFromViewController:vc withOption:PRINTIO_OPTION_PRESENT_VIEW_FROM_RIGHT];
+
+}
+----------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -1,9 +1,9 @@
 //
-//  MyPhotoSourceItem.h
-//  PrintIOSDKSample
+//  MyPhotoSource.h
+//  Gooten Sample App
 //
-//  Created by Boro Perisic on 6/30/15.
-//  Copyright (c) 2015 TestSDKApp. All rights reserved.
+//  Created by Boro Perisic on 8/3/18.
+//  Copyright (c) 2018 Gooten. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -11,4 +11,7 @@
 
 @interface MyPhotoSourceItem : NSObject <PIOPhotoSourceItem>
 
+@property (strong) NSString *imageUrl;
+
 @end
+

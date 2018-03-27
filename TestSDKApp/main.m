@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+//[PIOProgressHUD showWithStatus:localizedStringForKey(@"please_wait")];
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[])

@@ -1,17 +1,17 @@
 //
-//  MyPhotoSourceItem.m
-//  PrintIOSDKSample
+//  MyPhotoSource.h
+//  Gooten Sample App
 //
-//  Created by Boro Perisic on 6/30/15.
-//  Copyright (c) 2015 TestSDKApp. All rights reserved.
+//  Created by Boro Perisic on 8/3/18.
+//  Copyright (c) 2018 Gooten. All rights reserved.
 //
 
 #import "MyPhotoSourceItem.h"
 
 @implementation MyPhotoSourceItem
 
--(NSString*)uniqueIdentifier{
-    return @"boor12345";
+-(NSString *)uniqueIdentifier{
+    return self.imageUrl;
 }
 
 -(BOOL)isImageItem{
@@ -20,17 +20,21 @@
 
 -(void)fetchImageInPhotoSource:(id<PIOPhotoSource>)photoSource isThumbnail:(BOOL)thumbnail withCompletionHandler:(void(^)(UIImage*))imageFetchCompletionHandler{
     
-    if (thumbnail){
-        UIImage *image = [UIImage imageNamed:@"touch"];
+    if (thumbnail){ // here provide thumbnail
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]] scale:1.0];
         imageFetchCompletionHandler(image);
-    } else {
-        UIImage *image = [UIImage imageNamed:@"icon1"];
+        
+    } else { // here provide full size image
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageUrl]];
+        UIImage *image = [UIImage imageWithData:data scale:1.0];
+        NSLog(@"image size: %.2fmb", (float)data.length/1024.0f/1024.0f);
         imageFetchCompletionHandler(image);
     }
 }
 
-//-(NSString *)publicURLPath{
-//    return [[NSBundle mainBundle] pathForResource:@"icon1" ofType:@"png"];
-//}
+-(NSString *)publicURLPath{
+    return self.imageUrl;
+}
 
 @end
+

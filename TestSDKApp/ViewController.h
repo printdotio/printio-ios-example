@@ -1,26 +1,27 @@
 //
 //  ViewController.h
-//  TestSDKApp
+//  Gooten Sample App
 //
-//  Created by Tengai on 12/13/13.
-//  Copyright (c) 2013 TestSDKApp. All rights reserved.
+//  Created by Boro Perisic on 8/3/18.
+//  Copyright (c) 2018 Gooten. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <PrintIO/PrintIO.h>
 
-@interface ViewController : UIViewController <PrintIODelegate, UITextFieldDelegate>
+@interface ViewController : UIViewController <PrintIODelegate>
 
 - (IBAction)tapOnPrintSomething:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIView *panelView;
+@property (weak, nonatomic) IBOutlet UIView *panelView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
-@property (weak, nonatomic) IBOutlet UITextField *txtPayeeName;
-@property (weak, nonatomic) IBOutlet UITextField *txtPromoCode;
-@property (weak, nonatomic) IBOutlet UITextField *tfRecipeID;
-@property (weak, nonatomic) IBOutlet UITextField *tfRetailDiscount;
-
-@property (strong, nonatomic) IBOutletCollection(UISwitch) NSArray *switches;
+@property (weak, nonatomic) IBOutlet UISwitch *swTestMode;
+@property (weak, nonatomic) IBOutlet UISwitch *swPassImages;
+@property (weak, nonatomic) IBOutlet UISwitch *swLocalization;
+@property (weak, nonatomic) IBOutlet UISwitch *swCart;
+@property (weak, nonatomic) IBOutlet UISwitch *swCustomFonts;
+@property (weak, nonatomic) IBOutlet UISwitch *swCustomPhotoSource;
+@property (weak, nonatomic) IBOutlet UISwitch *swCustomNavBar;
 
 @end
